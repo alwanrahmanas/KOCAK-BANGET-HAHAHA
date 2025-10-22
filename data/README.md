@@ -12,10 +12,10 @@ Dataset sintetis ini dibuat untuk penelitian dan pengembangan sistem deteksi fra
 
 ```
 dataset/
-├── synthetic_bpjs_claims.csv          # Main dataset (CSV format)
-├── synthetic_bpjs_claims.parquet      # Compressed format (optional)
-├── metadata.json                      # Generation metadata
-└── README.md                          # This file
+├── main.py          
+├── generate_synthetic_bpjs.py      
+├── metadata.json                      
+└── README.md                          
 ```
 
 ---
@@ -27,7 +27,6 @@ dataset/
 | **Total Records** | 100,000 (default, configurable) |
 | **Time Period** | 2024 (configurable) |
 | **Fraud Ratio** | 3% (configurable) |
-| **File Size** | ~15-20 MB (CSV), ~5-8 MB (Parquet) |
 | **Format** | CSV, Parquet |
 | **Encoding** | UTF-8 |
 
@@ -438,20 +437,10 @@ You are free to:
 
 ## 📞 Contact & Support
 
-- **Issues**: [GitHub Issues]
-- **Questions**: [Discussion Forum]
-- **Email**: [Your Email]
-
+- **Email**: alwanrahmana@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/alwanrahmana/
 ---
 
-## 🔗 Related Resources
-
-- [Generation Script Documentation](../README.md)
-- [Fraud Detection Model](../models/README.md)
-- [API Documentation](../api/README.md)
-- [Dashboard User Guide](../dashboard/README.md)
-
----
 
 **Last Updated**: October 2024  
 **Dataset Version**: 1.0  

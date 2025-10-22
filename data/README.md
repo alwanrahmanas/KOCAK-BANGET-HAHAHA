@@ -99,7 +99,7 @@ dataset/
 | Column | Type | Description | Values |
 |--------|------|-------------|--------|
 | `fraud_flag` | integer | Fraud indicator | 0 (Normal) / 1 (Fraud) |
-| `fraud_type` | string | Type of fraud pattern | See [Fraud Types](#fraud-types) |
+| `fraud_type` | string | Type of fraud pattern | See [Fraud Types](https://github.com/alwanrahmanas/AI-fraud-detection/blob/main/data/fraud_type.md) |
 | `severity` | string | Fraud severity level | ringan / sedang / berat / none |
 | `evidence_type` | string | Evidence source | system_anom / audit / whistleblower / none |
 

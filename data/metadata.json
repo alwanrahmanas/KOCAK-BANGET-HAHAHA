@@ -6,10 +6,10 @@
     "type": "synthetic",
     "domain": "healthcare_fraud",
     "language": "id",
-    "created_date": "2024-10-22",
-    "last_updated": "2024-10-22",
+    "created_date": "2025-10-22",
+    "last_updated": "2025-10-22",
     "license": "MIT",
-    "repository": "https://github.com/your-repo/bpjs-fraud-detection"
+    "repository": "https://github.com/alwanrahmanas/AI-fraud-detection"
   },
   
   "generation_parameters": {

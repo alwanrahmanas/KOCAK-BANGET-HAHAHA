@@ -402,10 +402,10 @@ If you use this dataset in your research, please cite:
 ```bibtex
 @dataset{bpjs_fraud_synthetic_2024,
   title={BPJS Healthcare Claims Fraud Detection - Synthetic Dataset},
-  author={[Your Name/Organization]},
-  year={2024},
+  author={Alwan Rahmana Subian},
+  year={2025},
   version={1.0},
-  url={[Your Repository URL]}
+  url={[[Your Repository URL]](https://github.com/alwanrahmanas/AI-fraud-detection)}
 }
 ```
 

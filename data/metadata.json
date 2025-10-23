@@ -379,78 +379,170 @@
     "fraud_ratio": 0.03,
     "types": [
       {
-        "name": "phantom",
-        "description": "Claims for services never rendered",
-        "count": 750,
-        "percentage": 0.25,
-        "characteristics": {
-          "billed_amount_multiplier": [2.0, 6.0],
-          "visit_count_30d": [0, 1],
-          "severity": "berat",
-          "evidence": ["system_anom", "audit"]
-        }
-      },
-      {
-        "name": "upcoding",
-        "description": "Billing for more expensive services",
-        "count": 750,
-        "percentage": 0.25,
-        "characteristics": {
-          "billed_amount_multiplier": [1.5, 3.0],
-          "clinical_mismatch": true,
-          "severity": ["sedang", "berat"],
-          "evidence": ["audit"]
-        }
-      },
-      {
-        "name": "unbundling",
-        "description": "Splitting procedures into multiple claims",
+        "name": "upcoding_diagnosis",
+        "description": "Mengubah kode diagnosis agar tarif klaim lebih tinggi",
         "count": 450,
         "percentage": 0.15,
+        "severity": "sedang_berat",
+        "example": "Pasien apendisitis tanpa komplikasi diklaim sebagai apendisitis perforasi",
         "characteristics": {
-          "procedure_cost_multiplier": [1.8, 3.5],
-          "overlapping_procedures": true,
-          "severity": "sedang",
-          "evidence": ["system_anom"]
-        }
+          "billed_amount_multiplier": [1.5, 2.5],
+          "icd_manipulation": true,
+          "clinical_mismatch": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "phantom_billing",
+        "description": "Mengajukan klaim atas layanan yang tidak pernah dilakukan",
+        "count": 360,
+        "percentage": 0.12,
+        "severity": "berat",
+        "example": "Klaim tindakan operasi yang tidak pernah dilakukan",
+        "characteristics": {
+          "billed_amount_multiplier": [2.5, 6.0],
+          "visit_count_30d": [0, 1],
+          "no_documentation": true
+        },
+        "evidence": ["system_anom", "audit"]
+      },
+      {
+        "name": "cloning_claim",
+        "description": "Menyalin rekam medis atau data pasien lain untuk klaim baru",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "berat",
+        "example": "Copy-paste data pasien lain ke klaim berbeda",
+        "characteristics": {
+          "duplicate_patterns": true,
+          "same_diagnosis_procedure": true,
+          "pattern_matching": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "inflated_bill",
+        "description": "Menggelembungkan tagihan obat atau alat kesehatan",
+        "count": 360,
+        "percentage": 0.12,
+        "severity": "sedang",
+        "example": "Tagihan 4 vial obat padahal hanya diberikan 2",
+        "characteristics": {
+          "drug_cost_multiplier": [2.5, 8.0],
+          "procedure_cost_multiplier": [1.5, 3.0],
+          "quantity_mismatch": true
+        },
+        "evidence": ["system_anom"]
+      },
+      {
+        "name": "service_unbundling",
+        "description": "Memecah paket pelayanan menjadi beberapa klaim terpisah",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Pemeriksaan laboratorium yang seharusnya satu paket dibagi menjadi 4 klaim",
+        "characteristics": {
+          "procedure_cost_multiplier": [2.0, 4.0],
+          "multiple_claims_same_episode": true,
+          "overlapping_procedures": true
+        },
+        "evidence": ["system_anom"]
+      },
+      {
+        "name": "self_referral",
+        "description": "Merujuk pasien ke fasilitas milik sendiri tanpa alasan medis",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Dokter merujuk pasien ke RS tempat ia juga bekerja",
+        "characteristics": {
+          "billed_amount_multiplier": [1.3, 2.0],
+          "referral_flag": true,
+          "referral_to_same_facility": true,
+          "conflict_of_interest": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "repeat_billing",
+        "description": "Menagih kembali klaim yang sudah dibayar",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "berat",
+        "example": "Klaim rawat inap diajukan dua kali",
+        "characteristics": {
+          "duplicate_claim_submission": true,
+          "same_service_multiple_billing": true
+        },
+        "evidence": ["system_anom"]
       },
       {
         "name": "prolonged_los",
-        "description": "Unnecessary extended hospitalization",
-        "count": 450,
-        "percentage": 0.15,
+        "description": "Memperpanjang lama rawat inap tanpa indikasi medis",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Pasien ventilator dipertahankan tanpa indikasi",
         "characteristics": {
           "lama_dirawat_range": [15, 60],
           "billed_amount_multiplier": [2.0, 4.0],
-          "severity": "berat",
-          "evidence": ["audit"]
-        }
+          "unnecessary_prolongation": true
+        },
+        "evidence": ["audit"]
       },
       {
-        "name": "identity",
-        "description": "Using stolen or shared identities",
-        "count": 300,
-        "percentage": 0.10,
+        "name": "room_manipulation",
+        "description": "Memanipulasi kelas perawatan untuk menaikkan biaya klaim",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "sedang",
+        "example": "Klaim kelas I padahal pasien dirawat di kelas II",
         "characteristics": {
-          "duplicate_nik_hash": true,
-          "concurrent_claims": true,
-          "severity": "berat",
-          "evidence": ["whistleblower"]
-        }
+          "billed_amount_multiplier": [1.4, 2.2],
+          "room_class_fraud": true,
+          "claimed_higher_class": ["Kelas I", "VIP"]
+        },
+        "evidence": ["audit"]
       },
       {
-        "name": "inflated_drugs",
-        "description": "Excessive medication charges",
-        "count": 300,
-        "percentage": 0.10,
+        "name": "unnecessary_services",
+        "description": "Memberikan layanan medis yang tidak sesuai indikasi",
+        "count": 150,
+        "percentage": 0.05,
+        "severity": "ringan_sedang",
+        "example": "Pemeriksaan berlebihan agar tagihan naik",
         "characteristics": {
-          "drug_cost_multiplier": [2.0, 10.0],
-          "drug_ratio_threshold": 0.7,
-          "severity": ["sedang", "berat"],
-          "evidence": ["system_anom"]
-        }
+          "procedure_cost_multiplier": [1.5, 2.5],
+          "visit_count_30d_range": [5, 15],
+          "overutilization": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "fake_license",
+        "description": "Menggunakan izin praktik atau izin operasional palsu",
+        "count": 60,
+        "percentage": 0.02,
+        "severity": "berat",
+        "example": "Dokter tanpa SIP aktif tetap mencatat layanan",
+        "characteristics": {
+          "billed_amount_multiplier": [1.2, 2.0],
+          "invalid_license": true,
+          "illegal_practice": true
+        },
+        "evidence": ["whistleblower"]
       }
-    ]
+    ],
+    "severity_distribution": {
+      "berat": ["phantom_billing", "cloning_claim", "repeat_billing", "fake_license"],
+      "sedang": ["upcoding_diagnosis", "inflated_bill", "service_unbundling", "self_referral", "prolonged_los", "room_manipulation"],
+      "ringan_sedang": ["unnecessary_services"]
+    },
+    "detection_methods": {
+      "system_anom": ["phantom_billing", "inflated_bill", "service_unbundling", "repeat_billing"],
+      "audit": ["upcoding_diagnosis", "phantom_billing", "cloning_claim", "self_referral", "prolonged_los", "room_manipulation", "unnecessary_services"],
+      "whistleblower": ["fake_license"]
+    }
   },
   
   "statistical_distributions": {
@@ -579,7 +671,7 @@
   "version_history": [
     {
       "version": "1.0",
-      "release_date": "2024-10-22",
+      "release_date": "2025-10-22",
       "changes": [
         "Initial release",
         "100,000 records",

@@ -11,11 +11,13 @@ Dataset sintetis ini dibuat untuk penelitian dan pengembangan sistem deteksi fra
 ## 📁 File Structure
 
 ```
-dataset/
-├── main.py          
-├── generate_synthetic_bpjs.py      
+data/
+├── fraud_comparison.md          
+├── fraud_type.md
+├── generate_synthetic.py
+├── main.py     
 ├── metadata.json                      
-└── README.md                          
+└── README.md                         
 ```
 
 ---
@@ -27,6 +29,7 @@ dataset/
 | **Total Records** | 100,000 (default, configurable) |
 | **Time Period** | 2024 (configurable) |
 | **Fraud Ratio** | 3% (configurable) |
+| **File Size** | ~15-20 MB (CSV), ~5-8 MB (Parquet) |
 | **Format** | CSV, Parquet |
 | **Encoding** | UTF-8 |
 
@@ -107,61 +110,147 @@ dataset/
 
 ## 🔍 Fraud Types
 
-Dataset includes 6 realistic fraud patterns:
+Dataset includes **11 realistic fraud patterns** commonly found in healthcare claims:
 
-### 1. **Phantom Claims** (25% of fraud)
-- **Description**: Claims for services never rendered
+### 1. **Upcoding Diagnosis** (15% of fraud) 🔴
+- **Description**: Mengubah kode diagnosis agar tarif klaim lebih tinggi dari seharusnya
 - **Characteristics**:
-  - High billed amounts (2-6x normal)
+  - Billed amount inflated 1.5-2.5x
+  - ICD-10 code changed to more severe condition
+  - Clinical inconsistencies between diagnosis and treatment
+- **Severity**: Sedang-Berat (Medium-High)
+- **Detection**: Audit
+- **Example**: Pasien apendisitis tanpa komplikasi diklaim sebagai apendisitis perforasi
+
+### 2. **Phantom Billing** (12% of fraud) 🔴
+- **Description**: Mengajukan klaim atas layanan yang tidak pernah dilakukan (klaim fiktif)
+- **Characteristics**:
+  - High billed amounts (2.5-6x normal)
   - Zero or very low visit count (0-1 visits in 30 days)
   - No supporting documentation
 - **Severity**: Berat (Critical)
 - **Detection**: System anomaly, Audit
+- **Example**: Klaim tindakan operasi yang tidak pernah dilakukan
 
-### 2. **Upcoding** (25% of fraud)
-- **Description**: Billing for more expensive services than provided
+### 3. **Cloning Claim** (8% of fraud) 🔴
+- **Description**: Menyalin rekam medis atau data pasien lain untuk klaim baru
 - **Characteristics**:
-  - Billed amount inflated 1.5-3x
-  - Minor diagnosis mapped to expensive procedures
-  - Clinical inconsistencies
-- **Severity**: Sedang/Berat (Medium/High)
+  - Duplicate patterns across different claims
+  - Same diagnosis and procedure codes
+  - Pattern matching anomalies
+- **Severity**: Berat (Critical)
 - **Detection**: Audit
+- **Example**: Copy-paste data pasien lain ke klaim berbeda
 
-### 3. **Unbundling** (15% of fraud)
-- **Description**: Splitting one procedure into multiple claims
+### 4. **Inflated Bill** (12% of fraud) 🟡
+- **Description**: Menggelembungkan tagihan obat atau alat kesehatan
 - **Characteristics**:
-  - Multiple claims for same episode
-  - Overlapping procedure codes
-  - Total cost exceeds expected amount
+  - Drug cost inflated 2.5-8x
+  - Procedure cost inflated 1.5-3x
+  - Quantity mismatches
 - **Severity**: Sedang (Medium)
 - **Detection**: System anomaly
+- **Example**: Tagihan 4 vial obat padahal hanya diberikan 2
 
-### 4. **Prolonged LOS** (15% of fraud)
-- **Description**: Unnecessary extended hospitalization
+### 5. **Service Unbundling** (10% of fraud) 🟡
+- **Description**: Memecah paket pelayanan menjadi beberapa klaim terpisah untuk menaikkan total pembayaran
+- **Characteristics**:
+  - Procedure cost inflated 2-4x
+  - Multiple claims for same episode
+  - Overlapping procedure codes
+- **Severity**: Sedang (Medium)
+- **Detection**: System anomaly
+- **Example**: Pemeriksaan laboratorium yang seharusnya satu paket dibagi menjadi 4 klaim
+
+### 6. **Self-Referral** (10% of fraud) 🟡
+- **Description**: Merujuk pasien ke fasilitas milik sendiri tanpa alasan medis
+- **Characteristics**:
+  - Billed amount inflated 1.3-2x
+  - Referral flag = True
+  - Referral to same facility = True
+  - Conflict of interest
+- **Severity**: Sedang (Medium)
+- **Detection**: Audit
+- **Example**: Dokter merujuk pasien ke RS tempat ia juga bekerja
+
+### 7. **Repeat Billing** (8% of fraud) 🔴
+- **Description**: Menagih kembali klaim yang sudah dibayar
+- **Characteristics**:
+  - Duplicate claim submission
+  - Same service billed multiple times
+  - System-detectable duplicates
+- **Severity**: Berat (Critical)
+- **Detection**: System anomaly
+- **Example**: Klaim rawat inap diajukan dua kali
+
+### 8. **Prolonged LOS** (10% of fraud) 🟡
+- **Description**: Memperpanjang lama rawat inap tanpa indikasi medis
 - **Characteristics**:
   - Length of stay 15-60 days (unusually long)
-  - Inflated billing (2-4x normal)
-  - Simple diagnosis with complex treatment
-- **Severity**: Berat (Critical)
+  - Billed amount inflated 2-4x
+  - Simple diagnosis with prolonged treatment
+- **Severity**: Sedang (Medium)
 - **Detection**: Audit
+- **Example**: Pasien ventilator dipertahankan tanpa indikasi
 
-### 5. **Identity Fraud** (10% of fraud)
-- **Description**: Using stolen/shared identities
+### 9. **Room Manipulation** (8% of fraud) 🟡
+- **Description**: Memanipulasi kelas perawatan untuk menaikkan biaya klaim
 - **Characteristics**:
-  - Same NIK hash across multiple participant IDs
-  - Impossible age gaps for same identity
-  - Concurrent claims at different locations
+  - Billed amount inflated 1.4-2.2x
+  - Claimed higher room class (Kelas I, VIP)
+  - Actual class lower than claimed
+- **Severity**: Sedang (Medium)
+- **Detection**: Audit
+- **Example**: Klaim kelas I padahal pasien dirawat di kelas II
+
+### 10. **Unnecessary Services** (5% of fraud) 🟢
+- **Description**: Memberikan layanan medis yang tidak sesuai indikasi
+- **Characteristics**:
+  - Procedure cost inflated 1.5-2.5x
+  - High visit frequency (5-15 visits in 30 days)
+  - Overutilization of services
+- **Severity**: Ringan-Sedang (Low-Medium)
+- **Detection**: Audit
+- **Example**: Pemeriksaan berlebihan agar tagihan naik
+
+### 11. **Fake License** (2% of fraud) 🔴
+- **Description**: Menggunakan izin praktik atau izin operasional palsu
+- **Characteristics**:
+  - Billed amount inflated 1.2-2x
+  - Invalid or expired license
+  - Illegal medical practice
 - **Severity**: Berat (Critical)
 - **Detection**: Whistleblower
+- **Example**: Dokter tanpa SIP aktif tetap mencatat layanan
 
-### 6. **Inflated Drugs** (10% of fraud)
-- **Description**: Excessive medication charges
-- **Characteristics**:
-  - Drug cost 2-10x normal
-  - Quantity mismatches
-  - Drug ratio > 70% of total bill
-- **Severity**: Sedang/Berat (Medium/High)
-- **Detection**: System anomaly
+---
+
+## 📊 Fraud Distribution Summary
+
+### **By Severity**
+
+| Severity | Fraud Types | Total % |
+|----------|-------------|---------|
+| 🔴 **Berat (Critical)** | Phantom Billing, Cloning Claim, Repeat Billing, Fake License | 34% |
+| 🟡 **Sedang (Medium)** | Upcoding, Inflated Bill, Unbundling, Self-Referral, Prolonged LOS, Room Manipulation | 61% |
+| 🟢 **Ringan (Low)** | Unnecessary Services | 5% |
+
+### **By Detection Method**
+
+| Method | Fraud Types | % |
+|--------|-------------|---|
+| **System Anomaly** | Phantom Billing, Inflated Bill, Service Unbundling, Repeat Billing | 44% |
+| **Audit** | Upcoding, Phantom, Cloning, Self-Referral, Prolonged LOS, Room Manipulation, Unnecessary | 54% |
+| **Whistleblower** | Fake License | 2% |
+
+### **By Financial Impact**
+
+| Impact Level | Multiplier | Fraud Types |
+|--------------|-----------|-------------|
+| **Very High** | 2.5-8x | Phantom Billing, Inflated Bill |
+| **High** | 2.0-4x | Service Unbundling, Prolonged LOS |
+| **Medium** | 1.5-2.5x | Upcoding, Room Manipulation, Unnecessary Services |
+| **Low** | 1.2-2x | Self-Referral, Fake License |
 
 ---
 
@@ -258,8 +347,8 @@ Dataset generation is fully reproducible using random seeds:
 ```python
 # Generate identical dataset
 python generate_synthetic_bpjs.py \
-  --n_rows 1000 \
-  --fraud_ratio 0.05 \
+  --n_rows 100000 \
+  --fraud_ratio 0.03 \
   --year 2024 \
   --seed 42
 ```
@@ -405,7 +494,7 @@ If you use this dataset in your research, please cite:
   author={Alwan Rahmana Subian},
   year={2025},
   version={1.0},
-  url={[[Your Repository URL]](https://github.com/alwanrahmanas/AI-fraud-detection)}
+  url={https://github.com/alwanrahmanas/AI-fraud-detection}
 }
 ```
 
@@ -437,10 +526,19 @@ You are free to:
 
 ## 📞 Contact & Support
 
-- **Email**: alwanrahmana@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/alwanrahmana/
+- **Email**: alwanrahmana@gmail.com
+
 ---
 
+## 🔗 Related Resources
+
+- [Generation Script Documentation](../README.md)
+- [Fraud Detection Model](../models/README.md)
+- [API Documentation](../api/README.md)
+- [Dashboard User Guide](../dashboard/README.md)
+
+---
 
 **Last Updated**: October 2024  
 **Dataset Version**: 1.0  

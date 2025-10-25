@@ -1,6 +1,6 @@
 """
-BPJS Fraud Detection Dataset Generator V3.0
-===========================================
+BPJS Fraud Detection Dataset Generator V3.0 - COMPLETE EDITION
+===============================================================
 Enhanced with:
 - Peraturan BPJS No. 6 Tahun 2020 compliance
 - INA-CBG tariff integration (Permenkes No. 3/2023)
@@ -8,9 +8,10 @@ Enhanced with:
 - UU No. 27/2022 (PDP) compliance
 - Advanced temporal features
 - Real provincial distribution
+- COMPLETE FRAUD INJECTION (11 types)
 
 Author: [Your Name]
-Version: 3.0
+Version: 3.0-COMPLETE
 Last Updated: 2024-10
 """
 
@@ -21,6 +22,8 @@ from typing import Dict, List, Tuple
 import logging
 import json
 import hashlib
+import argparse
+import os
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -29,20 +32,19 @@ logger = logging.getLogger(__name__)
 class ClinicalPathwayManager:
     """Manage clinical pathways and INA-CBG tariff references."""
     
-    # Clinical Pathway Templates (based on common diagnoses)
     PATHWAYS = {
-        'J00': {  # Common cold
+        'J00': {
             'name': 'Nasofaringitis Akut (Common Cold)',
             'service_type': 'Rawat Jalan',
             'typical_los': 0,
-            'typical_procedures': ['89.03'],  # Physical examination
+            'typical_procedures': ['89.03'],
             'cost_range': (100_000, 500_000),
             'inacbg_code': 'M-1-20-I',
             'tarif_kelas_3': 383_300,
             'tarif_kelas_2': 447_100,
             'tarif_kelas_1': 510_900
         },
-        'I10': {  # Essential hypertension
+        'I10': {
             'name': 'Hipertensi Esensial',
             'service_type': 'Rawat Jalan',
             'typical_los': 0,
@@ -53,7 +55,7 @@ class ClinicalPathwayManager:
             'tarif_kelas_2': 706_100,
             'tarif_kelas_1': 806_800
         },
-        'E11.9': {  # Type 2 diabetes
+        'E11.9': {
             'name': 'Diabetes Melitus Tipe 2',
             'service_type': 'Rawat Jalan',
             'typical_los': 0,
@@ -64,7 +66,7 @@ class ClinicalPathwayManager:
             'tarif_kelas_2': 1_057_900,
             'tarif_kelas_1': 1_208_900
         },
-        'J18.9': {  # Pneumonia
+        'J18.9': {
             'name': 'Pneumonia',
             'service_type': 'Rawat Inap',
             'typical_los': 5,
@@ -75,7 +77,7 @@ class ClinicalPathwayManager:
             'tarif_kelas_2': 6_347_900,
             'tarif_kelas_1': 7_246_900
         },
-        'N39.0': {  # UTI
+        'N39.0': {
             'name': 'Infeksi Saluran Kemih',
             'service_type': 'Rawat Jalan',
             'typical_los': 0,
@@ -86,7 +88,7 @@ class ClinicalPathwayManager:
             'tarif_kelas_2': 688_700,
             'tarif_kelas_1': 786_900
         },
-        'K29.7': {  # Gastritis
+        'K29.7': {
             'name': 'Gastritis',
             'service_type': 'Rawat Jalan',
             'typical_los': 0,
@@ -97,7 +99,7 @@ class ClinicalPathwayManager:
             'tarif_kelas_2': 497_000,
             'tarif_kelas_1': 567_900
         },
-        'M-4-10-I': {  # Fracture (Inpatient)
+        'M-4-10-I': {
             'name': 'Fraktur Femur',
             'service_type': 'Rawat Inap',
             'typical_los': 7,
@@ -229,9 +231,8 @@ class FraudRuleEngine:
 
 
 class BPJSDataGeneratorV3:
-    """Enhanced BPJS dataset generator with regulation compliance."""
+    """Enhanced BPJS dataset generator with regulation compliance and FRAUD INJECTION."""
     
-    # Real provincial distribution (approximate BPJS data 2023)
     PROVINCE_DISTRIBUTION = {
         'Jawa Barat': 0.20,
         'Jawa Timur': 0.18,
@@ -262,7 +263,6 @@ class BPJSDataGeneratorV3:
         
     def generate_nik_hash(self, participant_id: str) -> str:
         """Generate privacy-compliant hashed NIK."""
-        # Simulate NIK hashing (PDP compliance)
         base = f"NIK_{participant_id}_{self.seed}"
         return hashlib.sha256(base.encode()).hexdigest()[:16].upper()
     
@@ -270,7 +270,6 @@ class BPJSDataGeneratorV3:
         """Assign INA-CBG code and tariff based on diagnosis."""
         pathway = self.pathway_manager.get_pathway(row['kode_icd10'])
         
-        # Select tariff based on room class
         if row['jenis_pelayanan'] == 'Rawat Inap':
             if row['room_class'] == 'Kelas III':
                 tarif = pathway['tarif_kelas_3']
@@ -281,7 +280,7 @@ class BPJSDataGeneratorV3:
             else:
                 tarif = pathway['tarif_kelas_3']
         else:
-            tarif = pathway['tarif_kelas_3']  # Outpatient base tariff
+            tarif = pathway['tarif_kelas_3']
         
         return {
             'kode_tarif_inacbg': pathway['inacbg_code'],
@@ -293,23 +292,17 @@ class BPJSDataGeneratorV3:
         """Generate advanced temporal features."""
         df = df.sort_values(['participant_id', 'tgl_pelayanan']).copy()
         
-        # Time since previous claim (per participant)
         df['time_diff_prev_claim'] = df.groupby('participant_id')['tgl_pelayanan'].diff().dt.days
-        df['time_diff_prev_claim'] = df['time_diff_prev_claim'].fillna(999)  # First claim
+        df['time_diff_prev_claim'] = df['time_diff_prev_claim'].fillna(999)
         
-        # Claim month
         df['claim_month'] = pd.to_datetime(df['tgl_pelayanan']).dt.month
         df['claim_quarter'] = pd.to_datetime(df['tgl_pelayanan']).dt.quarter
         
-        # Rolling average cost (per participant, 30-day window)
         df['rolling_avg_cost_30d'] = df.groupby('participant_id')['billed_amount'].transform(
             lambda x: x.rolling(window=3, min_periods=1).mean()
         )
         
-        # Provider claim frequency
         df['provider_monthly_claims'] = df.groupby(['dpjp_id', 'claim_month'])['claim_id'].transform('count')
-        
-        # NIK reuse count (identity fraud indicator)
         df['nik_hash_reuse_count'] = df.groupby('nik_hash')['nik_hash'].transform('count')
         
         return df
@@ -320,19 +313,16 @@ class BPJSDataGeneratorV3:
         
         logger.info(f"Generating {n_rows:,} enhanced claims...")
         
-        # Sample with provincial distribution
         provinces = list(self.PROVINCE_DISTRIBUTION.keys())
         province_probs = list(self.PROVINCE_DISTRIBUTION.values())
         
         selected_provinces = np.random.choice(provinces, size=n_rows, p=province_probs)
         
-        # Build base dataframe
         claims = []
         for i in range(n_rows):
             prov = selected_provinces[i]
             kab_list = self.KABUPATEN_MAP.get(prov, ['Unknown'])
             
-            # Sample providers from same province
             prov_providers = providers_df[providers_df['provinsi'] == prov]
             if len(prov_providers) == 0:
                 prov_providers = providers_df.sample(1)
@@ -340,15 +330,12 @@ class BPJSDataGeneratorV3:
             provider = prov_providers.sample(1).iloc[0]
             participant = participants_df.sample(1).iloc[0]
             
-            # Select diagnosis
             icd10 = np.random.choice(list(self.pathway_manager.PATHWAYS.keys()))
             pathway = self.pathway_manager.get_pathway(icd10)
             
-            # Generate service details
             jenis_pelayanan = pathway['service_type']
             lama_dirawat = np.random.poisson(pathway['typical_los']) if pathway['typical_los'] > 0 else 0
             
-            # Generate costs based on pathway
             cost_min, cost_max = pathway['cost_range']
             billed = int(np.random.uniform(cost_min, cost_max))
             
@@ -386,22 +373,17 @@ class BPJSDataGeneratorV3:
         
         df = pd.DataFrame(claims)
         
-        # Add INA-CBG tariffs
         inacbg_data = df.apply(self.assign_inacbg_tariff, axis=1, result_type='expand')
         df = pd.concat([df, inacbg_data], axis=1)
         
-        # Calculate selisih
         df['selisih_klaim'] = df['billed_amount'] - df['paid_amount']
         
-        # Ensure constraints
         df['paid_amount'] = np.minimum(df['paid_amount'], df['billed_amount'])
         df['drug_cost'] = np.minimum(df['drug_cost'], df['billed_amount'])
         df['procedure_cost'] = np.minimum(df['procedure_cost'], df['billed_amount'] - df['drug_cost'])
         
-        # Generate temporal features
         df = self.generate_temporal_features(df)
         
-        # Calculate clinical pathway deviation
         df['clinical_pathway_deviation_score'] = df.apply(
             self.pathway_manager.calculate_deviation_score, axis=1
         )
@@ -461,17 +443,259 @@ class BPJSDataGeneratorV3:
             'age': ages[:n_participants],
             'sex': np.random.choice(['M', 'F'], size=n_participants)
         })
+    
+    def inject_fraud(self, df: pd.DataFrame, fraud_ratio: float = 0.03) -> pd.DataFrame:
+        """
+        *** COMPLETE FRAUD INJECTION - 11 TYPES ***
+        Inject realistic fraud patterns with PerBPJS No. 6/2020 compliance.
+        """
+        logger.info(f"Injecting fraud with ratio {fraud_ratio:.2%}...")
+        
+        n_total = len(df)
+        n_fraud = int(n_total * fraud_ratio)
+        
+        # Fraud type distribution (11 types)
+        fraud_mix = {
+            'upcoding_diagnosis': 0.15,
+            'phantom_billing': 0.12,
+            'cloning_claim': 0.08,
+            'inflated_bill': 0.12,
+            'service_unbundling': 0.10,
+            'self_referral': 0.10,
+            'repeat_billing': 0.08,
+            'prolonged_los': 0.10,
+            'room_manipulation': 0.08,
+            'unnecessary_services': 0.05,
+            'fake_license': 0.02
+        }
+        
+        fraud_indices = np.random.choice(n_total, size=n_fraud, replace=False)
+        type_counts = {k: int(n_fraud * v) for k, v in fraud_mix.items()}
+        
+        idx_pointer = 0
+        
+        # 1. UPCODING DIAGNOSIS (15%)
+        n_upcode = type_counts['upcoding_diagnosis']
+        upcode_idx = fraud_indices[idx_pointer:idx_pointer + n_upcode]
+        df.loc[upcode_idx, 'billed_amount'] = (df.loc[upcode_idx, 'billed_amount'] * 
+                                                np.random.uniform(1.5, 2.5, size=len(upcode_idx))).astype(int)
+        df.loc[upcode_idx, 'kode_icd10'] = np.random.choice(['I10', 'E11.9', 'J18.9'], size=len(upcode_idx))
+        df.loc[upcode_idx, 'fraud_flag'] = 1
+        df.loc[upcode_idx, 'fraud_type'] = 'upcoding_diagnosis'
+        df.loc[upcode_idx, 'severity'] = np.random.choice(['sedang', 'berat'], size=len(upcode_idx), p=[0.4, 0.6])
+        df.loc[upcode_idx, 'evidence_type'] = 'audit'
+        idx_pointer += n_upcode
+        
+        # 2. PHANTOM BILLING (12%)
+        n_phantom = type_counts['phantom_billing']
+        phantom_idx = fraud_indices[idx_pointer:idx_pointer + n_phantom]
+        df.loc[phantom_idx, 'billed_amount'] = (df.loc[phantom_idx, 'billed_amount'] * 
+                                                 np.random.uniform(2.5, 6.0, size=len(phantom_idx))).astype(int)
+        df.loc[phantom_idx, 'visit_count_30d'] = np.random.choice([0, 1], size=len(phantom_idx))
+        df.loc[phantom_idx, 'fraud_flag'] = 1
+        df.loc[phantom_idx, 'fraud_type'] = 'phantom_billing'
+        df.loc[phantom_idx, 'severity'] = 'berat'
+        df.loc[phantom_idx, 'evidence_type'] = np.random.choice(['system_anom', 'audit'], size=len(phantom_idx))
+        idx_pointer += n_phantom
+        
+        # 3. CLONING CLAIM (8%)
+        n_clone = type_counts['cloning_claim']
+        clone_idx = fraud_indices[idx_pointer:idx_pointer + n_clone]
+        for idx in clone_idx:
+            random_claim = df.sample(1).iloc[0]
+            df.loc[idx, 'kode_icd10'] = random_claim['kode_icd10']
+            df.loc[idx, 'kode_prosedur'] = random_claim['kode_prosedur']
+        df.loc[clone_idx, 'fraud_flag'] = 1
+        df.loc[clone_idx, 'fraud_type'] = 'cloning_claim'
+        df.loc[clone_idx, 'severity'] = 'berat'
+        df.loc[clone_idx, 'evidence_type'] = 'audit'
+        idx_pointer += n_clone
+        
+        # 4. INFLATED BILL (12%)
+        n_inflated = type_counts['inflated_bill']
+        inflated_idx = fraud_indices[idx_pointer:idx_pointer + n_inflated]
+        df.loc[inflated_idx, 'drug_cost'] = (df.loc[inflated_idx, 'drug_cost'] * 
+                                              np.random.uniform(2.5, 8.0, size=len(inflated_idx))).astype(int)
+        df.loc[inflated_idx, 'procedure_cost'] = (df.loc[inflated_idx, 'procedure_cost'] * 
+                                                   np.random.uniform(1.5, 3.0, size=len(inflated_idx))).astype(int)
+        df.loc[inflated_idx, 'billed_amount'] = (df.loc[inflated_idx, 'drug_cost'] + 
+                                                  df.loc[inflated_idx, 'procedure_cost']).astype(int)
+        df.loc[inflated_idx, 'fraud_flag'] = 1
+        df.loc[inflated_idx, 'fraud_type'] = 'inflated_bill'
+        df.loc[inflated_idx, 'severity'] = 'sedang'
+        df.loc[inflated_idx, 'evidence_type'] = 'system_anom'
+        idx_pointer += n_inflated
+        
+        # 5. SERVICE UNBUNDLING (10%)
+        n_unbundle = type_counts['service_unbundling']
+        unbundle_idx = fraud_indices[idx_pointer:idx_pointer + n_unbundle]
+        df.loc[unbundle_idx, 'procedure_cost'] = (df.loc[unbundle_idx, 'procedure_cost'] * 
+                                                   np.random.uniform(2.0, 4.0, size=len(unbundle_idx))).astype(int)
+        df.loc[unbundle_idx, 'billed_amount'] = (df.loc[unbundle_idx, 'drug_cost'] + 
+                                                  df.loc[unbundle_idx, 'procedure_cost']).astype(int)
+        df.loc[unbundle_idx, 'fraud_flag'] = 1
+        df.loc[unbundle_idx, 'fraud_type'] = 'service_unbundling'
+        df.loc[unbundle_idx, 'severity'] = 'sedang'
+        df.loc[unbundle_idx, 'evidence_type'] = 'system_anom'
+        idx_pointer += n_unbundle
+        
+        # 6. SELF-REFERRAL (10%)
+        n_self_ref = type_counts['self_referral']
+        self_ref_idx = fraud_indices[idx_pointer:idx_pointer + n_self_ref]
+        df.loc[self_ref_idx, 'referral_flag'] = True
+        df.loc[self_ref_idx, 'referral_to_same_facility'] = True
+        df.loc[self_ref_idx, 'billed_amount'] = (df.loc[self_ref_idx, 'billed_amount'] * 
+                                                  np.random.uniform(1.3, 2.0, size=len(self_ref_idx))).astype(int)
+        df.loc[self_ref_idx, 'fraud_flag'] = 1
+        df.loc[self_ref_idx, 'fraud_type'] = 'self_referral'
+        df.loc[self_ref_idx, 'severity'] = 'sedang'
+        df.loc[self_ref_idx, 'evidence_type'] = 'audit'
+        idx_pointer += n_self_ref
+        
+        # 7. REPEAT BILLING (8%)
+        n_repeat = type_counts['repeat_billing']
+        repeat_idx = fraud_indices[idx_pointer:idx_pointer + n_repeat]
+        df.loc[repeat_idx, 'fraud_flag'] = 1
+        df.loc[repeat_idx, 'fraud_type'] = 'repeat_billing'
+        df.loc[repeat_idx, 'severity'] = 'berat'
+        df.loc[repeat_idx, 'evidence_type'] = 'system_anom'
+        idx_pointer += n_repeat
+        
+        # 8. PROLONGED LOS (10%)
+        n_prolong = type_counts['prolonged_los']
+        prolong_idx = fraud_indices[idx_pointer:idx_pointer + n_prolong]
+        
+        ranap_mask = df.loc[prolong_idx, 'jenis_pelayanan'] == 'Rawat Inap'
+        ranap_prolong = prolong_idx[ranap_mask]
+        rajal_prolong = prolong_idx[~ranap_mask]
+        
+        if len(ranap_prolong) > 0:
+            df.loc[ranap_prolong, 'lama_dirawat'] = np.random.randint(15, 60, size=len(ranap_prolong))
+            df.loc[ranap_prolong, 'billed_amount'] = (df.loc[ranap_prolong, 'billed_amount'] * 
+                                                       np.random.uniform(2.0, 4.0, size=len(ranap_prolong))).astype(int)
+            df.loc[ranap_prolong, 'fraud_flag'] = 1
+            df.loc[ranap_prolong, 'fraud_type'] = 'prolonged_los'
+            df.loc[ranap_prolong, 'severity'] = 'sedang'
+            df.loc[ranap_prolong, 'evidence_type'] = 'audit'
+        
+        if len(rajal_prolong) > 0:
+            df.loc[rajal_prolong, 'billed_amount'] = (df.loc[rajal_prolong, 'billed_amount'] * 
+                                                       np.random.uniform(1.5, 2.5, size=len(rajal_prolong))).astype(int)
+            df.loc[rajal_prolong, 'fraud_flag'] = 1
+            df.loc[rajal_prolong, 'fraud_type'] = 'upcoding_diagnosis'
+            df.loc[rajal_prolong, 'severity'] = 'sedang'
+            df.loc[rajal_prolong, 'evidence_type'] = 'audit'
+        
+        idx_pointer += n_prolong
+        
+        # 9. ROOM MANIPULATION (8%)
+        n_room = type_counts['room_manipulation']
+        room_idx = fraud_indices[idx_pointer:idx_pointer + n_room]
+        
+        ranap_mask = df.loc[room_idx, 'jenis_pelayanan'] == 'Rawat Inap'
+        ranap_room = room_idx[ranap_mask]
+        
+        if len(ranap_room) > 0:
+            df.loc[ranap_room, 'room_class'] = np.random.choice(['Kelas I', 'VIP'], size=len(ranap_room))
+            df.loc[ranap_room, 'billed_amount'] = (df.loc[ranap_room, 'billed_amount'] * 
+                                                    np.random.uniform(1.4, 2.2, size=len(ranap_room))).astype(int)
+            df.loc[ranap_room, 'fraud_flag'] = 1
+            df.loc[ranap_room, 'fraud_type'] = 'room_manipulation'
+            df.loc[ranap_room, 'severity'] = 'sedang'
+            df.loc[ranap_room, 'evidence_type'] = 'audit'
+        
+        rajal_room = room_idx[~ranap_mask]
+        if len(rajal_room) > 0:
+            df.loc[rajal_room, 'drug_cost'] = (df.loc[rajal_room, 'drug_cost'] * 
+                                                np.random.uniform(2, 5, size=len(rajal_room))).astype(int)
+            df.loc[rajal_room, 'billed_amount'] = (df.loc[rajal_room, 'billed_amount'] * 
+                                                    np.random.uniform(1.5, 2.5, size=len(rajal_room))).astype(int)
+            df.loc[rajal_room, 'fraud_flag'] = 1
+            df.loc[rajal_room, 'fraud_type'] = 'inflated_bill'
+            df.loc[rajal_room, 'severity'] = 'sedang'
+            df.loc[rajal_room, 'evidence_type'] = 'system_anom'
+        
+        idx_pointer += n_room
+        
+        # 10. UNNECESSARY SERVICES (5%)
+        n_unnecessary = type_counts['unnecessary_services']
+        unnecessary_idx = fraud_indices[idx_pointer:idx_pointer + n_unnecessary]
+        df.loc[unnecessary_idx, 'procedure_cost'] = (df.loc[unnecessary_idx, 'procedure_cost'] * 
+                                                      np.random.uniform(1.5, 2.5, size=len(unnecessary_idx))).astype(int)
+        df.loc[unnecessary_idx, 'visit_count_30d'] = np.random.randint(5, 15, size=len(unnecessary_idx))
+        df.loc[unnecessary_idx, 'billed_amount'] = (df.loc[unnecessary_idx, 'drug_cost'] + 
+                                                     df.loc[unnecessary_idx, 'procedure_cost']).astype(int)
+        df.loc[unnecessary_idx, 'fraud_flag'] = 1
+        df.loc[unnecessary_idx, 'fraud_type'] = 'unnecessary_services'
+        df.loc[unnecessary_idx, 'severity'] = np.random.choice(['ringan', 'sedang'], size=len(unnecessary_idx))
+        df.loc[unnecessary_idx, 'evidence_type'] = 'audit'
+        idx_pointer += n_unnecessary
+        
+        # 11. FAKE LICENSE (2%)
+        n_fake = type_counts['fake_license']
+        fake_idx = fraud_indices[idx_pointer:idx_pointer + n_fake]
+        df.loc[fake_idx, 'billed_amount'] = (df.loc[fake_idx, 'billed_amount'] * 
+                                              np.random.uniform(1.2, 2.0, size=len(fake_idx))).astype(int)
+        df.loc[fake_idx, 'fraud_flag'] = 1
+        df.loc[fake_idx, 'fraud_type'] = 'fake_license'
+        df.loc[fake_idx, 'severity'] = 'berat'
+        df.loc[fake_idx, 'evidence_type'] = 'whistleblower'
+        
+        # Recalculate paid_amount and selisih after fraud injection
+        df['paid_amount'] = np.minimum(df['paid_amount'], df['billed_amount'])
+        df['selisih_klaim'] = df['billed_amount'] - df['paid_amount']
+        
+        # Recalculate clinical pathway deviation for fraud cases
+        df.loc[df['fraud_flag'] == 1, 'clinical_pathway_deviation_score'] = df.loc[df['fraud_flag'] == 1].apply(
+            self.pathway_manager.calculate_deviation_score, axis=1
+        )
+        
+        # Summary
+        fraud_summary = df[df['fraud_flag'] == 1]['fraud_type'].value_counts().sort_index()
+        logger.info(f"✅ Fraud injection complete: {df['fraud_flag'].sum():,} fraudulent claims")
+        logger.info("Fraud distribution by type:")
+        for fraud_type, count in fraud_summary.items():
+            percentage = count / df['fraud_flag'].sum() * 100
+            logger.info(f"  - {fraud_type}: {count} ({percentage:.1f}%)")
+        
+        return df
+    
+    def featurize(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add engineered features for ML."""
+        logger.info("Computing engineered features...")
+        
+        df['claim_ratio'] = df['billed_amount'] / (df['paid_amount'] + 1)
+        df['drug_ratio'] = df['drug_cost'] / (df['billed_amount'] + 1)
+        df['procedure_ratio'] = df['procedure_cost'] / (df['billed_amount'] + 1)
+        
+        df['year_month'] = pd.to_datetime(df['tgl_pelayanan']).dt.to_period('M')
+        provider_monthly_counts = df.groupby(['dpjp_id', 'year_month']).size().reset_index(name='provider_claims')
+        monthly_total = df.groupby('year_month').size().reset_index(name='total_claims')
+        
+        provider_stats = provider_monthly_counts.merge(monthly_total, on='year_month')
+        provider_stats['provider_claim_share'] = provider_stats['provider_claims'] / provider_stats['total_claims']
+        
+        df = df.merge(
+            provider_stats[['dpjp_id', 'year_month', 'provider_claim_share']], 
+            on=['dpjp_id', 'year_month'], 
+            how='left'
+        )
+        df['provider_claim_share'] = df['provider_claim_share'].fillna(0)
+        df.drop('year_month', axis=1, inplace=True)
+        
+        logger.info("✅ Feature engineering complete")
+        
+        return df
 
 
-# Export metadata dengan compliance info
 def generate_metadata_v3(params: Dict) -> Dict:
     """Generate enhanced metadata with regulation compliance."""
     
     metadata = {
         "dataset_info": {
             "name": "BPJS Healthcare Claims Fraud Detection Dataset",
-            "version": "3.0",
-            "description": "Enhanced synthetic dataset with regulation compliance",
+            "version": "3.0-COMPLETE",
+            "description": "Enhanced synthetic dataset with regulation compliance and COMPLETE fraud injection",
             "compliance": {
                 "pdn_compliant": True,
                 "regulated_by": [
@@ -503,26 +727,157 @@ def generate_metadata_v3(params: Dict) -> Dict:
     return metadata
 
 
-if __name__ == "__main__":
-    # Demo generation
-    generator = BPJSDataGeneratorV3(seed=42)
+def validate(df: pd.DataFrame, fraud_ratio: float) -> bool:
+    """Run validation checks on generated dataset."""
+    logger.info("Running validation checks...")
     
-    providers = generator.make_providers(100)
-    participants = generator.make_participants(1000)
+    checks_passed = True
     
-    df = generator.assemble_enhanced_claims(500, providers, participants, 2024)
+    # Check 1: No negative amounts
+    if (df[['billed_amount', 'paid_amount', 'drug_cost', 'procedure_cost']] < 0).any().any():
+        logger.error("❌ FAIL: Found negative monetary values")
+        checks_passed = False
+    else:
+        logger.info("✓ PASS: No negative amounts")
     
-    print("\n" + "="*70)
-    print("ENHANCED DATASET SAMPLE")
-    print("="*70)
-    print(df.head(10))
-    print(f"\nNew columns: {[c for c in df.columns if c not in ['claim_id', 'participant_id']]}")
+    # Check 2: paid <= billed
+    if not (df['paid_amount'] <= df['billed_amount']).all():
+        logger.error("❌ FAIL: Found paid_amount > billed_amount")
+        checks_passed = False
+    else:
+        logger.info("✓ PASS: paid_amount <= billed_amount")
     
-    # Save with metadata
-    df.to_csv('bpjs_claims_v3_enhanced.csv', index=False)
+    # Check 3: Fraud ratio within tolerance
+    actual_fraud_ratio = df['fraud_flag'].mean()
+    tolerance = fraud_ratio * 0.2
+    if abs(actual_fraud_ratio - fraud_ratio) > tolerance:
+        logger.warning(f"⚠ WARNING: Fraud ratio {actual_fraud_ratio:.2%} outside tolerance of {fraud_ratio:.2%} ± {tolerance:.2%}")
+    else:
+        logger.info(f"✓ PASS: Fraud ratio {actual_fraud_ratio:.2%} within tolerance")
     
-    metadata = generate_metadata_v3({'n_rows': 500, 'seed': 42, 'year': 2024})
-    with open('metadata_v3_enhanced.json', 'w', encoding='utf-8') as f:
+    # Check 4: Fraud types not 'none'
+    fraud_none_count = (df['fraud_flag'] == 1) & (df['fraud_type'] == 'none')
+    if fraud_none_count.any():
+        logger.error(f"❌ FAIL: Found {fraud_none_count.sum()} fraud records with type='none'")
+        checks_passed = False
+    else:
+        logger.info("✓ PASS: All fraud records have valid fraud_type")
+    
+    # Check 5: Clinical pathway deviation
+    if df['clinical_pathway_deviation_score'].isnull().any():
+        logger.warning("⚠ WARNING: Some records have null deviation scores")
+    else:
+        logger.info("✓ PASS: All records have deviation scores")
+    
+    return checks_passed
+
+
+def print_summary(df: pd.DataFrame):
+    """Print dataset summary."""
+    print("\n" + "=" * 80)
+    print("BPJS V3.0-COMPLETE DATASET SUMMARY")
+    print("=" * 80)
+    
+    print(f"\n📊 Total Claims: {len(df):,}")
+    print(f"🚨 Fraudulent Claims: {df['fraud_flag'].sum():,} ({df['fraud_flag'].mean():.2%})")
+    print(f"✅ Legitimate Claims: {(df['fraud_flag'] == 0).sum():,} ({(df['fraud_flag'] == 0).mean():.2%})")
+    
+    print("\n🔍 Fraud Type Distribution:")
+    fraud_dist = df[df['fraud_flag'] == 1]['fraud_type'].value_counts().sort_values(ascending=False)
+    for fraud_type, count in fraud_dist.items():
+        pct = count / df['fraud_flag'].sum() * 100
+        logger.info(f"  {fraud_type:25s}: {count:5d} ({pct:5.1f}%)")
+    
+    print("\n💰 Monetary Statistics (IDR):")
+    print(df[['billed_amount', 'paid_amount', 'drug_cost', 'procedure_cost']].describe().round(0))
+    
+    print("\n🏥 Service Type Distribution:")
+    print(df['jenis_pelayanan'].value_counts())
+    
+    print("\n🎯 Clinical Pathway Deviation (Fraud vs Legitimate):")
+    print(f"  Fraud avg deviation: {df[df['fraud_flag']==1]['clinical_pathway_deviation_score'].mean():.3f}")
+    print(f"  Legit avg deviation: {df[df['fraud_flag']==0]['clinical_pathway_deviation_score'].mean():.3f}")
+    
+    print("\n" + "=" * 80)
+
+
+def save_outputs(df: pd.DataFrame, out_dir: str, params: Dict):
+    """Save dataset and metadata."""
+    os.makedirs(out_dir, exist_ok=True)
+    
+    csv_path = os.path.join(out_dir, 'bpjs_v3_complete.csv')
+    parquet_path = os.path.join(out_dir, 'bpjs_v3_complete.parquet')
+    meta_path = os.path.join(out_dir, 'metadata_v3_complete.json')
+    
+    logger.info(f"Saving CSV to {csv_path}...")
+    df.to_csv(csv_path, index=False)
+    
+    logger.info(f"Saving Parquet to {parquet_path}...")
+    df.to_parquet(parquet_path, index=False, compression='snappy')
+    
+    metadata = generate_metadata_v3(params)
+    metadata['statistics'] = {
+        'n_rows': len(df),
+        'n_fraud': int(df['fraud_flag'].sum()),
+        'fraud_ratio': float(df['fraud_flag'].mean()),
+        'fraud_type_distribution': df[df['fraud_flag']==1]['fraud_type'].value_counts().to_dict()
+    }
+    
+    with open(meta_path, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False, default=str)
     
-    print("\n✅ Enhanced dataset generated with regulation compliance!")
+    logger.info(f"✅ All files saved to {out_dir}/")
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Generate BPJS V3.0 Complete Dataset')
+    parser.add_argument('--n_rows', type=int, default=100_000, help='Number of claim records')
+    parser.add_argument('--fraud_ratio', type=float, default=0.03, help='Fraud ratio (default: 3%)')
+    parser.add_argument('--year', type=int, default=2024, help='Claim year')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
+    parser.add_argument('--out_dir', type=str, default='./output', help='Output directory')
+    parser.add_argument('--n_providers', type=int, default=500, help='Number of providers')
+    parser.add_argument('--n_participants', type=int, default=50000, help='Number of participants')
+    
+    args = parser.parse_args()
+    
+    logger.info("=" * 80)
+    logger.info("BPJS V3.0-COMPLETE DATASET GENERATOR")
+    logger.info("=" * 80)
+    logger.info(f"Parameters: n_rows={args.n_rows:,}, fraud_ratio={args.fraud_ratio:.1%}, year={args.year}, seed={args.seed}")
+    
+    # Initialize generator
+    generator = BPJSDataGeneratorV3(seed=args.seed)
+    
+    # Generate components
+    providers_df = generator.make_providers(n_providers=args.n_providers)
+    participants_df = generator.make_participants(n_participants=args.n_participants)
+    
+    # Assemble base claims
+    df = generator.assemble_enhanced_claims(args.n_rows, providers_df, participants_df, args.year)
+    
+    # *** INJECT FRAUD (11 TYPES) ***
+    df = generator.inject_fraud(df, fraud_ratio=args.fraud_ratio)
+    
+    # Add ML features
+    df = generator.featurize(df)
+    
+    # Validate
+    if validate(df, args.fraud_ratio):
+        logger.info("✅ All validation checks passed!")
+    else:
+        logger.warning("⚠ Some validation checks failed. Review output carefully.")
+    
+    # Save
+    save_outputs(df, args.out_dir, vars(args))
+    
+    # Summary
+    print_summary(df)
+    
+    logger.info("=" * 80)
+    logger.info("✅ DATASET GENERATION COMPLETE!")
+    logger.info("=" * 80)
+
+
+if __name__ == "__main__":
+    main()

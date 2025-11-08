@@ -21,7 +21,7 @@
 
 | Feature | V1.0 | V2.0 | V3.0 |
 |---------|------|------|------|
-| **Release Date** | Oct 2024 | Oct 2024 | Oct 2024 |
+| **Release Date** | Oct 2025 | Oct 2025 | Oct 2025 |
 | **Total Columns** | 44 | 44 | **52 (+8)** |
 | **Fraud Types** | 6 basic | 11 types | 11 types |
 | **INA-CBG Integration** | ❌ | ❌ | ✅ **NEW** |

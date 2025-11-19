@@ -1,0 +1,1236 @@
+2025-11-18 12:14:06,033 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:14:06,035 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:14:06,036 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:38:11,342 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:38:11,347 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:38:11,347 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:38:15,539 - bpjs_fraud_detection - INFO - 
+Training data loaded: 1000 samples
+2025-11-18 12:41:23,101 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:41:23,103 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:41:23,103 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:41:27,093 - bpjs_fraud_detection - INFO - 
+Training data loaded: 1000 samples
+2025-11-18 12:43:21,681 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:43:21,683 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:43:21,684 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:43:36,059 - bpjs_fraud_detection - INFO - 
+Training data loaded: 1000 samples
+2025-11-18 12:45:26,159 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:45:26,160 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:45:26,161 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:46:25,132 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:46:25,133 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:46:25,133 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:46:39,468 - bpjs_fraud_detection - INFO - 
+Training data loaded: 100 samples
+2025-11-18 12:48:50,762 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:48:50,765 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:48:50,766 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:48:57,474 - bpjs_fraud_detection - INFO - 
+Training data loaded: 100 samples
+2025-11-18 12:49:50,374 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:49:50,374 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:49:50,375 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:49:59,923 - bpjs_fraud_detection - INFO - 
+Training data loaded: 500 samples
+2025-11-18 12:50:52,162 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:50:52,163 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:50:52,163 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:50:55,869 - bpjs_fraud_detection - INFO - 
+Training data loaded: 1000 samples
+2025-11-18 12:54:42,882 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:54:42,884 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:54:42,884 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:54:48,872 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 12:59:41,006 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 12:59:41,008 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 12:59:41,009 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 12:59:44,740 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 13:15:41,231 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 13:15:41,233 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 13:15:41,234 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 13:16:11,363 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 13:20:21,768 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 13:20:21,769 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 13:20:21,770 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 13:20:25,514 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 13:26:03,276 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 13:26:03,278 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 13:26:03,278 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 13:26:06,506 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 16:09:31,912 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:09:31,915 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 16:09:31,916 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:12:11,992 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 16:18:22,161 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:18:22,164 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 16:18:22,165 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:18:27,569 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 16:28:20,540 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:28:20,542 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 16:28:20,544 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:28:23,450 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 16:29:13,040 - bpjs_fraud_detection - WARNING -    Saving model without detailed metrics...
+2025-11-18 16:29:14,351 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:29:14,364 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:29:14,365 - bpjs_fraud_detection - INFO - 
+Model artifacts saved:
+2025-11-18 16:29:14,366 - bpjs_fraud_detection - INFO -   Binary: artifacts\binary_ensemble_20251118_162912
+2025-11-18 16:29:14,367 - bpjs_fraud_detection - INFO -   Multiclass: artifacts\multiclass_ensemble_20251118_162913
+2025-11-18 16:31:54,430 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:31:54,432 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 16:31:54,433 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:39:25,062 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 16:40:29,922 - bpjs_fraud_detection - WARNING - 
+⚠️  Stage 2 results incomplete, metrics not available
+2025-11-18 16:40:29,923 - bpjs_fraud_detection - WARNING -    Saving model without detailed metrics...
+2025-11-18 16:40:31,290 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:40:31,291 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-18 16:40:31,292 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:40:31,293 - bpjs_fraud_detection - INFO - 
+Model artifacts saved:
+2025-11-18 16:40:31,295 - bpjs_fraud_detection - INFO -   Binary: artifacts\binary_ensemble_20251118_164029
+2025-11-18 16:40:31,296 - bpjs_fraud_detection - INFO -   Multiclass: artifacts\multiclass_ensemble_20251118_164029
+2025-11-18 16:43:53,393 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:43:53,413 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 16:43:53,414 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:44:45,147 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:44:45,149 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 16:44:45,150 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:55:15,351 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 16:55:15,353 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 16:55:15,354 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 16:55:59,291 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 17:10:20,855 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:10:20,857 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 17:10:20,858 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:10:49,064 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 17:20:34,823 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:20:34,826 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 17:20:34,827 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:21:03,860 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 17:33:55,749 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:33:55,751 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 17:33:55,752 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:34:19,945 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 17:34:33,008 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:34:33,009 - bpjs_fraud_detection - INFO - ✅ INFERENCE COMPLETED!
+2025-11-18 17:34:33,010 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:34:33,011 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251118_173432.csv
+2025-11-18 17:34:33,012 - bpjs_fraud_detection - INFO - Total samples: 250
+2025-11-18 17:34:33,013 - bpjs_fraud_detection - INFO - Fraud detected: 83
+2025-11-18 17:34:33,014 - bpjs_fraud_detection - INFO - Columns in output: 49
+2025-11-18 17:34:33,015 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud cases (showing first 3):
+2025-11-18 17:34:33,017 - bpjs_fraud_detection - INFO - 
+  Case 1:
+2025-11-18 17:34:33,017 - bpjs_fraud_detection - INFO -     Claim ID: C00000133
+2025-11-18 17:34:33,018 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:34:33,019 - bpjs_fraud_detection - INFO -     Confidence: 99.94%
+2025-11-18 17:34:33,019 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, age↑, billed_amount↑
+2025-11-18 17:34:33,021 - bpjs_fraud_detection - INFO - 
+  Case 2:
+2025-11-18 17:34:33,022 - bpjs_fraud_detection - INFO -     Claim ID: C00000245
+2025-11-18 17:34:33,022 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:34:33,023 - bpjs_fraud_detection - INFO -     Confidence: 98.17%
+2025-11-18 17:34:33,024 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, drug_cost↓, nik_hash_reuse_count↓, clinical_pathway_deviation_score↓
+2025-11-18 17:34:33,025 - bpjs_fraud_detection - INFO - 
+  Case 3:
+2025-11-18 17:34:33,026 - bpjs_fraud_detection - INFO -     Claim ID: C00000170
+2025-11-18 17:34:33,026 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:34:33,027 - bpjs_fraud_detection - INFO -     Confidence: 99.96%
+2025-11-18 17:34:33,027 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, rolling_avg_cost_30d↑, age↓
+2025-11-18 17:53:51,362 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:53:51,363 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 17:53:51,364 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:54:12,448 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 17:54:26,384 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:54:26,385 - bpjs_fraud_detection - INFO - ✅ INFERENCE COMPLETED!
+2025-11-18 17:54:26,386 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:54:26,387 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251118_175426.csv
+2025-11-18 17:54:26,388 - bpjs_fraud_detection - INFO - Total samples: 250
+2025-11-18 17:54:26,390 - bpjs_fraud_detection - INFO - Fraud detected: 83
+2025-11-18 17:54:26,391 - bpjs_fraud_detection - INFO - Columns in output: 49
+2025-11-18 17:54:26,393 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud cases (showing first 3):
+2025-11-18 17:54:26,395 - bpjs_fraud_detection - INFO - 
+  Case 1:
+2025-11-18 17:54:26,397 - bpjs_fraud_detection - INFO -     Claim ID: C00000133
+2025-11-18 17:54:26,398 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:54:26,399 - bpjs_fraud_detection - INFO -     Confidence: 99.94%
+2025-11-18 17:54:26,400 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, age↑, billed_amount↑
+2025-11-18 17:54:26,402 - bpjs_fraud_detection - INFO - 
+  Case 2:
+2025-11-18 17:54:26,403 - bpjs_fraud_detection - INFO -     Claim ID: C00000245
+2025-11-18 17:54:26,404 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:54:26,405 - bpjs_fraud_detection - INFO -     Confidence: 98.17%
+2025-11-18 17:54:26,406 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, drug_cost↓, nik_hash_reuse_count↓, clinical_pathway_deviation_score↓
+2025-11-18 17:54:26,407 - bpjs_fraud_detection - INFO - 
+  Case 3:
+2025-11-18 17:54:26,408 - bpjs_fraud_detection - INFO -     Claim ID: C00000170
+2025-11-18 17:54:26,408 - bpjs_fraud_detection - INFO -     Fraud Type: 17.0
+2025-11-18 17:54:26,409 - bpjs_fraud_detection - INFO -     Confidence: 99.96%
+2025-11-18 17:54:26,409 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, rolling_avg_cost_30d↑, age↓
+2025-11-18 17:57:47,817 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 17:57:47,819 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 17:57:47,820 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 17:58:45,427 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 18:05:29,955 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:05:29,957 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 18:05:29,958 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:05:32,864 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 18:06:27,315 - bpjs_fraud_detection - INFO - 
+✅ Stage 2 model saved successfully
+2025-11-18 18:06:27,316 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:06:27,317 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-18 18:06:27,319 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:06:27,320 - bpjs_fraud_detection - INFO - 
+Model artifacts saved:
+2025-11-18 18:06:27,322 - bpjs_fraud_detection - INFO -   Binary: artifacts\binary_ensemble_20251118_180625
+2025-11-18 18:06:27,324 - bpjs_fraud_detection - INFO -   Multiclass: artifacts\multiclass_ensemble_20251118_180625
+2025-11-18 18:07:58,134 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:07:58,136 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 18:07:58,137 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:15:18,406 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:15:18,407 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 18:15:18,409 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:16:05,761 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:16:05,762 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 18:16:05,763 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:16:17,832 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 18:16:17,835 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:16:17,836 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-18 18:16:17,837 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:16:41,607 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:16:41,609 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-18 18:16:41,610 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:16:41,616 - bpjs_fraud_detection - INFO - Found 1678 fraud cases for Stage 2 training
+2025-11-18 18:17:07,433 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:17:07,434 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-18 18:17:07,434 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:17:07,889 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251118_181707
+2025-11-18 18:17:07,891 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer saved: shap_explainer.pkl
+2025-11-18 18:21:25,496 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:21:25,498 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 18:21:25,498 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:22:09,996 - bpjs_fraud_detection - INFO - 
+Training data loaded: 500 samples
+2025-11-18 18:22:09,999 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:22:10,000 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-18 18:22:10,001 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:22:24,801 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:22:24,802 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-18 18:22:24,803 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:22:24,805 - bpjs_fraud_detection - WARNING - Insufficient fraud cases or missing 'fraud_type' column
+2025-11-18 18:22:24,806 - bpjs_fraud_detection - WARNING - Stage 2 training skipped
+2025-11-18 18:22:24,807 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:22:24,809 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-18 18:22:24,810 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:22:25,218 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251118_182224
+2025-11-18 18:22:25,224 - bpjs_fraud_detection - WARNING - Could not verify encoders: No module named 'LabelEncoder'
+2025-11-18 18:22:25,226 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer saved
+2025-11-18 18:22:25,227 - bpjs_fraud_detection - WARNING -   ⚠️  fraud_type_encoder NOT saved
+2025-11-18 18:22:25,229 - bpjs_fraud_detection - INFO -   ✓ Feature config saved
+2025-11-18 18:22:25,231 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer saved: shap_explainer.pkl
+2025-11-18 18:24:32,160 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:24:32,161 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 18:24:32,162 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:25:34,694 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 18:25:34,697 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:25:34,697 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-18 18:25:34,698 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:25:54,723 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:25:54,724 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-18 18:25:54,725 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:25:54,730 - bpjs_fraud_detection - INFO - Found 1678 fraud cases for Stage 2 training
+2025-11-18 18:26:18,736 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:26:18,736 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-18 18:26:18,737 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:26:19,203 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251118_182618
+2025-11-18 18:26:19,204 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-18 18:26:19,205 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-18 18:26:19,205 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-18 18:26:20,452 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251118_182619
+2025-11-18 18:26:20,453 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:26:20,453 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-18 18:26:20,454 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:26:20,455 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-18 18:26:20,455 - bpjs_fraud_detection - INFO -   Total samples: 10,000
+2025-11-18 18:26:20,456 - bpjs_fraud_detection - INFO -   Fraud cases: 1678 (16.78%)
+2025-11-18 18:26:20,457 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-18 18:26:20,458 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251118_182618
+2025-11-18 18:26:20,458 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251118_182619
+2025-11-18 18:26:20,459 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-18 18:26:20,459 - bpjs_fraud_detection - INFO -   Accuracy:  0.9720
+2025-11-18 18:26:20,460 - bpjs_fraud_detection - INFO -   F1-Score:  0.9097
+2025-11-18 18:26:20,460 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9402
+2025-11-18 18:26:20,461 - bpjs_fraud_detection - INFO -   Threshold: 0.2000
+2025-11-18 18:26:20,462 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-18 18:26:20,462 - bpjs_fraud_detection - INFO -   Accuracy:  0.9495
+2025-11-18 18:26:20,463 - bpjs_fraud_detection - INFO -   F1-Score:  0.9387
+2025-11-18 18:26:20,464 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5636
+2025-11-18 18:26:20,464 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-18 18:26:20,465 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-18 18:26:20,466 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-18 18:26:20,466 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-18 18:26:20,467 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-18 18:26:20,467 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-18 18:26:20,468 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-18 18:26:20,468 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:03,220 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:03,221 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 18:28:03,222 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:28:15,437 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 18:28:15,440 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:15,440 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-18 18:28:15,441 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:28:36,150 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:36,151 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-18 18:28:36,152 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:28:36,156 - bpjs_fraud_detection - INFO - Found 1678 fraud cases for Stage 2 training
+2025-11-18 18:28:57,100 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:57,101 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-18 18:28:57,102 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:28:57,518 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251118_182857
+2025-11-18 18:28:57,519 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-18 18:28:57,521 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-18 18:28:57,522 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-18 18:28:58,691 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251118_182857
+2025-11-18 18:28:58,694 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:28:58,695 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-18 18:28:58,697 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:28:58,698 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-18 18:28:58,699 - bpjs_fraud_detection - INFO -   Total samples: 10,000
+2025-11-18 18:28:58,701 - bpjs_fraud_detection - INFO -   Fraud cases: 1678 (16.78%)
+2025-11-18 18:28:58,702 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-18 18:28:58,703 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251118_182857
+2025-11-18 18:28:58,704 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251118_182857
+2025-11-18 18:28:58,706 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-18 18:28:58,708 - bpjs_fraud_detection - INFO -   Accuracy:  0.9720
+2025-11-18 18:28:58,710 - bpjs_fraud_detection - INFO -   F1-Score:  0.9097
+2025-11-18 18:28:58,711 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9402
+2025-11-18 18:28:58,713 - bpjs_fraud_detection - INFO -   Threshold: 0.2000
+2025-11-18 18:28:58,714 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-18 18:28:58,715 - bpjs_fraud_detection - INFO -   Accuracy:  0.9495
+2025-11-18 18:28:58,716 - bpjs_fraud_detection - INFO -   F1-Score:  0.9387
+2025-11-18 18:28:58,717 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5636
+2025-11-18 18:28:58,718 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-18 18:28:58,720 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-18 18:28:58,722 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-18 18:28:58,723 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-18 18:28:58,725 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-18 18:28:58,726 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-18 18:28:58,728 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-18 18:28:58,729 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:30:19,987 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:30:19,989 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 18:30:19,990 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:31:28,869 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 18:43:59,963 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 18:43:59,965 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 18:43:59,966 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 18:44:38,896 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 19:55:23,168 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:55:23,173 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-18 19:55:23,179 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:56:07,179 - bpjs_fraud_detection - INFO - 
+Training data loaded: 10000 samples
+2025-11-18 19:56:07,182 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:56:07,183 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-18 19:56:07,184 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:56:33,525 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:56:33,526 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-18 19:56:33,527 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:56:33,534 - bpjs_fraud_detection - INFO - Found 1678 fraud cases for Stage 2 training
+2025-11-18 19:56:59,511 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:56:59,512 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-18 19:56:59,513 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:57:00,121 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251118_195659
+2025-11-18 19:57:00,123 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-18 19:57:00,124 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-18 19:57:00,125 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-18 19:57:01,546 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251118_195700
+2025-11-18 19:57:01,548 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:57:01,549 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-18 19:57:01,550 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:57:01,551 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-18 19:57:01,553 - bpjs_fraud_detection - INFO -   Total samples: 10,000
+2025-11-18 19:57:01,555 - bpjs_fraud_detection - INFO -   Fraud cases: 1678 (16.78%)
+2025-11-18 19:57:01,556 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-18 19:57:01,559 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251118_195659
+2025-11-18 19:57:01,560 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251118_195700
+2025-11-18 19:57:01,561 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-18 19:57:01,562 - bpjs_fraud_detection - INFO -   Accuracy:  0.9720
+2025-11-18 19:57:01,563 - bpjs_fraud_detection - INFO -   F1-Score:  0.9097
+2025-11-18 19:57:01,565 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9402
+2025-11-18 19:57:01,565 - bpjs_fraud_detection - INFO -   Threshold: 0.2000
+2025-11-18 19:57:01,566 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-18 19:57:01,566 - bpjs_fraud_detection - INFO -   Accuracy:  0.9495
+2025-11-18 19:57:01,569 - bpjs_fraud_detection - INFO -   F1-Score:  0.9387
+2025-11-18 19:57:01,570 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5636
+2025-11-18 19:57:01,571 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-18 19:57:01,571 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-18 19:57:01,572 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-18 19:57:01,572 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-18 19:57:01,573 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-18 19:57:01,573 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-18 19:57:01,574 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-18 19:57:01,575 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:58:16,437 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:58:16,438 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 19:58:16,439 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 19:59:56,354 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 19:59:56,356 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-18 19:59:56,357 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 20:00:26,819 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-18 20:00:39,945 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-18 20:00:39,946 - bpjs_fraud_detection - INFO - ✅ INFERENCE COMPLETED!
+2025-11-18 20:00:39,948 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-18 20:00:39,949 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251118_200039.csv
+2025-11-18 20:00:39,951 - bpjs_fraud_detection - INFO - Total samples: 250
+2025-11-18 20:00:39,952 - bpjs_fraud_detection - INFO - Fraud detected: 83
+2025-11-18 20:00:39,953 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-18 20:00:39,956 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud cases (showing first 3):
+2025-11-18 20:00:39,957 - bpjs_fraud_detection - INFO - 
+  Case 1:
+2025-11-18 20:00:39,958 - bpjs_fraud_detection - INFO -     Claim ID: C00000133
+2025-11-18 20:00:39,959 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-18 20:00:39,961 - bpjs_fraud_detection - INFO -     Confidence: 99.94%
+2025-11-18 20:00:39,962 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, provider_monthly_claims↓, age↑
+2025-11-18 20:00:39,963 - bpjs_fraud_detection - INFO - 
+  Case 2:
+2025-11-18 20:00:39,964 - bpjs_fraud_detection - INFO -     Claim ID: C00000245
+2025-11-18 20:00:39,965 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-18 20:00:39,967 - bpjs_fraud_detection - INFO -     Confidence: 98.17%
+2025-11-18 20:00:39,968 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, selisih_klaim↑, billed_amount↑, nik_hash_reuse_count↓
+2025-11-18 20:00:39,970 - bpjs_fraud_detection - INFO - 
+  Case 3:
+2025-11-18 20:00:39,970 - bpjs_fraud_detection - INFO -     Claim ID: C00000170
+2025-11-18 20:00:39,972 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-18 20:00:39,973 - bpjs_fraud_detection - INFO -     Confidence: 99.96%
+2025-11-18 20:00:39,974 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, visit_count_30d↓, drug_ratio↓
+2025-11-19 09:52:27,312 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 09:52:27,315 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 09:52:27,316 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 09:56:13,786 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 09:56:13,788 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 09:56:13,789 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 09:57:35,228 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 250 samples
+2025-11-19 09:57:49,614 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 09:57:49,615 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 09:57:49,616 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 09:57:49,617 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_095749.csv
+2025-11-19 09:57:49,618 - bpjs_fraud_detection - INFO - Total samples: 250
+2025-11-19 09:57:49,620 - bpjs_fraud_detection - INFO - Fraud detected: 83
+2025-11-19 09:57:49,621 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 09:58:20,731 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 09:58:20,732 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 09:58:20,733 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 09:58:20,734 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 10:19:16,229 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 10:19:16,240 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 10:19:16,241 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 10:19:16,242 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_101916.csv
+2025-11-19 10:19:16,243 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 10:19:16,251 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 10:19:16,253 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000133
+2025-11-19 10:19:16,254 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 10:19:16,255 - bpjs_fraud_detection - INFO -   Confidence: 99.94%
+2025-11-19 10:19:16,256 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 10:19:16,257 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+Klaim dengan ID C00000133 terindikasi sebagai fraud tipe upcoding_diagnosis dengan probabilitas 99.9%. Klaim ini tidak mencantumkan diagnosis, prosedur, atau jenis pelayanan, serta tarif INA-CBG dan tagihan yang diajukan adalah 0. Hal ini menunjukkan adanya ketidakberesan dalam pengajuan klaim yang seharusnya mencantumkan informasi yang jelas dan lengkap.
+
+### 2. Analisis Fitur Kunci yang Mencurigakan
+- **Tidak Ada Diagnosis atau Prosedur**: Klaim ini tidak menyertakan di...
+2025-11-19 10:19:16,267 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud cases (showing first 3):
+2025-11-19 10:19:16,273 - bpjs_fraud_detection - INFO - 
+  Case 1:
+2025-11-19 10:19:16,275 - bpjs_fraud_detection - INFO -     Claim ID: C00000133
+2025-11-19 10:19:16,278 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-19 10:19:16,278 - bpjs_fraud_detection - INFO -     Confidence: 99.94%
+2025-11-19 10:19:16,279 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, provider_monthly_claims↓, age↑
+2025-11-19 10:19:16,282 - bpjs_fraud_detection - INFO - 
+  Case 2:
+2025-11-19 10:19:16,282 - bpjs_fraud_detection - INFO -     Claim ID: C00000245
+2025-11-19 10:19:16,283 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-19 10:19:16,283 - bpjs_fraud_detection - INFO -     Confidence: 98.17%
+2025-11-19 10:19:16,284 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, selisih_klaim↑, billed_amount↑, nik_hash_reuse_count↓
+2025-11-19 10:19:16,285 - bpjs_fraud_detection - INFO - 
+  Case 3:
+2025-11-19 10:19:16,285 - bpjs_fraud_detection - INFO -     Claim ID: C00000170
+2025-11-19 10:19:16,286 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-19 10:19:16,287 - bpjs_fraud_detection - INFO -     Confidence: 99.96%
+2025-11-19 10:19:16,287 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, clinical_pathway_deviation_score↑, provider_claim_share↓, visit_count_30d↓, drug_ratio↓
+2025-11-19 13:45:45,530 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 13:45:45,532 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 13:45:45,533 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 13:46:18,713 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 100 samples
+2025-11-19 13:46:32,990 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 13:46:32,992 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 13:46:32,993 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 13:46:32,995 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_134632.csv
+2025-11-19 13:46:32,996 - bpjs_fraud_detection - INFO - Total samples: 100
+2025-11-19 13:46:32,998 - bpjs_fraud_detection - INFO - Fraud detected: 54
+2025-11-19 13:46:32,999 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 13:47:12,697 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 13:47:12,699 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 13:47:12,700 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 13:47:12,701 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 14:04:34,391 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 14:04:34,401 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 14:04:34,402 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 14:04:34,403 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_140434.csv
+2025-11-19 14:04:34,404 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 14:04:34,412 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 14:04:34,414 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000036
+2025-11-19 14:04:34,415 - bpjs_fraud_detection - INFO -   Fraud Type: graph_bipartite_collusion
+2025-11-19 14:04:34,417 - bpjs_fraud_detection - INFO -   Confidence: 99.26%
+2025-11-19 14:04:34,418 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 14:04:34,419 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+Klaim dengan ID C00000036 menunjukkan indikasi fraud dengan probabilitas 99.3% berdasarkan analisis graph_bipartite_collusion. Klaim ini tidak mencantumkan diagnosis atau prosedur yang jelas, meskipun tagihan yang diajukan jauh melebihi tarif INA-CBG yang ditetapkan. Selisih klaim sebesar 64.891 menunjukkan adanya markup yang tidak wajar.
+
+### 2. Analisis Fitur Kunci yang Mencurigakan
+- **Tidak ada diagnosis atau prosedur yang dicantumkan**: Klaim ini tidak menyertakan di...
+2025-11-19 14:04:34,423 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud cases (showing first 3):
+2025-11-19 14:04:34,427 - bpjs_fraud_detection - INFO - 
+  Case 1:
+2025-11-19 14:04:34,428 - bpjs_fraud_detection - INFO -     Claim ID: C00000036
+2025-11-19 14:04:34,429 - bpjs_fraud_detection - INFO -     Fraud Type: graph_bipartite_collusion
+2025-11-19 14:04:34,430 - bpjs_fraud_detection - INFO -     Confidence: 99.26%
+2025-11-19 14:04:34,430 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, provider_monthly_claims↓, billed_amount↑, procedure_cost↓
+2025-11-19 14:04:34,431 - bpjs_fraud_detection - INFO - 
+  Case 2:
+2025-11-19 14:04:34,432 - bpjs_fraud_detection - INFO -     Claim ID: C00000056
+2025-11-19 14:04:34,433 - bpjs_fraud_detection - INFO -     Fraud Type: phantom_billing
+2025-11-19 14:04:34,434 - bpjs_fraud_detection - INFO -     Confidence: 97.78%
+2025-11-19 14:04:34,434 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, clinical_pathway_deviation_score↑, age↑, provider_monthly_claims↓
+2025-11-19 14:04:34,436 - bpjs_fraud_detection - INFO - 
+  Case 3:
+2025-11-19 14:04:34,437 - bpjs_fraud_detection - INFO -     Claim ID: C00000016
+2025-11-19 14:04:34,437 - bpjs_fraud_detection - INFO -     Fraud Type: upcoding_diagnosis
+2025-11-19 14:04:34,438 - bpjs_fraud_detection - INFO -     Confidence: 97.18%
+2025-11-19 14:04:34,439 - bpjs_fraud_detection - INFO -     Key Features: claim_ratio↑, provider_claim_share↓, procedure_cost↑, rolling_avg_cost_30d↓, selisih_klaim↓
+2025-11-19 14:10:22,356 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 14:10:22,358 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 14:10:22,359 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 14:14:00,525 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 30 samples
+2025-11-19 14:14:13,817 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 14:14:13,819 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 14:14:13,820 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 14:14:13,822 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_141413.csv
+2025-11-19 14:14:13,824 - bpjs_fraud_detection - INFO - Total samples: 30
+2025-11-19 14:14:13,826 - bpjs_fraud_detection - INFO - Fraud detected: 24
+2025-11-19 14:14:13,827 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 14:14:43,851 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 14:14:43,852 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 14:14:43,853 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 14:14:43,854 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 14:48:02,201 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 14:48:02,206 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 14:48:02,207 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 14:48:02,209 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_144802.csv
+2025-11-19 14:48:02,210 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 14:48:02,212 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 14:48:02,214 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000026
+2025-11-19 14:48:02,214 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 14:48:02,215 - bpjs_fraud_detection - INFO -   Confidence: 97.53%
+2025-11-19 14:48:02,216 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 14:48:02,216 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+Klaim dengan ID C00000026 terindikasi sebagai fraud dengan tipe upcoding_diagnosis. Klaim ini menunjukkan bahwa tidak ada diagnosis atau prosedur yang tercantum, namun tagihan yang diajukan jauh melebihi tarif INA-CBG yang ditetapkan. Dengan probabilitas fraud sebesar 97.5%, klaim ini mencurigakan dan berpotensi merugikan BPJS Kesehatan.
+
+### 2. Analisis Fitur Kunci yang Mencurigakan
+- **Tidak Ada Diagnosis atau Prosedur**: Klaim ini tidak mencantumkan diagnosis atau pros...
+2025-11-19 14:48:02,219 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000026
+2025-11-19 14:48:02,219 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 14:48:02,220 - bpjs_fraud_detection - INFO -   Confidence: 97.53%
+2025-11-19 14:48:02,221 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 14:48:02,222 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+Klaim dengan ID C00000026 terindikasi sebagai fraud dengan tipe upcoding_diagnosis. Klaim ini menunjukkan bahwa tidak ada diagnosis atau prosedur yang tercantum, namun tagihan yang diajukan jauh melebihi tarif INA-CBG yang ditetapkan. Dengan probabilitas fraud sebesar 97.5%, klaim ini mencurigakan dan berpotensi merugikan BPJS Kesehatan.
+
+### 2. Analisis Fitur Kunci yang Mencurigakan
+- **Tidak Ada Diagnosis atau Prosedur**: Klaim ini tidak mencantumkan diagnosis atau pros...
+2025-11-19 15:05:28,669 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:05:28,674 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 15:05:28,676 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:06:16,970 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 30 samples
+2025-11-19 15:06:33,003 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:06:33,005 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 15:06:33,006 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:06:33,007 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_150632.csv
+2025-11-19 15:06:33,008 - bpjs_fraud_detection - INFO - Total samples: 30
+2025-11-19 15:06:33,011 - bpjs_fraud_detection - INFO - Fraud detected: 24
+2025-11-19 15:06:33,012 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 15:07:15,104 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:07:15,105 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 15:07:15,107 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:07:15,108 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 15:09:48,485 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:09:48,487 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 15:09:48,488 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:10:07,370 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 30 samples
+2025-11-19 15:10:28,145 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:10:28,146 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 15:10:28,147 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:10:28,148 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_151028.csv
+2025-11-19 15:10:28,148 - bpjs_fraud_detection - INFO - Total samples: 30
+2025-11-19 15:10:28,151 - bpjs_fraud_detection - INFO - Fraud detected: 24
+2025-11-19 15:10:28,153 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 15:11:14,509 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:11:14,509 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 15:11:14,510 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:11:25,952 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 30 samples
+2025-11-19 15:11:36,847 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:11:36,848 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 15:11:36,849 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:11:36,851 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_151136.csv
+2025-11-19 15:11:36,852 - bpjs_fraud_detection - INFO - Total samples: 30
+2025-11-19 15:11:36,854 - bpjs_fraud_detection - INFO - Fraud detected: 24
+2025-11-19 15:11:36,855 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 15:12:11,487 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:12:11,489 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 15:12:11,490 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:12:11,491 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 15:20:50,818 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:20:50,820 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 15:20:50,822 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:21:04,020 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 30 samples
+2025-11-19 15:21:19,671 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:21:19,673 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 15:21:19,675 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:21:19,677 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_152119.csv
+2025-11-19 15:21:19,678 - bpjs_fraud_detection - INFO - Total samples: 30
+2025-11-19 15:21:19,680 - bpjs_fraud_detection - INFO - Fraud detected: 24
+2025-11-19 15:21:19,681 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 15:21:58,774 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:21:58,776 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 15:21:58,777 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:21:58,778 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 15:28:40,051 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:28:40,053 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 15:28:40,054 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:28:40,055 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_152840.csv
+2025-11-19 15:28:40,056 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 15:28:40,059 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 15:28:40,062 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000026
+2025-11-19 15:28:40,063 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 15:28:40,064 - bpjs_fraud_detection - INFO -   Confidence: 97.53%
+2025-11-19 15:28:40,066 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 15:28:40,067 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+- **Claim ID**: C00000026 menunjukkan indikasi fraud dengan tipe **upcoding_diagnosis**.
+- **Tarif INA-CBG**: Rp 4,288,700.
+- **Tagihan (billed)**: Rp 10,558,628.
+- **Selisih Klaim**: Rp 1,769,950.
+- **Claim Ratio**: 2.10x tarif, yang menunjukkan bahwa tagihan yang diajukan lebih dari dua kali lipat tarif resmi, mengindikasikan potensi upcoding.
+
+### 2. Analisis Fitur Kunci (SHAP)
+- **Diagnosis**: M-4-10-I (N/A) - Diagnosis ini tidak sesuai dengan klasifikasi yang umum di...
+2025-11-19 15:28:40,071 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000026
+2025-11-19 15:28:40,073 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 15:28:40,076 - bpjs_fraud_detection - INFO -   Confidence: 97.53%
+2025-11-19 15:28:40,079 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 15:28:40,080 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+- **Claim ID**: C00000026 menunjukkan indikasi fraud dengan tipe **upcoding_diagnosis**.
+- **Tarif INA-CBG**: Rp 4,288,700.
+- **Tagihan (billed)**: Rp 10,558,628.
+- **Selisih Klaim**: Rp 1,769,950.
+- **Claim Ratio**: 2.10x tarif, yang menunjukkan bahwa tagihan yang diajukan lebih dari dua kali lipat tarif resmi, mengindikasikan potensi upcoding.
+
+### 2. Analisis Fitur Kunci (SHAP)
+- **Diagnosis**: M-4-10-I (N/A) - Diagnosis ini tidak sesuai dengan klasifikasi yang umum di...
+2025-11-19 15:43:56,425 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:43:56,427 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 15:43:56,429 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:46:44,220 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 10 samples
+2025-11-19 15:46:56,686 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:46:56,688 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 15:46:56,689 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:46:56,689 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_154656.csv
+2025-11-19 15:46:56,691 - bpjs_fraud_detection - INFO - Total samples: 10
+2025-11-19 15:46:56,692 - bpjs_fraud_detection - INFO - Fraud detected: 9
+2025-11-19 15:46:56,694 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 15:47:26,881 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 15:47:26,882 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 15:47:26,884 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 15:47:26,885 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 16:09:07,108 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:09:07,112 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 16:09:07,112 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:09:41,459 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 10 samples
+2025-11-19 16:09:54,899 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:09:54,901 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 16:09:54,902 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:09:54,903 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_160954.csv
+2025-11-19 16:09:54,904 - bpjs_fraud_detection - INFO - Total samples: 10
+2025-11-19 16:09:54,906 - bpjs_fraud_detection - INFO - Fraud detected: 9
+2025-11-19 16:09:54,907 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 16:10:37,026 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:10:37,027 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 16:10:37,028 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:10:37,030 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 16:10:50,593 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:10:50,594 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 16:10:50,596 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:10:50,597 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_161050.csv
+2025-11-19 16:10:50,598 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 16:10:50,601 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 16:10:50,602 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000005
+2025-11-19 16:10:50,604 - bpjs_fraud_detection - INFO -   Fraud Type: graph_bipartite_collusion
+2025-11-19 16:10:50,605 - bpjs_fraud_detection - INFO -   Confidence: 98.35%
+2025-11-19 16:10:50,606 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 16:10:50,607 - bpjs_fraud_detection - INFO -   Error: name 'diagnosis_name' is not defined...
+2025-11-19 16:10:50,610 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000005
+2025-11-19 16:10:50,611 - bpjs_fraud_detection - INFO -   Fraud Type: graph_bipartite_collusion
+2025-11-19 16:10:50,613 - bpjs_fraud_detection - INFO -   Confidence: 98.35%
+2025-11-19 16:10:50,614 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 16:10:50,615 - bpjs_fraud_detection - INFO -   Error: name 'diagnosis_name' is not defined...
+2025-11-19 16:16:16,064 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:16:16,066 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:16:16,068 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:16:20,916 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:16:20,920 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:16:20,921 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:16:20,922 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:22:30,095 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:22:30,096 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:22:30,098 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:23:15,062 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:23:15,067 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:23:15,068 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:23:15,070 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:23:52,043 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:23:52,044 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 16:23:52,045 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:23:52,055 - bpjs_fraud_detection - INFO - Found 3390 fraud cases for Stage 2 training
+2025-11-19 16:24:27,457 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:24:27,458 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-19 16:24:27,459 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:24:27,948 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251119_162427
+2025-11-19 16:24:27,950 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-19 16:24:27,952 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-19 16:24:27,953 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-19 16:24:28,941 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251119_162427
+2025-11-19 16:24:28,945 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:24:28,946 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-19 16:24:28,947 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:24:28,950 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-19 16:24:28,952 - bpjs_fraud_detection - INFO -   Total samples: 20,000
+2025-11-19 16:24:28,955 - bpjs_fraud_detection - INFO -   Fraud cases: 3390 (16.95%)
+2025-11-19 16:24:28,961 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-19 16:24:28,963 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251119_162427
+2025-11-19 16:24:28,965 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251119_162427
+2025-11-19 16:24:28,966 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-19 16:24:28,966 - bpjs_fraud_detection - INFO -   Accuracy:  0.9810
+2025-11-19 16:24:28,967 - bpjs_fraud_detection - INFO -   F1-Score:  0.9406
+2025-11-19 16:24:28,969 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9543
+2025-11-19 16:24:28,971 - bpjs_fraud_detection - INFO -   Threshold: 0.2800
+2025-11-19 16:24:28,972 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-19 16:24:28,973 - bpjs_fraud_detection - INFO -   Accuracy:  0.9437
+2025-11-19 16:24:28,974 - bpjs_fraud_detection - INFO -   F1-Score:  0.9305
+2025-11-19 16:24:28,976 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5561
+2025-11-19 16:24:28,978 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-19 16:24:28,979 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-19 16:24:28,980 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-19 16:24:28,981 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-19 16:24:28,982 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-19 16:24:28,982 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-19 16:24:28,983 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-19 16:24:28,984 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:28:55,646 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:28:55,648 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:28:55,650 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:29:07,833 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:29:07,836 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:29:07,837 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:29:07,838 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:32:19,707 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:32:19,709 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:32:19,710 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:33:03,442 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:33:03,447 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:33:03,448 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:33:03,450 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:36:09,616 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:36:09,618 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:36:09,619 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:36:49,407 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:36:49,411 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:36:49,412 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:36:49,414 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:47:48,672 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:47:48,674 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:47:48,675 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:48:11,393 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:48:11,397 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:48:11,398 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:48:11,399 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:48:48,571 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:48:48,580 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 16:48:48,585 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:48:48,638 - bpjs_fraud_detection - INFO - Found 3390 fraud cases for Stage 2 training
+2025-11-19 16:51:49,512 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:51:49,514 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 16:51:49,515 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:51:54,975 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 16:51:54,979 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:51:54,980 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 16:51:54,981 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:52:26,008 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:52:26,010 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 16:52:26,011 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:52:26,015 - bpjs_fraud_detection - INFO - Found 3390 fraud cases for Stage 2 training
+2025-11-19 16:53:04,543 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:53:04,544 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-19 16:53:04,545 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:53:05,006 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251119_165304
+2025-11-19 16:53:05,009 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-19 16:53:05,011 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-19 16:53:05,013 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-19 16:53:06,014 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251119_165305
+2025-11-19 16:53:06,015 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 16:53:06,016 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-19 16:53:06,017 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 16:53:06,018 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-19 16:53:06,020 - bpjs_fraud_detection - INFO -   Total samples: 20,000
+2025-11-19 16:53:06,022 - bpjs_fraud_detection - INFO -   Fraud cases: 3390 (16.95%)
+2025-11-19 16:53:06,023 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-19 16:53:06,025 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251119_165304
+2025-11-19 16:53:06,027 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251119_165305
+2025-11-19 16:53:06,029 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-19 16:53:06,031 - bpjs_fraud_detection - INFO -   Accuracy:  0.9810
+2025-11-19 16:53:06,032 - bpjs_fraud_detection - INFO -   F1-Score:  0.9406
+2025-11-19 16:53:06,033 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9543
+2025-11-19 16:53:06,034 - bpjs_fraud_detection - INFO -   Threshold: 0.2800
+2025-11-19 16:53:06,036 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-19 16:53:06,038 - bpjs_fraud_detection - INFO -   Accuracy:  0.9437
+2025-11-19 16:53:06,040 - bpjs_fraud_detection - INFO -   F1-Score:  0.9305
+2025-11-19 16:53:06,041 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5561
+2025-11-19 16:53:06,043 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-19 16:53:06,045 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-19 16:53:06,045 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-19 16:53:06,046 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-19 16:53:06,046 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-19 16:53:06,047 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-19 16:53:06,048 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-19 16:53:06,048 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:02:55,748 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:02:55,751 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 17:02:55,752 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:03:05,344 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 17:03:05,348 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:03:05,348 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 17:03:05,349 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:03:38,004 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:03:38,005 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 17:03:38,007 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:03:38,040 - bpjs_fraud_detection - INFO - Found 3390 fraud cases for Stage 2 training
+2025-11-19 17:04:14,124 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:04:14,125 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-19 17:04:14,126 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:04:14,805 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251119_170414
+2025-11-19 17:04:14,806 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-19 17:04:14,808 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-19 17:04:14,811 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-19 17:04:16,107 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251119_170414
+2025-11-19 17:04:16,110 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:04:16,111 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-19 17:04:16,112 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:04:16,114 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-19 17:04:16,115 - bpjs_fraud_detection - INFO -   Total samples: 20,000
+2025-11-19 17:04:16,117 - bpjs_fraud_detection - INFO -   Fraud cases: 3390 (16.95%)
+2025-11-19 17:04:16,121 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-19 17:04:16,123 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251119_170414
+2025-11-19 17:04:16,124 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251119_170414
+2025-11-19 17:04:16,125 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-19 17:04:16,127 - bpjs_fraud_detection - INFO -   Accuracy:  0.9810
+2025-11-19 17:04:16,128 - bpjs_fraud_detection - INFO -   F1-Score:  0.9406
+2025-11-19 17:04:16,130 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9543
+2025-11-19 17:04:16,132 - bpjs_fraud_detection - INFO -   Threshold: 0.2800
+2025-11-19 17:04:16,132 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-19 17:04:16,134 - bpjs_fraud_detection - INFO -   Accuracy:  0.9437
+2025-11-19 17:04:16,135 - bpjs_fraud_detection - INFO -   F1-Score:  0.9305
+2025-11-19 17:04:16,136 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5561
+2025-11-19 17:04:16,136 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-19 17:04:16,137 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-19 17:04:16,137 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-19 17:04:16,139 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-19 17:04:16,140 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-19 17:04:16,141 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-19 17:04:16,142 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-19 17:04:16,143 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:13:00,637 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:13:00,639 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 17:13:00,640 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:13:37,199 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 17:13:37,203 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:13:37,204 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 17:13:37,204 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:14:38,424 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:14:38,426 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 17:14:38,427 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:15:05,791 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 17:15:05,794 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:15:05,795 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 17:15:05,796 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:18:21,020 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:18:21,022 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 17:18:21,023 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:18:27,729 - bpjs_fraud_detection - INFO - 
+Training data loaded: 20000 samples
+2025-11-19 17:18:27,733 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:18:27,734 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 17:18:27,735 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:18:58,767 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:18:58,768 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 17:18:58,771 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:18:58,789 - bpjs_fraud_detection - INFO - Found 3390 fraud cases for Stage 2 training
+2025-11-19 17:19:35,703 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:19:35,703 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-19 17:19:35,704 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:19:36,166 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251119_171935
+2025-11-19 17:19:36,167 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-19 17:19:36,168 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-19 17:19:36,169 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-19 17:19:37,222 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251119_171936
+2025-11-19 17:19:37,224 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:19:37,224 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-19 17:19:37,225 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:19:37,225 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-19 17:19:37,226 - bpjs_fraud_detection - INFO -   Total samples: 20,000
+2025-11-19 17:19:37,226 - bpjs_fraud_detection - INFO -   Fraud cases: 3390 (16.95%)
+2025-11-19 17:19:37,227 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-19 17:19:37,227 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251119_171935
+2025-11-19 17:19:37,228 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251119_171936
+2025-11-19 17:19:37,229 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-19 17:19:37,230 - bpjs_fraud_detection - INFO -   Accuracy:  0.9810
+2025-11-19 17:19:37,231 - bpjs_fraud_detection - INFO -   F1-Score:  0.9406
+2025-11-19 17:19:37,232 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9543
+2025-11-19 17:19:37,232 - bpjs_fraud_detection - INFO -   Threshold: 0.2800
+2025-11-19 17:19:37,233 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-19 17:19:37,233 - bpjs_fraud_detection - INFO -   Accuracy:  0.9437
+2025-11-19 17:19:37,235 - bpjs_fraud_detection - INFO -   F1-Score:  0.9305
+2025-11-19 17:19:37,236 - bpjs_fraud_detection - INFO -   F1-Macro:  0.5561
+2025-11-19 17:19:37,236 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-19 17:19:37,237 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-19 17:19:37,237 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-19 17:19:37,238 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-19 17:19:37,239 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-19 17:19:37,239 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-19 17:19:37,240 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-19 17:19:37,241 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:21:45,537 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:21:45,538 - bpjs_fraud_detection - INFO - INFERENCE MODE
+2025-11-19 17:21:45,538 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:22:30,127 - bpjs_fraud_detection - INFO - 
+Inference data loaded: 10 samples
+2025-11-19 17:22:41,434 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:22:41,434 - bpjs_fraud_detection - INFO - ✅ ML INFERENCE COMPLETED!
+2025-11-19 17:22:41,435 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:22:41,435 - bpjs_fraud_detection - INFO - 
+Results saved to: output\fraud_detection_results_20251119_172241.csv
+2025-11-19 17:22:41,435 - bpjs_fraud_detection - INFO - Total samples: 10
+2025-11-19 17:22:41,437 - bpjs_fraud_detection - INFO - Fraud detected: 9
+2025-11-19 17:22:41,438 - bpjs_fraud_detection - INFO - Columns in output: 67
+2025-11-19 17:23:11,050 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:23:11,051 - bpjs_fraud_detection - INFO - RAG SYSTEM DETECTED
+2025-11-19 17:23:11,051 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:23:11,052 - bpjs_fraud_detection - INFO - Path: C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG
+2025-11-19 17:26:00,840 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 17:26:00,841 - bpjs_fraud_detection - INFO - ✅ RAG INTEGRATION COMPLETED!
+2025-11-19 17:26:00,843 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 17:26:00,843 - bpjs_fraud_detection - INFO - 
+Full output saved to: output\fraud_detection_with_rag_20251119_172600.csv
+2025-11-19 17:26:00,844 - bpjs_fraud_detection - INFO - Total columns: 71
+2025-11-19 17:26:00,847 - bpjs_fraud_detection - INFO - 
+📊 Sample fraud case with RAG explanation:
+2025-11-19 17:26:00,848 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000005
+2025-11-19 17:26:00,850 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 17:26:00,851 - bpjs_fraud_detection - INFO -   Confidence: 97.72%
+2025-11-19 17:26:00,852 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 17:26:00,853 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+- **Tipe Fraud**: Upcoding diagnosis
+- **Probabilitas Fraud**: 97.7%
+- **Tarif INA-CBG**: Rp 906,900
+- **Tagihan (billed)**: Rp 1,203,371
+- **Selisih Klaim**: Rp 142,763
+- **Claim Ratio**: 3.21x tarif
+- **Analisis**: Terdapat indikasi kuat bahwa klaim ini merupakan upcoding diagnosis, mengingat tagihan yang diajukan jauh melebihi tarif INA-CBG yang berlaku, dengan rasio klaim 3.21 kali tarif.
+
+### 2. Analisis Fitur Kunci (SHAP)
+- **Kode Diagnosis**: Tidak diketahui. Ketid...
+2025-11-19 17:26:00,856 - bpjs_fraud_detection - INFO - 
+  Claim ID: C00000005
+2025-11-19 17:26:00,857 - bpjs_fraud_detection - INFO -   Fraud Type: upcoding_diagnosis
+2025-11-19 17:26:00,858 - bpjs_fraud_detection - INFO -   Confidence: 97.72%
+2025-11-19 17:26:00,859 - bpjs_fraud_detection - INFO - 
+  RAG Explanation (first 500 chars):
+2025-11-19 17:26:00,860 - bpjs_fraud_detection - INFO -   ### 1. Ringkasan Temuan
+- **Tipe Fraud**: Upcoding diagnosis
+- **Probabilitas Fraud**: 97.7%
+- **Tarif INA-CBG**: Rp 906,900
+- **Tagihan (billed)**: Rp 1,203,371
+- **Selisih Klaim**: Rp 142,763
+- **Claim Ratio**: 3.21x tarif
+- **Analisis**: Terdapat indikasi kuat bahwa klaim ini merupakan upcoding diagnosis, mengingat tagihan yang diajukan jauh melebihi tarif INA-CBG yang berlaku, dengan rasio klaim 3.21 kali tarif.
+
+### 2. Analisis Fitur Kunci (SHAP)
+- **Kode Diagnosis**: Tidak diketahui. Ketid...

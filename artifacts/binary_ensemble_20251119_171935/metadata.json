@@ -1,0 +1,14 @@
+{
+  "accuracy": 0.981,
+  "f1_score": 0.940625,
+  "roc_auc": 0.9542719582864926,
+  "optimal_threshold": 0.2799999999999999,
+  "threshold_metric": "f1",
+  "stage": "binary",
+  "model_name": "ensemble",
+  "timestamp": "20251119_171935",
+  "save_date": "2025-11-19T17:19:36.159077",
+  "artifacts_dir": "artifacts\\binary_ensemble_20251119_171935",
+  "shap_available": true,
+  "has_ensemble": false
+}

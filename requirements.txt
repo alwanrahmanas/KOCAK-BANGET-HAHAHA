@@ -1,0 +1,36 @@
+# Core ML libraries
+pandas>=1.5.0
+numpy>=1.23.0
+scikit-learn>=1.2.0
+xgboost>=1.7.0
+lightgbm>=3.3.0
+
+# SHAP for explainability
+shap>=0.41.0
+cloudpickle>=2.2.0
+
+# Utilities
+pyyaml>=6.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Development
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Existing ML dependencies
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+shap
+
+# RAG System dependencies
+langchain
+langchain-openai
+langchain-community
+supabase
+python-dotenv
+openai
+tiktoken

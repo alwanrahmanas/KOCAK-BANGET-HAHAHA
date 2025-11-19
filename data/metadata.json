@@ -1,0 +1,695 @@
+{
+  "dataset_info": {
+    "name": "BPJS Healthcare Claims Fraud Detection Dataset",
+    "version": "1.0",
+    "description": "Synthetic dataset for healthcare claims fraud detection research with realistic patterns and distributions",
+    "type": "synthetic",
+    "domain": "healthcare_fraud",
+    "language": "id",
+    "created_date": "2025-10-22",
+    "last_updated": "2025-10-22",
+    "license": "MIT",
+    "repository": "https://github.com/alwanrahmanas/AI-fraud-detection"
+  },
+  
+  "generation_parameters": {
+    "n_rows": 100000,
+    "n_providers": 500,
+    "n_participants": 50000,
+    "fraud_ratio": 0.03,
+    "year": 2024,
+    "random_seed": 42,
+    "generator_version": "1.0",
+    "generation_timestamp": "2024-10-22T10:30:00Z"
+  },
+  
+  "data_specifications": {
+    "file_formats": ["csv", "parquet"],
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "total_records": 100000,
+    "total_columns": 44,
+    "file_size_mb": {
+      "csv": 18.5,
+      "parquet": 6.2
+    },
+    "missing_values": false,
+    "duplicates": false
+  },
+  
+  "schema": {
+    "identifiers": [
+      {
+        "column": "claim_id",
+        "type": "string",
+        "description": "Unique claim identifier",
+        "pattern": "C\\d{8}",
+        "example": "C00001234",
+        "nullable": false,
+        "unique": true
+      },
+      {
+        "column": "episode_id",
+        "type": "string",
+        "description": "Episode/visit identifier",
+        "pattern": "E\\d{8}",
+        "example": "E00001234",
+        "nullable": false,
+        "unique": true
+      },
+      {
+        "column": "participant_id",
+        "type": "string",
+        "description": "Patient identifier",
+        "pattern": "P\\d{8}",
+        "example": "P00012345",
+        "nullable": false,
+        "unique": false
+      },
+      {
+        "column": "nik_hash",
+        "type": "string",
+        "description": "Hashed National ID for identity fraud detection",
+        "pattern": "NIK\\d{10}",
+        "example": "NIK0012345678",
+        "nullable": false,
+        "unique": false
+      },
+      {
+        "column": "faskes_id",
+        "type": "string",
+        "description": "Healthcare facility identifier",
+        "pattern": "F\\d{5}",
+        "example": "F00123",
+        "nullable": false,
+        "unique": false
+      },
+      {
+        "column": "dpjp_id",
+        "type": "string",
+        "description": "Doctor/provider identifier",
+        "pattern": "D\\d{5}",
+        "example": "D00456",
+        "nullable": false,
+        "unique": false
+      }
+    ],
+    
+    "demographics": [
+      {
+        "column": "age",
+        "type": "integer",
+        "description": "Patient age in years",
+        "min": 0,
+        "max": 90,
+        "mean": 42.5,
+        "nullable": false
+      },
+      {
+        "column": "sex",
+        "type": "string",
+        "description": "Patient gender",
+        "values": ["M", "F"],
+        "nullable": false
+      },
+      {
+        "column": "provinsi",
+        "type": "string",
+        "description": "Province location",
+        "values": [
+          "DKI Jakarta",
+          "Jawa Barat",
+          "Jawa Tengah",
+          "Jawa Timur",
+          "Sumatera Utara",
+          "Banten",
+          "Sulawesi Selatan",
+          "Kalimantan Timur",
+          "Bali",
+          "Riau"
+        ],
+        "nullable": false
+      },
+      {
+        "column": "kabupaten",
+        "type": "string",
+        "description": "Regency/city location",
+        "nullable": false
+      },
+      {
+        "column": "faskes_level",
+        "type": "string",
+        "description": "Healthcare facility level",
+        "values": ["FKTP", "FKRTL"],
+        "distribution": {
+          "FKTP": 0.70,
+          "FKRTL": 0.30
+        },
+        "nullable": false
+      }
+    ],
+    
+    "clinical": [
+      {
+        "column": "tgl_pelayanan",
+        "type": "date",
+        "description": "Service date",
+        "format": "YYYY-MM-DD",
+        "min": "2024-01-01",
+        "max": "2024-12-31",
+        "nullable": false
+      },
+      {
+        "column": "kode_icd10",
+        "type": "string",
+        "description": "ICD-10 diagnosis code",
+        "examples": ["J00", "J06.9", "K29.7", "I10", "E11.9"],
+        "nullable": false
+      },
+      {
+        "column": "kode_prosedur",
+        "type": "string",
+        "description": "Medical procedure code",
+        "examples": ["89.03", "93.39", "96.72", "87.44"],
+        "nullable": false
+      },
+      {
+        "column": "jenis_pelayanan",
+        "type": "string",
+        "description": "Service type",
+        "values": ["Rawat Jalan", "Rawat Inap"],
+        "distribution": {
+          "Rawat Jalan": 0.70,
+          "Rawat Inap": 0.30
+        },
+        "nullable": false
+      },
+      {
+        "column": "room_class",
+        "type": "string",
+        "description": "Inpatient room class",
+        "values": ["", "Kelas I", "Kelas II", "Kelas III", "VIP"],
+        "nullable": true,
+        "note": "Empty for outpatient services"
+      },
+      {
+        "column": "lama_dirawat",
+        "type": "integer",
+        "description": "Length of stay in days",
+        "min": 0,
+        "max": 60,
+        "mean": 2.5,
+        "distribution": "poisson",
+        "nullable": false
+      }
+    ],
+    
+    "financial": [
+      {
+        "column": "billed_amount",
+        "type": "integer",
+        "description": "Total billed amount in IDR",
+        "min": 50000,
+        "max": 50000000,
+        "mean": 1200000,
+        "median": 450000,
+        "distribution": "gamma",
+        "currency": "IDR",
+        "nullable": false
+      },
+      {
+        "column": "paid_amount",
+        "type": "integer",
+        "description": "Amount paid by BPJS in IDR",
+        "min": 30000,
+        "max": 50000000,
+        "constraint": "paid_amount <= billed_amount",
+        "currency": "IDR",
+        "nullable": false
+      },
+      {
+        "column": "selisih_klaim",
+        "type": "integer",
+        "description": "Difference between billed and paid",
+        "formula": "billed_amount - paid_amount",
+        "min": 0,
+        "currency": "IDR",
+        "nullable": false
+      },
+      {
+        "column": "drug_cost",
+        "type": "integer",
+        "description": "Medication cost in IDR",
+        "min": 0,
+        "constraint": "drug_cost <= billed_amount",
+        "currency": "IDR",
+        "nullable": false
+      },
+      {
+        "column": "procedure_cost",
+        "type": "integer",
+        "description": "Procedure cost in IDR",
+        "min": 0,
+        "constraint": "procedure_cost <= billed_amount",
+        "currency": "IDR",
+        "nullable": false
+      }
+    ],
+    
+    "behavioral": [
+      {
+        "column": "visit_count_30d",
+        "type": "integer",
+        "description": "Number of visits in last 30 days",
+        "min": 0,
+        "max": 50,
+        "mean": 2.5,
+        "distribution": "negative_binomial",
+        "nullable": false
+      },
+      {
+        "column": "kapitasi_flag",
+        "type": "boolean",
+        "description": "Capitation payment indicator",
+        "values": [true, false],
+        "nullable": false
+      },
+      {
+        "column": "referral_flag",
+        "type": "boolean",
+        "description": "Has referral to another provider",
+        "values": [true, false],
+        "nullable": false
+      },
+      {
+        "column": "referral_to_same_facility",
+        "type": "boolean",
+        "description": "Suspicious circular referral pattern",
+        "values": [true, false],
+        "fraud_indicator": true,
+        "nullable": false
+      }
+    ],
+    
+    "computed_features": [
+      {
+        "column": "claim_ratio",
+        "type": "float",
+        "description": "Ratio of billed to paid amount",
+        "formula": "billed_amount / paid_amount",
+        "min": 1.0,
+        "max": 10.0,
+        "nullable": false
+      },
+      {
+        "column": "drug_ratio",
+        "type": "float",
+        "description": "Drug cost as fraction of total",
+        "formula": "drug_cost / billed_amount",
+        "min": 0.0,
+        "max": 1.0,
+        "nullable": false
+      },
+      {
+        "column": "procedure_ratio",
+        "type": "float",
+        "description": "Procedure cost as fraction of total",
+        "formula": "procedure_cost / billed_amount",
+        "min": 0.0,
+        "max": 1.0,
+        "nullable": false
+      },
+      {
+        "column": "provider_claim_share",
+        "type": "float",
+        "description": "Provider's share of monthly claims",
+        "formula": "provider_monthly_claims / total_monthly_claims",
+        "min": 0.0,
+        "max": 1.0,
+        "nullable": false
+      }
+    ],
+    
+    "fraud_labels": [
+      {
+        "column": "fraud_flag",
+        "type": "integer",
+        "description": "Binary fraud indicator",
+        "values": [0, 1],
+        "distribution": {
+          "0": 0.97,
+          "1": 0.03
+        },
+        "nullable": false
+      },
+      {
+        "column": "fraud_type",
+        "type": "string",
+        "description": "Type of fraud pattern",
+        "values": [
+          "none",
+          "phantom",
+          "upcoding",
+          "unbundling",
+          "prolonged_los",
+          "identity",
+          "inflated_drugs"
+        ],
+        "nullable": false
+      },
+      {
+        "column": "severity",
+        "type": "string",
+        "description": "Fraud severity level",
+        "values": ["none", "ringan", "sedang", "berat"],
+        "nullable": false
+      },
+      {
+        "column": "evidence_type",
+        "type": "string",
+        "description": "Source of fraud evidence",
+        "values": ["none", "system_anom", "audit", "whistleblower"],
+        "nullable": false
+      }
+    ]
+  },
+  
+  "fraud_patterns": {
+    "total_fraud_cases": 3000,
+    "fraud_ratio": 0.03,
+    "types": [
+      {
+        "name": "upcoding_diagnosis",
+        "description": "Mengubah kode diagnosis agar tarif klaim lebih tinggi",
+        "count": 450,
+        "percentage": 0.15,
+        "severity": "sedang_berat",
+        "example": "Pasien apendisitis tanpa komplikasi diklaim sebagai apendisitis perforasi",
+        "characteristics": {
+          "billed_amount_multiplier": [1.5, 2.5],
+          "icd_manipulation": true,
+          "clinical_mismatch": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "phantom_billing",
+        "description": "Mengajukan klaim atas layanan yang tidak pernah dilakukan",
+        "count": 360,
+        "percentage": 0.12,
+        "severity": "berat",
+        "example": "Klaim tindakan operasi yang tidak pernah dilakukan",
+        "characteristics": {
+          "billed_amount_multiplier": [2.5, 6.0],
+          "visit_count_30d": [0, 1],
+          "no_documentation": true
+        },
+        "evidence": ["system_anom", "audit"]
+      },
+      {
+        "name": "cloning_claim",
+        "description": "Menyalin rekam medis atau data pasien lain untuk klaim baru",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "berat",
+        "example": "Copy-paste data pasien lain ke klaim berbeda",
+        "characteristics": {
+          "duplicate_patterns": true,
+          "same_diagnosis_procedure": true,
+          "pattern_matching": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "inflated_bill",
+        "description": "Menggelembungkan tagihan obat atau alat kesehatan",
+        "count": 360,
+        "percentage": 0.12,
+        "severity": "sedang",
+        "example": "Tagihan 4 vial obat padahal hanya diberikan 2",
+        "characteristics": {
+          "drug_cost_multiplier": [2.5, 8.0],
+          "procedure_cost_multiplier": [1.5, 3.0],
+          "quantity_mismatch": true
+        },
+        "evidence": ["system_anom"]
+      },
+      {
+        "name": "service_unbundling",
+        "description": "Memecah paket pelayanan menjadi beberapa klaim terpisah",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Pemeriksaan laboratorium yang seharusnya satu paket dibagi menjadi 4 klaim",
+        "characteristics": {
+          "procedure_cost_multiplier": [2.0, 4.0],
+          "multiple_claims_same_episode": true,
+          "overlapping_procedures": true
+        },
+        "evidence": ["system_anom"]
+      },
+      {
+        "name": "self_referral",
+        "description": "Merujuk pasien ke fasilitas milik sendiri tanpa alasan medis",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Dokter merujuk pasien ke RS tempat ia juga bekerja",
+        "characteristics": {
+          "billed_amount_multiplier": [1.3, 2.0],
+          "referral_flag": true,
+          "referral_to_same_facility": true,
+          "conflict_of_interest": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "repeat_billing",
+        "description": "Menagih kembali klaim yang sudah dibayar",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "berat",
+        "example": "Klaim rawat inap diajukan dua kali",
+        "characteristics": {
+          "duplicate_claim_submission": true,
+          "same_service_multiple_billing": true
+        },
+        "evidence": ["system_anom"]
+      },
+      {
+        "name": "prolonged_los",
+        "description": "Memperpanjang lama rawat inap tanpa indikasi medis",
+        "count": 300,
+        "percentage": 0.10,
+        "severity": "sedang",
+        "example": "Pasien ventilator dipertahankan tanpa indikasi",
+        "characteristics": {
+          "lama_dirawat_range": [15, 60],
+          "billed_amount_multiplier": [2.0, 4.0],
+          "unnecessary_prolongation": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "room_manipulation",
+        "description": "Memanipulasi kelas perawatan untuk menaikkan biaya klaim",
+        "count": 240,
+        "percentage": 0.08,
+        "severity": "sedang",
+        "example": "Klaim kelas I padahal pasien dirawat di kelas II",
+        "characteristics": {
+          "billed_amount_multiplier": [1.4, 2.2],
+          "room_class_fraud": true,
+          "claimed_higher_class": ["Kelas I", "VIP"]
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "unnecessary_services",
+        "description": "Memberikan layanan medis yang tidak sesuai indikasi",
+        "count": 150,
+        "percentage": 0.05,
+        "severity": "ringan_sedang",
+        "example": "Pemeriksaan berlebihan agar tagihan naik",
+        "characteristics": {
+          "procedure_cost_multiplier": [1.5, 2.5],
+          "visit_count_30d_range": [5, 15],
+          "overutilization": true
+        },
+        "evidence": ["audit"]
+      },
+      {
+        "name": "fake_license",
+        "description": "Menggunakan izin praktik atau izin operasional palsu",
+        "count": 60,
+        "percentage": 0.02,
+        "severity": "berat",
+        "example": "Dokter tanpa SIP aktif tetap mencatat layanan",
+        "characteristics": {
+          "billed_amount_multiplier": [1.2, 2.0],
+          "invalid_license": true,
+          "illegal_practice": true
+        },
+        "evidence": ["whistleblower"]
+      }
+    ],
+    "severity_distribution": {
+      "berat": ["phantom_billing", "cloning_claim", "repeat_billing", "fake_license"],
+      "sedang": ["upcoding_diagnosis", "inflated_bill", "service_unbundling", "self_referral", "prolonged_los", "room_manipulation"],
+      "ringan_sedang": ["unnecessary_services"]
+    },
+    "detection_methods": {
+      "system_anom": ["phantom_billing", "inflated_bill", "service_unbundling", "repeat_billing"],
+      "audit": ["upcoding_diagnosis", "phantom_billing", "cloning_claim", "self_referral", "prolonged_los", "room_manipulation", "unnecessary_services"],
+      "whistleblower": ["fake_license"]
+    }
+  },
+  
+  "statistical_distributions": {
+    "billed_amount": {
+      "distribution": "gamma",
+      "parameters": {
+        "outpatient": {
+          "shape": 2.0,
+          "scale": 150000
+        },
+        "inpatient": {
+          "shape": 3.0,
+          "scale": 500000
+        }
+      }
+    },
+    "visit_count_30d": {
+      "distribution": "negative_binomial",
+      "parameters": {
+        "mean": 2.5,
+        "dispersion": 3.0
+      }
+    },
+    "lama_dirawat": {
+      "distribution": "poisson",
+      "parameters": {
+        "lambda": 5
+      }
+    },
+    "age": {
+      "distribution": "mixture",
+      "components": [
+        {
+          "name": "young",
+          "range": [0, 20],
+          "weight": 0.30
+        },
+        {
+          "name": "adult",
+          "range": [20, 60],
+          "weight": 0.50
+        },
+        {
+          "name": "elderly",
+          "range": [60, 90],
+          "weight": 0.20
+        }
+      ]
+    },
+    "payment_ratio": {
+      "distribution": "uniform",
+      "parameters": {
+        "min": 0.6,
+        "max": 1.0
+      }
+    }
+  },
+  
+  "data_quality": {
+    "validation_rules": [
+      "paid_amount <= billed_amount",
+      "drug_cost + procedure_cost <= billed_amount * 1.1",
+      "all monetary values >= 0",
+      "lama_dirawat >= 0",
+      "fraud_ratio within target ± 20%",
+      "no missing critical fields",
+      "all dates within specified year"
+    ],
+    "completeness": {
+      "total_fields": 44,
+      "fields_with_nulls": 0,
+      "completeness_percentage": 100
+    },
+    "consistency": {
+      "duplicate_claim_ids": 0,
+      "invalid_date_format": 0,
+      "constraint_violations": 0
+    },
+    "accuracy": {
+      "fraud_ratio_target": 0.03,
+      "fraud_ratio_actual": 0.03,
+      "deviation_percentage": 0.0
+    }
+  },
+  
+  "usage_guidelines": {
+    "recommended_splits": {
+      "train_test": {
+        "method": "time_based",
+        "train_ratio": 0.8,
+        "test_ratio": 0.2,
+        "description": "Use chronological split for realistic evaluation"
+      },
+      "stratification": {
+        "column": "fraud_flag",
+        "description": "Maintain fraud ratio in splits"
+      }
+    },
+    "ml_tasks": [
+      "binary_classification",
+      "multi_class_classification",
+      "anomaly_detection",
+      "graph_analysis",
+      "time_series_analysis"
+    ],
+    "evaluation_metrics": [
+      "AUROC",
+      "AUPRC",
+      "Precision@k",
+      "Recall@k",
+      "F1-Score",
+      "Cost-based metrics"
+    ]
+  },
+  
+  "privacy_compliance": {
+    "data_type": "synthetic",
+    "contains_pii": false,
+    "gdpr_compliant": true,
+    "anonymization_level": "fully_synthetic",
+    "linkability_risk": "none",
+    "re_identification_risk": "none",
+    "safe_for_public_release": true
+  },
+  
+  "version_history": [
+    {
+      "version": "1.0",
+      "release_date": "2025-10-22",
+      "changes": [
+        "Initial release",
+        "100,000 records",
+        "6 fraud types implemented",
+        "Full feature set"
+      ]
+    }
+  ],
+  
+  "citations": {
+    "bibtex": "@dataset{bpjs_fraud_synthetic_2024,\n  title={BPJS Healthcare Claims Fraud Detection - Synthetic Dataset},\n  author={Alwan Rahmana Subian},\n  year={2024},\n  version={1.0},\n  url=https://github.com/alwanrahmanas/AI-fraud-detection/new/main/data",
+    "apa": "Subian, A.R.. (2024). BPJS Healthcare Claims Fraud Detection - Synthetic Dataset (Version 1.0). https://github.com/alwanrahmanas/AI-fraud-detection/new/main/data"
+  },
+  
+  "contact": {
+    "maintainer": "Alwan Rahmana",
+    "email": "alwanrahmana@gmail.com",
+    "repository": "https://github.com/alwanrahmanas/AI-fraud-detection/",
+    "issues": "https://github.com/alwanrahmanas/AI-fraud-detection/issues"
+  }
+}

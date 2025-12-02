@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+*.log
+artifacts/
+model_artifacts/
+models/
+RAG/vectorstore/
+outputs/
+logs/
+data/
+dataset/
+dashboard/__pycache__/
+/RAG/.env

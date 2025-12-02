@@ -58,8 +58,8 @@ class RAGConfig:
     
     # Model Configuration
     EMBEDDING_MODEL = "text-embedding-3-small"  # 1536 dimensions, cost-effective
-    LLM_MODEL = "gpt-4o-mini"  # Fast and cheap for metadata generation
-    LLM_TEMPERATURE = 0.3  # Low temperature for factual responses
+    LLM_MODEL = "gpt-4.1"  # Fast and cheap for metadata generation
+    LLM_TEMPERATURE = 0.5  # Low temperature for factual responses
     
     # Chunking Configuration (Optimized for legal/medical documents)
     # Research shows 500-800 tokens optimal for semantic retrieval

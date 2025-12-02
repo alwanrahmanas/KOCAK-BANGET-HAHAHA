@@ -1,7 +1,0 @@
-{
-  "stage": "multiclass",
-  "timestamp": "2025-11-18T16:29:14.348829",
-  "random_state": 42,
-  "enable_shap": true,
-  "note": "Trained but metrics unavailable"
-}

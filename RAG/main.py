@@ -9,6 +9,7 @@ import os
 import sys
 import argparse
 from pathlib import Path
+import pandas as pd
 from dotenv import load_dotenv
 import warnings
 warnings.filterwarnings('ignore')
@@ -24,7 +25,18 @@ from ml_pipeline_rag_bridge import MLPipelineRAGBridge
 from retrieval_engine import RetrievalEngine
 from vector_store_manager import VectorStoreManager
 from bpjs_fraud_rag_system import BPJSFraudRAGSystem
+import logging
+# Setup logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
+
+# Console handler
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('[%(levelname)s] %(asctime)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
 def print_banner():
     """Print welcome banner"""
@@ -241,95 +253,262 @@ def cmd_test(args):
     print("✅ TEST COMPLETE!")
     print("="*80)
 
+# Version with logger and debugger integration (breakpoints), without changing logic.
 
+# import os
+# import pandas as pd
+# import json
+# import logging
+
+# # Setup logger
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.DEBUG)
+
+# # Console handler
+# ch = logging.StreamHandler()
+# ch.setLevel(logging.DEBUG)
+# formatter = logging.Formatter('[%(levelname)s] %(asctime)s - %(message)s')
+# ch.setFormatter(formatter)
+# logger.addHandler(ch)
+# claim_data = {}
+# for source, target in colmap.items():
+#     claim_data[target] = row.get(source)
 def cmd_explain(args):
-    """Generate explanation for fraud cases from CSV"""
+    """Generate explanation for fraud cases from CSV (FULLY FIXED VERSION)"""
+
+    logger.info("Starting cmd_explain execution")
+
     print("\n" + "="*80)
     print("COMMAND: GENERATE EXPLANATIONS")
     print("="*80)
-    
+
+    # Check input file
     if not args.input:
+        logger.error("--input file missing")
         print("✗ Error: --input file is required")
-        print("   Usage: python main.py explain --input predictions.csv")
         return
-    
+
     if not os.path.exists(args.input):
+        logger.error(f"Input file not found: {args.input}")
         print(f"✗ Error: Input file not found: {args.input}")
         return
-    
+
     # Load predictions
-    import pandas as pd
-    
+    logger.debug(f"Loading predictions CSV: {args.input}")
     print(f"\n[1/4] Loading predictions from: {args.input}")
     predictions_df = pd.read_csv(args.input)
-    print(f"   Loaded {len(predictions_df)} predictions")
-    
-    # Filter fraud cases only
+    logger.info(f"Loaded {len(predictions_df)} predictions from CSV")
+
+    # Print available columns for debugging
+    print(f"\n[Debug] Available columns in CSV ({len(predictions_df.columns)}):")
+    print(f"   {', '.join(predictions_df.columns[:20])}...")
+
     fraud_df = predictions_df[predictions_df['predicted_fraud'] == 1].copy()
+    logger.info(f"Detected {len(fraud_df)} fraud cases")
+
+    print(f"   Loaded {len(predictions_df)} predictions")
     print(f"   Fraud cases detected: {len(fraud_df)}")
-    
+
     if len(fraud_df) == 0:
+        logger.warning("No fraud cases found; stopping execution")
         print("   No fraud cases to explain. Exiting.")
         return
-    
-    # Limit if requested
-    if args.limit:
-        fraud_df = fraud_df.head(args.limit)
-        print(f"   Limited to first {args.limit} cases")
-    
+
+    # Optional RAG data merge
+    if hasattr(args, 'rag_data') and args.rag_data:
+        logger.debug(f"rag_data argument detected: {args.rag_data}")
+
+        if os.path.exists(args.rag_data):
+            print(f"\n[2/4] Loading comprehensive RAG data from: {args.rag_data}")
+            rag_df = pd.read_csv(args.rag_data)
+            logger.info(f"Loaded {len(rag_df)} rows of RAG enrichment data")
+
+            fraud_rag_df = fraud_df.merge(rag_df, on='claim_id', suffixes=('_pred', '_rag'))
+            logger.info(f"Merged dataset resulting rows: {len(fraud_rag_df)}")
+            print(f"   Merged fraud and RAG data rows: {len(fraud_rag_df)}")
+        else:
+            logger.error(f"RAG file not found: {args.rag_data}")
+            print(f"✗ Error: RAG data file not found: {args.rag_data}")
+            return
+    else:
+        logger.debug("No rag_data argument provided; using fraud_df only")
+        fraud_rag_df = fraud_df
+
     # Initialize RAG system
-    print("\n[2/4] Loading RAG system...")
+    logger.debug("Initializing RAG system")
+    print("\n[3/4] Loading RAG system...")
     rag_system = BPJSFraudRAGSystem()
     rag_system.setup(rebuild_vectors=False)
-    
+
     # Prepare fraud cases
-    # Note: This assumes predictions_df already has all needed columns
-    # If you need to merge with original claims, do that here
-    print("\n[3/4] Preparing fraud cases...")
+    logger.debug("Preparing fraud cases for RAG explanation")
+    print("\n[4/4] Preparing fraud cases for explanation...")
     
     fraud_cases = []
-    for _, row in fraud_df.iterrows():
-        fraud_case = {
-            'claim_id': row['claim_id'],
-            'predicted_fraud': row['predicted_fraud'],
-            'fraud_probability': row['fraud_probability'],
-            'predicted_fraud_type': row['predicted_fraud_type'],
-            'top_features': row.get('top_features', ''),
-            'explanation_summary': row.get('explanation_summary', ''),
-            'explanation_json': row.get('explanation_json', {}),
-            'claim_data': {
-                'diagnosis': row.get('kode_icd10', 'N/A'),
-                'procedure': row.get('kode_prosedur', 'N/A'),
-                'jenis_pelayanan': row.get('jenis_pelayanan', 'N/A'),
-                'room_class': row.get('room_class', 'N/A'),
-                'lama_dirawat': row.get('lama_dirawat', 0),
-                'billed_amount': row.get('billed_amount', 0),
-                'tarif_inacbg': row.get('tarif_inacbg', 0),
-                'selisih_klaim': row.get('selisih_klaim', 0),
-                'claim_ratio': row.get('claim_ratio', 0),
-            }
-        }
+
+    # ═══════════════════════════════════════════════════════════════
+    # CRITICAL FIX: Use ORIGINAL CSV column names (no mapping needed!)
+    # ExplanationGenerator already expects these exact names
+    # ═══════════════════════════════════════════════════════════════
+    
+    # List of columns to pass through (use CSV column names as-is)
+    columns_to_pass = [
+        # Core identifiers
+        'claim_id',
+        
+        # Fraud prediction
+        'predicted_fraud',
+        'fraud_probability', 
+        'predicted_fraud_type',
+        'fraud_label',
+        
+        # SHAP explanation
+        'shap_explanation_summary',
+        'shap_top_features',
+        
+        # Clinical data - EXACT CSV column names
+        'kode_icd10',           # ✓ Keep original name
+        'diagnosis_name',       # ✓ Keep original name  
+        'clinical_pathway_name', # ✓ Keep original name
+        'kode_prosedur',        # ✓ Keep original name
+        'procedure_name',       # ✓ Keep original name
+        
+        # Financial data
+        'inacbg_code',
+        'kode_tarif_inacbg',
+        'tarif_inacbg',
+        'inacbg_tarif',
+        'billed_amount',
+        'paid_amount',
+        'selisih_klaim',
+        'claim_ratio',
+        
+        # Ratio indicators
+        'drug_ratio',
+        'procedure_ratio',
+        
+        # Service data
+        'jenis_pelayanan',
+        'room_class',
+        'lama_dirawat',
+        
+        # Provider data
+        'faskes_id',
+        'faskes_name',  # May not exist
+        'faskes_level',
+        'provider_monthly_claims',
+        
+        # Patient history
+        'visit_count_30d',
+        'clinical_pathway_deviation_score',
+        
+        # Additional context
+        'drug_cost',
+        'procedure_cost',
+        'obat_keluar',
+        'obat_match_score',
+    ]
+
+    for idx, row in fraud_rag_df.iterrows():
+        logger.debug(f"Processing claim_id: {row.get('claim_id')}")
+
+        # Parse explanation_json if string
+        explanation_json = row.get('explanation_json', {})
+        if isinstance(explanation_json, str):
+            try:
+                explanation_json = json.loads(explanation_json)
+            except Exception as e:
+                logger.warning(f"Failed to parse explanation_json for {row.get('claim_id')}: {e}")
+                explanation_json = {}
+
+        # ═══════════════════════════════════════════════════════════════
+        # FIXED: Build fraud_case with ORIGINAL column names
+        # No mapping needed - pass CSV columns directly
+        # ═══════════════════════════════════════════════════════════════
+        fraud_case = {}
+        
+        # Copy all relevant columns with their ORIGINAL names
+        for col in columns_to_pass:
+            if col in row.index:
+                fraud_case[col] = row[col]
+            else:
+                # If column doesn't exist, set to None
+                fraud_case[col] = None
+
+        # Add explanation_json
+        fraud_case['explanation_json'] = explanation_json
+        
+        # Ensure fraud_label exists
+        if 'fraud_label' not in fraud_case or pd.isna(fraud_case['fraud_label']):
+            fraud_case['fraud_label'] = "FRAUD" if fraud_case.get('predicted_fraud') == 1 else "LEGITIMATE"
+
         fraud_cases.append(fraud_case)
+
+    logger.info(f"Total fraud cases prepared: {len(fraud_cases)}")
+
+    # ═══════════════════════════════════════════════════════════════
+    # DIAGNOSTIC: Print first case structure
+    # ═══════════════════════════════════════════════════════════════
+    if fraud_cases:
+        print("\n" + "="*80)
+        print("[DIAGNOSTIC] First fraud case structure:")
+        print("="*80)
+        
+        first_case = fraud_cases[0]
+        
+        # Check critical fields
+        critical_fields = {
+            'claim_id': first_case.get('claim_id'),
+            'kode_icd10': first_case.get('kode_icd10'),
+            'diagnosis_name': first_case.get('diagnosis_name'),
+            'tarif_inacbg': first_case.get('tarif_inacbg'),
+            'billed_amount': first_case.get('billed_amount'),
+            'paid_amount': first_case.get('paid_amount'),
+            'selisih_klaim': first_case.get('selisih_klaim'),
+            'claim_ratio': first_case.get('claim_ratio'),
+        }
+        
+        print("\nCritical Fields:")
+        for field, value in critical_fields.items():
+            status = "✓" if value is not None and str(value).strip() != '' else "✗ NULL"
+            print(f"   {status} {field}: {value}")
+        
+        # Check SHAP features
+        shap_features = first_case.get('shap_top_features')
+        print(f"\nSHAP Features Type: {type(shap_features)}")
+        if isinstance(shap_features, str):
+            print(f"   First 100 chars: {shap_features[:100]}")
+        
+        print("\n" + "="*80)
+
+    # Call RAG batch explanation
+    logger.debug("Calling RAG batch explanation engine")
+    print("\n[5/5] Generating RAG explanations...")
     
-    # Generate explanations
-    print(f"\n[4/4] Generating explanations for {len(fraud_cases)} cases...")
     rag_explanations_df = rag_system.explain_fraud_cases_batch(fraud_cases)
-    
-    # Merge back and save
-    output_path = args.output or './output/fraud_explanations.csv'
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    
-    final_df = MLPipelineRAGBridge.merge_rag_explanations_back(
-        predictions_df,
-        rag_explanations_df
-    )
-    
-    final_df.to_csv(output_path, index=False)
-    
+    logger.info("RAG explanation batch completed")
+
+    # Set output path
+    if not args.output:
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        args.output = f'./output/rag_explanations_{timestamp}.csv'
+        logger.debug(f"Output path auto-generated: {args.output}")
+
+    os.makedirs(os.path.dirname(args.output), exist_ok=True)
+
+    # Merge explanations back
+    logger.debug("Merging RAG explanations back to full prediction dataframe")
+    final_df = MLPipelineRAGBridge.merge_rag_explanations_back(predictions_df, rag_explanations_df)
+    final_df.to_csv(args.output, index=False)
+
+    logger.info(f"Saved explanation output to: {args.output}")
+    logger.info(f"Total rows in final output: {len(final_df)}")
+
     print("\n" + "="*80)
     print("✅ EXPLANATIONS COMPLETE!")
     print("="*80)
-    print(f"📄 Output saved to: {output_path}")
+    print(f"📄 Output saved to: {args.output}")
     print(f"   Total rows: {len(final_df)}")
     print(f"   Fraud cases explained: {len(rag_explanations_df)}")
 

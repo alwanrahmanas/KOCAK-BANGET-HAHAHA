@@ -1,0 +1,13 @@
+2025-11-20 19:40:55,332 | __main__ | INFO | Starting training workflow...
+2025-11-20 19:40:55,333 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 19:40:55,333 | workflows.training_workflow | INFO | TRAINING BPJS FRAUD DETECTION MODELS
+2025-11-20 19:40:55,334 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 19:40:55,335 | workflows.training_workflow | INFO | 📂 Loading training data from: bpjs_train_small.csv
+2025-11-20 19:40:57,288 | workflows.training_workflow | INFO |    ✅ Rows: 100,000
+2025-11-20 19:40:57,290 | workflows.training_workflow | INFO |    ✅ Fraud rate: 5.48%
+2025-11-20 19:40:57,291 | workflows.training_workflow | INFO | 🎯 Training Stage 1 (binary)...
+2025-11-20 19:41:46,977 | workflows.training_workflow | INFO | 🎯 Training Stage 2 (multiclass)...
+2025-11-20 19:43:13,381 | workflows.training_workflow | INFO | 💾 Saving models to: ./model_artifacts
+2025-11-20 19:43:14,951 | workflows.training_workflow | INFO | ✅ TRAINING COMPLETED
+2025-11-20 19:43:15,002 | __main__ | INFO | Binary model saved to: ./model_artifacts\binary_ensemble_20251120_194313
+2025-11-20 19:43:15,003 | __main__ | INFO | Multiclass model saved to: ./model_artifacts\multiclass_ensemble_20251120_194314

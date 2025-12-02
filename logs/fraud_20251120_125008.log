@@ -1,0 +1,9 @@
+2025-11-20 12:50:08,335 | __main__ | INFO | Command: train
+2025-11-20 12:50:08,337 | __main__ | INFO | Using config: config/settings.yaml
+2025-11-20 12:50:08,338 | __main__ | INFO | Starting training workflow...
+2025-11-20 12:50:08,338 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 12:50:08,340 | workflows.training_workflow | INFO | TRAINING BPJS FRAUD DETECTION MODELS
+2025-11-20 12:50:08,341 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 12:50:08,342 | workflows.training_workflow | INFO | 📂 Loading training data from: bpjs_train_small.csv
+2025-11-20 12:50:08,567 | workflows.training_workflow | INFO |    ✅ Rows: 7,500
+2025-11-20 12:50:08,569 | workflows.training_workflow | INFO |    ✅ Fraud rate: 5.44%

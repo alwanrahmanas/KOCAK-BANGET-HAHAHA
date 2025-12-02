@@ -1,0 +1,26 @@
+2025-11-20 15:24:35,488 | __main__ | INFO | Starting inference workflow...
+2025-11-20 15:24:35,490 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:24:35,490 | workflows.inference_workflow | INFO | BATCH FRAUD PREDICTION (RAG-READY)
+2025-11-20 15:24:35,491 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:24:35,491 | workflows.inference_workflow | INFO | 📂 Loading data: bpjs_inference_small.csv
+2025-11-20 15:24:35,542 | workflows.inference_workflow | INFO |    ✅ Rows: 100
+2025-11-20 15:24:35,549 | workflows.inference_workflow | INFO |    ℹ️  Has labels: False
+2025-11-20 15:24:35,549 | workflows.inference_workflow | INFO | 🔧 Loading inference engine...
+2025-11-20 15:24:36,384 | workflows.inference_workflow | INFO | 🔮 Running predictions...
+2025-11-20 15:24:36,385 | workflows.inference_workflow | INFO |    - Generate explanations: True
+2025-11-20 15:24:36,386 | workflows.inference_workflow | INFO |    - Evaluate: False
+2025-11-20 15:24:48,986 | workflows.inference_workflow | INFO | 
+📊 Prediction Summary:
+2025-11-20 15:24:48,987 | workflows.inference_workflow | INFO |    Total: 100
+2025-11-20 15:24:48,988 | workflows.inference_workflow | INFO |    Fraud: 6 (6.00%)
+2025-11-20 15:24:48,998 | workflows.inference_workflow | INFO | 
+💾 Saved: outputs/predictions_20251120_152428.csv
+2025-11-20 15:24:48,998 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:24:48,999 | workflows.inference_workflow | INFO | ✅ INFERENCE COMPLETED
+2025-11-20 15:24:49,000 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:24:49,021 | __main__ | INFO | ✅ Predictions saved to: outputs/predictions_20251120_152428.csv
+2025-11-20 15:24:49,022 | __main__ | INFO |    Total claims: 100
+2025-11-20 15:24:49,023 | __main__ | INFO |    Fraud cases: 6
+2025-11-20 15:24:49,023 | __main__ | INFO | 
+🔗 Next step - Generate RAG explanations:
+2025-11-20 15:24:49,023 | __main__ | INFO |    python RAGSystem/main.py explain --input outputs/predictions_20251120_152428.csv

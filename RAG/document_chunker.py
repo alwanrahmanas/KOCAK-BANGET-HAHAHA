@@ -1,4 +1,4 @@
-from rag_config import RAGConfig
+from RAG.rag_config import RAGConfig
 from typing import List, Tuple, Dict, Optional
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document

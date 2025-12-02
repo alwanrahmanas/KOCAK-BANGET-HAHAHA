@@ -1,0 +1,14 @@
+{
+  "dataset_size": 100000,
+  "fraud_ratio": 0.05477,
+  "accuracy": 0.9926,
+  "f1_score": 0.9287776708373436,
+  "roc_auc": 0.9485346946218717,
+  "stage": "binary",
+  "model_name": "ensemble",
+  "timestamp": "20251120_194313",
+  "save_date": "2025-11-20T19:43:14.047578",
+  "artifacts_dir": "./model_artifacts\\binary_ensemble_20251120_194313",
+  "optimal_threshold": 0.3199999999999999,
+  "shap_available": true
+}

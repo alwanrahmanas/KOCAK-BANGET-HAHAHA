@@ -1,0 +1,52 @@
+claim_id,episode_id,participant_id,nik_hash,age,sex,faskes_id,dpjp_id,faskes_level,provinsi,kabupaten,tgl_pelayanan,kode_icd10,kode_prosedur,jenis_pelayanan,room_class,lama_dirawat,billed_amount,paid_amount,drug_cost,procedure_cost,visit_count_30d,kapitasi_flag,referral_flag,referral_to_same_facility,referral_to,graph_pattern_id,kode_tarif_inacbg,tarif_inacbg,clinical_pathway_name,diagnosis_name,procedure_name,inacbg_code,inacbg_tarif,selisih_klaim,obat_keluar,obat_match_score,time_diff_prev_claim,claim_month,claim_quarter,rolling_avg_cost_30d,provider_monthly_claims,nik_hash_reuse_count,clinical_pathway_deviation_score,claim_ratio,prev_claim_1_kode_icd10,prev_claim_1_jenis_pelayanan,prev_claim_1_room_class,prev_claim_1_billed_amount,prev_claim_1_claim_ratio,prev_claim_1_clinical_pathway_deviation_score,prev_claim_1_visit_count_30d,prev_claim_1_faskes_id,prev_claim_2_kode_icd10,prev_claim_2_jenis_pelayanan,prev_claim_2_room_class,prev_claim_2_billed_amount,prev_claim_2_claim_ratio,prev_claim_2_clinical_pathway_deviation_score,prev_claim_2_visit_count_30d,prev_claim_2_faskes_id,prev_claim_3_kode_icd10,prev_claim_3_jenis_pelayanan,prev_claim_3_room_class,prev_claim_3_billed_amount,prev_claim_3_claim_ratio,prev_claim_3_clinical_pathway_deviation_score,prev_claim_3_visit_count_30d,prev_claim_3_faskes_id,prev_claim_4_kode_icd10,prev_claim_4_jenis_pelayanan,prev_claim_4_room_class,prev_claim_4_billed_amount,prev_claim_4_claim_ratio,prev_claim_4_clinical_pathway_deviation_score,prev_claim_4_visit_count_30d,prev_claim_4_faskes_id,prev_claim_5_kode_icd10,prev_claim_5_jenis_pelayanan,prev_claim_5_room_class,prev_claim_5_billed_amount,prev_claim_5_claim_ratio,prev_claim_5_clinical_pathway_deviation_score,prev_claim_5_visit_count_30d,prev_claim_5_faskes_id,total_klaim_5x,rerata_billed_5x,std_claim_ratio_5x,rerata_lama_dirawat_5x,total_rs_unique_visited_5x,total_diagnosis_unique_5x,visit_suspicious_flag,obat_mismatch_flag,billing_spike_flag,high_deviation_flag,phantom_suspect_score,drug_ratio,procedure_ratio,provider_claim_share,phantom_node_flag,predicted_fraud,fraud_probability,fraud_label,threshold_used,predicted_fraud_type,prob_cloning_claim,prob_graph_clique_collusion,prob_graph_ring_network,prob_graph_star_center,prob_graph_star_spoke,prob_inflated_bill,prob_phantom_billing,prob_upcoding_diagnosis,shap_top_features,shap_explanation_summary,explanation_text,retrieved_docs,model,timestamp
+C00000015,E00000015,P00002954,F35B20AC562435A8,27,F,F00286,STAR0_S7,FKTP,DKI Jakarta,Jakarta Selatan,2024-04-26,N39.0,89.03,Rawat Jalan,,0,417487,350747,53371,34232,4,True,False,False,STAR0_HUB,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,66740,"['ciprofloxacin', 'cefadroxil']",0.5,999.0,4,2,417487.0,1,1,0.0722511111111111,1.1902762097004116,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1278384049361897,0.0819951711186908,0.25,0,0,0.010497916138476,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -2.0845346975675785, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.115860157769639, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -1.1116896251623984, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.8697931153455284, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.8111518195539247, 'direction': '↓'}]","billed_amount↓, paid_amount↑, procedure_cost↓, procedure_ratio↑, provider_claim_share↓",No explanation generated — claim classified as benign.,,,
+C00000020,E00000020,P00004754,D5DEC2FEEDC4C268,14,M,F00474,STAR0_S5,FKTP,Jawa Barat,Bandung,2024-09-24,E11.9,89.03,Rawat Jalan,,0,614514,490108,176886,147314,8,False,False,False,STAR0_HUB,,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,124406,"['glimepiride', 'insulin', 'glibenclamide']",0.75,999.0,9,3,614514.0,1,1,0.180648,1.2538312905904605,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2878465131038298,0.2397240099916194,0.25,0,0,0.0137444107587365,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -0.7567370771861169, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.606881802076241, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.5274327275191899, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.5016010820982046, 'direction': '↑'}, {'feature': 'clinical_pathway_deviation_score', 'value': None, 'shap_value': 0.4317738352995366, 'direction': '↑'}]","billed_amount↓, provider_claim_share↓, paid_amount↑, provider_monthly_claims↑, clinical_pathway_deviation_score↑",No explanation generated — claim classified as benign.,,,
+C00000009,E00000009,P00009161,878907D0DE55440E,63,F,F00160,CLIQUE0_P0,FKTP,Sumatera Utara,Deli Serdang,2024-06-09,M-4-10-I,87.03,Rawat Inap,Kelas II,3,21969147,8303408,1107484,3014564,9,False,True,False,CLIQUE0_P3,CLIQUE_0,M-4-10-I,3756700,Fraktur Femur,Femur Fracture,Bone X-Ray,M-4-10-I,3756700,910808,"['heparin', 'tramadol']",0.4,999.0,6,2,9214216.0,1,1,0.3250034857142857,1.1096907306384642,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0504108761978389,0.1372180659896323,0.5,0,1,0.9083969133477312,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0357061665680623,0.0164750999248748,0.0181345715801104,0.0003697976351436,0.0004283520252341,0.0098962768229639,1.022716235282462e-05,0.9189795107793364,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 9.56547512390418, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 1.7858432834467386, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.1066362944734283, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.8896555285312934, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.7678843077307101, 'direction': '↑'}]","billed_amount↑, procedure_cost↑, paid_amount↓, tarif_inacbg↓, procedure_ratio↑","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
+LAPORAN AUDIT KLAIM BPJS KESEHATAN  
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
+
+1. Executive Summary  
+Klaim ID C00000009 menunjukkan indikasi kuat upcoding diagnosis dengan probabilitas fraud sebesar 0.91. Selisih klaim dan rasio klaim yang tinggi memerlukan investigasi lebih lanjut terhadap justifikasi klinis dan finansial. Terdapat deviasi clinical pathway yang signifikan pada kasus rawat inap Fraktur Femur ini.
+
+2. Analisis Finansial  
+- Tarif INA-CBG: Rp3.756.700  
+- Jumlah ditagihkan: Rp21.969.147  
+- Jumlah dibayar: Rp8.303.408  
+- Selisih klaim: Rp910.808  
+- Claim ratio: 1,11  
+- Drug ratio: 0,05  
+- Procedure ratio: 0,14  
+
+Nilai tagihan jauh melebihi tarif INA-CBG yang berlaku. Selisih klaim dan claim ratio di atas 1 mengindikasikan adanya ketidakwajaran dalam penetapan biaya.
+
+3. Analisis Klinis  
+- ICD10: M-4-10-I (Fraktur Femur)  
+- Prosedur: 87.03 (Bone X-Ray)  
+- Jenis Pelayanan: Rawat Inap, Kelas II  
+- Lama dirawat: 3 hari  
+
+Diagnosis fraktur femur umumnya memerlukan tindakan ortopedi lebih lanjut, bukan hanya X-Ray. Prosedur yang tercatat hanya Bone X-Ray, sehingga tidak sinkron dengan diagnosis berat seperti fraktur femur.
+
+4. Cross-check INA-CBG  
+Tarif INA-CBG untuk kasus ini adalah Rp3.756.700, namun tagihan mencapai Rp21.969.147 (hampir 6x lipat). Jumlah hari rawat inap (3 hari) dan prosedur yang dilakukan (hanya X-Ray) tidak sesuai dengan tagihan dan diagnosis berat.
+
+5. Analisis Fraud Type: upcoding_diagnosis  
+Klaim ini terindikasi upcoding diagnosis, di mana diagnosis yang lebih berat (Fraktur Femur) dicantumkan untuk mendapatkan tarif lebih tinggi, namun tindakan yang dilakukan tidak mendukung diagnosis tersebut. Probabilitas fraud sangat tinggi (0,91).
+
+6. Analisis Fitur SHAP (Upcoding Diagnosis)  
+- Claim ratio (1,11): Menunjukkan klaim yang diajukan lebih tinggi dari standar INA-CBG.  
+- Clinical pathway deviation score (0,33): Adanya deviasi signifikan dari standar penanganan klinis fraktur femur.  
+- Procedure ratio (0,14) dan drug ratio (0,05): Rendah, tidak sesuai dengan kebutuhan klinis fraktur femur yang biasanya membutuhkan tindakan lebih invasif dan obat-obatan lebih banyak.  
+- Visit count 30 hari (9): Tinggi, dapat mengindikasikan upaya meningkatkan klaim.  
+- Provider monthly claims (1): Tidak ada data provider lain untuk benchmarking.  
+
+7. Kesimpulan Auditor  
+Terdapat ketidaksesuaian antara diagnosis, tindakan, dan biaya yang diajukan. Indikasi kuat upcoding diagnosis dengan data pendukung berupa claim ratio tinggi, deviasi clinical pathway, dan tindakan yang tidak relevan dengan diagnosis utama.
+
+8. Rekomendasi  
+- Lakukan investigasi lanjutan pada rekam medis dan justifikasi diagnosis.  
+- Klarifikasi ke faskes terkait alasan penetapan diagnosis dan tindakan.  
+- Evaluasi sistem audit internal dan lakukan pelatihan ulang terkait kodefikasi diagnosis dan prosedur.  
+- Pertimbangkan penolakan atau revisi pembayaran klaim jika ditemukan pelanggaran.  
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4.1,2025-11-20T22:34:50.832916

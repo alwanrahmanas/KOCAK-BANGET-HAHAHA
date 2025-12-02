@@ -4,256 +4,44 @@
 paths:
   output_dir: './output'
   artifacts_dir: './artifacts'
-  rag_system_path: 'C:\Users\US3R\OneDrive\Dokumen\Referensi\RAG-Bahan\RAG'  # Path to RAG system
+  rag_system_path: 'C:\Users\US3R\OneDrive\Dokumen\Data Science\Project\RAG'  # Path to RAG system
 
+# BPJS Fraud Detection Configuration
 
-  
-
-
-# Model Configuration
+# Model Settings
 model:
   random_state: 42
   enable_shap: true
-
-  # Feature Definitions
-  features:
-    numerical:
-      - age
-      - lama_dirawat
-      - billed_amount
-      - paid_amount
-      - drug_cost
-      - procedure_cost
-      - visit_count_30d
-      - tarif_inacbg
-      - selisih_klaim
-      - time_diff_prev_claim
-      - rolling_avg_cost_30d
-      - provider_monthly_claims
-      - nik_hash_reuse_count
-      - clinical_pathway_deviation_score
-      - claim_ratio
-      - drug_ratio
-      - procedure_ratio
-      - provider_claim_share
-      - claim_month
-
-    categorical:
-      - sex
-      - faskes_level
-      - jenis_pelayanan
-      - room_class
-
-    boolean:
-      - kapitasi_flag
-      - referral_flag
-      - referral_to_same_facility
-
-  # Training Configuration
-  training:
-    test_size: 0.2
+  
+  # Binary Classification
+  binary:
     tune_threshold: true
-    threshold_metric: 'f1' # Options: 'f1', 'f2', 'f0.5', 'balanced'
-    cv_folds: 5
-    create_explainer: true
-
-  # Model Hyperparameters
-  hyperparameters:
-    xgboost:
-      n_estimators: 100
-      max_depth: 6
-      learning_rate: 0.1
-      subsample: 0.8
-      colsample_bytree: 0.8
-
-    lightgbm:
-      n_estimators: 100
-      max_depth: 6
-      learning_rate: 0.1
-      num_leaves: 31
-      feature_fraction: 0.8
-
-    random_forest:
-      n_estimators: 100
-      max_depth: 10
-      min_samples_split: 2
-      min_samples_leaf: 1
-
-  # Inference Configuration
-    inference:
-    primary_key: 'claim_id'
-    use_optimal_threshold: true
-    return_probabilities: true
-    generate_explanations: true
-    explanation_top_k: 5
-    # primary_key: 'claim_id'
-    # use_optimal_threshold: true
-    # return_probabilities: true
-    # generate_explanations: true
-    # explanation_top_k: 5
+    threshold_metric: 'f1'  # 'f1', 'f2', 'f0.5', 'balanced'
+    test_size: 0.2
     
-    # RAG Integration
-    enable_rag_explanations: true
-    rag_auto_generate: false  # If true, auto-generate without asking
+  # Multiclass Classification
+  multiclass:
+    test_size: 0.2
 
-# Paths Configuration
-paths:
-  # Base directories
-  artifacts_dir: './artifacts'
-  binary_models_dir: './artifacts/binary_models'
-  multiclass_models_dir: './artifacts/multiclass_models'
-  logs_dir: './logs'
-  output_dir: './output'
-  data_dir: './data'
-
-  # Training data
-  train_data: './data/bpjs_train.csv'
-  test_data: './data/bpjs_test.csv'
-
-  # Inference data
-  inference_data: './data/bpjs_inference.csv'
-
-  # Output files
-  predictions_output: './output/predictions.csv'
-  metrics_output: './output/metrics.json'
-
-  # Saved models (examples)
-  binary_model_latest: null # Will be set after training
-  multiclass_model_latest: null # Will be set after training
-
-# Logging Configuration
-logging:
-  level: 'INFO' # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
-  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-  date_format: '%Y-%m-%d %H:%M:%S'
-  file: './logs/bpjs_fraud_detection.log'
-  console: true
-  file_mode: 'a' # 'a' for append, 'w' for overwrite
-  max_bytes: 10485760 # 10MB
-  backup_count: 5
-
-# SHAP Explainer Configuration
+# SHAP Settings
 shap:
-  enable: true
-  max_samples: 100 # Maximum samples for background data
-  enable_fallback: true # Use z-score if SHAP fails
-  compute_feature_stats: true
+  max_background_samples: 100
   explanation_top_k: 5
-  impact_thresholds:
-    very_strong: 0.5
-    strong: 0.3
-    moderate: 0.1
-    weak: 0.0
 
-# Threshold Optimization Configuration
-threshold:
-  min_threshold: 0.1
-  max_threshold: 0.9
-  step: 0.01
-  metrics:
-    - 'f1'
-    - 'f2'
-    - 'f0.5'
-    - 'balanced'
-  plot_curves: true
-  save_plots: true
-  plots_dir: './output/threshold_plots'
+# Paths
+paths:
+  artifacts_dir: './model_artifacts'
+  output_dir: './outputs'
+  logs_dir: './logs'
 
-# Data Validation Configuration
-validation:
-  required_columns_binary:
-    - claim_id
-    - fraud_flag
-    - age
-    - billed_amount
-    - paid_amount
-
-  required_columns_multiclass:
-    - claim_id
-    - fraud_flag
-    - fraud_type
-    - age
-    - billed_amount
-
-  required_columns_inference:
-    - claim_id
-    - age
-    - billed_amount
-    - paid_amount
-
-  check_missing_values: true
-  check_duplicates: true
-  check_outliers: false
-
-# Output Configuration
-output:
-  save_predictions: true
-  save_metrics: true
-  save_explanations: true
-  save_plots: true
-
-  # Output format
-  predictions_format: 'csv' # Options: csv, json, parquet
-  include_probabilities: true
-  include_explanations: true
-  include_original_data: true
-
-  # CSV options
-  csv_separator: ','
-  csv_encoding: 'utf-8'
-  csv_index: false
-
-  # Column ordering in output
-  output_column_order:
-    - claim_id
-    - predicted_fraud
-    - fraud_probability
-    - fraud_label
-    - predicted_fraud_type
-    - shap_explanation_summary
-    - shap_top_features
-    # ... followed by original data columns
-
-# RAG Integration Configuration (Future)
-rag:
-  enable: false # Not implemented yet
-  vector_db:
-    type: 'chromadb' # Options: chromadb, pinecone, weaviate
-    collection_name: 'bpjs_regulations'
-    embedding_model: 'sentence-transformers/all-MiniLM-L6-v2'
-
-  llm:
-    provider: 'openai' # Options: openai, anthropic, local
-    model: 'gpt-4'
-    temperature: 0.3
-    max_tokens: 1000
-
-  retrieval:
-    top_k: 5
-    similarity_threshold: 0.7
-
-  explanation:
-    include_regulations: true
-    include_shap: true
-    include_similar_cases: false
-
-# Performance Configuration
-performance:
+# Inference Settings
+inference:
+  use_optimal_threshold: true
+  return_probabilities: true
+  generate_explanations: true
   batch_size: 1000
-  n_jobs: -1 # -1 for all cores
-  cache_predictions: false
-  enable_gpu: false
 
-# Development Settings
-development:
-  debug: false
-  verbose: true
-  save_intermediate_results: false
-  profile_performance: false
-
-# Production Settings
-production:
-  strict_validation: true
-  fail_on_warning: false
-  enable_monitoring: false
-  log_predictions: true
+# RAG Settings
+rag:
+  min_fraud_probability: 0.7
+  top_n_cases: null  # null for all cases

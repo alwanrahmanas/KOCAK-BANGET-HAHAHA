@@ -1,0 +1,5 @@
+2025-11-20 15:23:58,160 | __main__ | INFO | Starting inference workflow...
+2025-11-20 15:23:58,161 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:23:58,161 | workflows.inference_workflow | INFO | BATCH FRAUD PREDICTION (RAG-READY)
+2025-11-20 15:23:58,163 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 15:23:58,163 | workflows.inference_workflow | INFO | 📂 Loading data: data/bpjs_inference_small.csv

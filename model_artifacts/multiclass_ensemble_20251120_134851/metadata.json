@@ -1,0 +1,11 @@
+{
+  "accuracy": 0.7439024390243902,
+  "f1_score": 0.7251373686093916,
+  "stage": "multiclass",
+  "model_name": "ensemble",
+  "timestamp": "20251120_134851",
+  "save_date": "2025-11-20T13:48:52.455701",
+  "artifacts_dir": "./model_artifacts\\multiclass_ensemble_20251120_134851",
+  "optimal_threshold": null,
+  "shap_available": false
+}

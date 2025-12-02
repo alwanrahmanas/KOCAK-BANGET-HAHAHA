@@ -1,0 +1,357 @@
+claim_id,predicted_fraud,fraud_probability,fraud_label,threshold_used,predicted_fraud_type,prob_cloning_claim,prob_graph_clique_collusion,prob_graph_ring_network,prob_graph_star_center,prob_graph_star_spoke,prob_inflated_bill,prob_phantom_billing,prob_upcoding_diagnosis,shap_explanation_summary,shap_top_features,explanation_text,retrieved_docs,model,timestamp
+C00004558,1,0.6280400089773303,FRAUD,0.12,upcoding_diagnosis,0.0490139724097028,0.072065835951339,0.3269478174498033,0.0054315057419155,0.0135801213937981,0.0174336607581604,0.003684616026278,0.5118424539708574,"paid_amount↑, billed_amount↑, rolling_avg_cost_30d↑","[{'feature': 'paid_amount', 'value': -0.5825323550112268, 'shap_value': 2.4488924197293818, 'direction': '↑'}, {'feature': 'billed_amount', 'value': -0.480649787182257, 'shap_value': 1.7558107495121658, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': -0.6014376089785258, 'shap_value': 1.4810624147113414, 'direction': '↑'}, {'feature': 'drug_ratio', 'value': -1.3043334979966583, 'shap_value': 1.2172417388588657, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': -0.6161032733882642, 'shap_value': -1.108131794888759, 'direction': '↓'}]","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+
+## 1. Gambaran Umum Kasus
+Klaim ID: C00004558 terdeteksi sebagai potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas model sebesar 62.80%. Data klaim menunjukkan bahwa tidak ada informasi terkait diagnosis, prosedur, INA-CBG, tarif, tagihan rumah sakit, dan jumlah yang dibayarkan oleh BPJS. Hal ini menimbulkan indikasi awal bahwa klaim ini mungkin tidak valid atau tidak sesuai dengan ketentuan yang berlaku.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio yang relevan (claim_ratio, drug_ratio, procedure_ratio) tidak dapat dihitung karena tidak ada data yang tersedia. Hal ini menunjukkan ketidaklengkapan data klaim.
+- **Hubungan Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG, tagihan rumah sakit, dan selisih klaim semuanya bernilai 0, tidak ada dasar untuk menilai kewajaran klaim. Hal ini menunjukkan potensi manipulasi atau pengajuan klaim yang tidak valid.
+- **Pola Abnormal**: Ketidakadaan data yang lengkap dan relevan menunjukkan adanya pola abnormal yang sesuai dengan kriteria SPO Audit BPJS, terutama dalam hal kelengkapan dan keakuratan data klaim.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada kode diagnosis yang terlampir, sehingga tidak mungkin untuk mengevaluasi kesesuaian dengan ICD-10.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa data prosedur, evaluasi kesesuaian tidak dapat dilakukan.
+- **Risiko Upcoding**: Mengingat penelitian UGM menunjukkan ketidaktepatan kode diagnosis sebesar 31%, potensi upcoding pada klaim ini tidak dapat diabaikan, meskipun tidak ada data spesifik untuk dianalisis.
+- **Lama Rawat dan Tindakan**: Lama rawat tidak tertera, sehingga tidak dapat dibandingkan dengan clinical pathway yang menyatakan bahwa untuk diagnosis pneumonia (J18.9), lama rawat yang wajar adalah 5 hari, dengan justifikasi medis untuk perawatan lebih dari 7 hari.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+- **Upcoding**: Klaim ini berpotensi mengandung upcoding karena tidak ada data diagnosis dan prosedur yang jelas.
+- **Unbundling, Inflated Bills, Phantom Billing, No Medical Value, Abuse/Overutilization, Graph Fraud**: Tidak ada data yang mendukung atau menolak kategori-kategori ini, namun ketidaklengkapan data mengindikasikan potensi manipulasi.
+- **Regulasi Terkait**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, klaim yang tidak wajar dapat dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tidak ada data untuk cross-check, sehingga tidak dapat dinyatakan konsisten atau tidak.
+- **Severity Level**: Tanpa data severity level, evaluasi tidak dapat dilakukan.
+- **Tarif Wajar**: Dengan tarif dan tagihan yang bernilai 0, tidak ada indikasi kewajaran tarif.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia untuk dianalisis. Hal ini mengindikasikan bahwa model tidak dapat memberikan informasi tambahan untuk mendukung dugaan fraud.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis di atas, klaim ini menunjukkan indikasi kuat potensi fraud. Oleh karena itu, kesimpulan auditor adalah:
+- **“Potensi Fraud Tinggi”**
+
+## 8. Rekomendasi Tindak Lanjut
+- **Audit Medis Lanjutan**: Mengingat ketidaklengkapan data, audit medis lanjutan diperlukan untuk mengumpulkan informasi lebih lanjut.
+- **Permintaan Berkas Tambahan**: Meminta berkas klaim dan dokumen pendukung dari rumah sakit.
+- **Konfirmasi Dokter Penanggung Jawab**: Mengonfirmasi dengan dokter yang bertanggung jawab untuk mendapatkan penjelasan terkait klaim.
+- **Permintaan Data Rekam Medis Lengkap**: Meminta rekam medis pasien untuk verifikasi lebih lanjut.
+- **Pengecekan Ulang CP & BA BPJS**: Melakukan pengecekan ulang terhadap Clinical Pathway dan Best Available (BA) BPJS.
+- **Koreksi Kode Diagnosis atau Prosedur**: Jika ditemukan kesalahan, melakukan koreksi yang diperlukan.
+- **Potensi Pengembalian ke RS**: Jika terbukti ada kesalahan klaim, pertimbangkan untuk meminta pengembalian dana dari rumah sakit.
+
+Laporan ini disusun berdasarkan regulasi dan pedoman yang berlaku di BPJS Kesehatan untuk memastikan akuntabilitas dan transparansi dalam pengelolaan klaim kesehatan.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:46:23.650437
+C00000152,0,0.0189008728461113,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007346,0,0.0178213445995942,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007700,0,0.0051741048003176,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003229,0,0.0256488112018084,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000201,0,0.0041938165217656,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008272,0,0.0243925677733647,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006369,0,0.0346868987582567,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004776,0,0.0051810399614494,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009758,1,0.1503721205443049,FRAUD,0.12,graph_ring_network,0.0677437310576592,0.0787775798044964,0.4190958803699672,0.0052854395726036,0.3758215011058549,0.0128255957597659,0.0037728542723692,0.0366774213169123,"provider_claim_share↑, billed_amount↓, procedure_cost↓","[{'feature': 'provider_claim_share', 'value': -1.2941651818780748, 'shap_value': 3.1510322673025075, 'direction': '↑'}, {'feature': 'billed_amount', 'value': -0.6391110931075211, 'shap_value': -2.759895520475693, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': -0.6009184331789565, 'shap_value': -2.345860094834934, 'direction': '↓'}, {'feature': 'rolling_avg_cost_30d', 'value': -0.6621932682320045, 'shap_value': 2.3253684620407875, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': -1.6395076018901993, 'shap_value': 1.8223112539300927, 'direction': '↑'}]","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+
+## 1. Gambaran Umum Kasus
+Klaim dengan ID C00009758 terdeteksi sebagai potensi fraud oleh model analisis data dengan probabilitas 15.04%. Klaim ini tidak memiliki informasi diagnosis, prosedur, atau tarif INA-CBG yang terdaftar. Dengan tagihan rumah sakit dan jumlah yang dibayar oleh BPJS sebesar 0, klaim ini menunjukkan indikasi awal yang mencurigakan. Tidak adanya data yang relevan mengindikasikan potensi manipulasi atau pengajuan klaim yang tidak valid.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio (claim_ratio, drug_ratio, procedure_ratio) adalah 0, yang menunjukkan tidak adanya klaim yang diajukan untuk obat atau prosedur. Hal ini tidak wajar karena setiap klaim seharusnya memiliki komponen biaya yang jelas.
+- **Hubungan Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG, tagihan rumah sakit, dan selisih klaim semuanya 0, tidak ada dasar untuk menilai kewajaran klaim. Sesuai dengan Permenkes INA-CBG, markup tidak boleh melebihi 10% dari tarif dasar, namun dalam kasus ini, tidak ada tarif yang dapat dibandingkan.
+- **Pola Abnormal**: Tidak adanya data yang relevan dan semua nilai yang nol menunjukkan pola abnormal yang sesuai dengan indikasi fraud.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada diagnosis yang terdaftar, sehingga tidak dapat dilakukan evaluasi kesesuaian dengan ICD-10.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa prosedur yang terdaftar, evaluasi kesesuaian tidak dapat dilakukan.
+- **Risiko Upcoding**: Dengan tidak adanya kode diagnosis, risiko upcoding tidak dapat dinilai. Namun, berdasarkan penelitian UGM, ketidaktepatan kode diagnosis dapat berimplikasi pada tarif klaim.
+- **Lama Rawat dan Tindakan**: Lama dirawat adalah 0, yang tidak sesuai dengan clinical pathway yang mengharuskan justifikasi medis untuk perawatan lebih dari 7 hari.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+Berdasarkan PerBPJS No. 6/2020 Pasal 15, klaim ini dapat dikategorikan sebagai potensi fraud tipe graph_ring_network. Tidak adanya data yang relevan menunjukkan kemungkinan:
+- **Phantom Billing**: Klaim yang diajukan tanpa adanya layanan nyata.
+- **No Medical Value**: Klaim yang tidak memiliki nilai medis karena tidak ada diagnosis atau prosedur yang terdaftar.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tidak ada diagnosis atau prosedur yang dapat diperiksa, sehingga tidak dapat dilakukan cross-check dengan grouper.
+- **Severity Level**: Tidak ada severity level yang dapat dievaluasi.
+- **Tarif Wajar**: Dengan tarif yang tidak terdaftar, tidak ada indikasi manipulasi yang dapat dinyatakan.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia untuk mendukung dugaan fraud, namun ketidakadaan data yang relevan mendukung pola perilaku provider yang mencurigakan.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis yang dilakukan, klaim ini dapat dikategorikan sebagai “Potensi Fraud Tinggi” karena tidak adanya informasi yang valid dan relevan, serta indikasi kuat bahwa klaim ini tidak mencerminkan layanan medis yang sebenarnya.
+
+## 8. Rekomendasi Tindak Lanjut
+- Melakukan audit medis lanjutan untuk mengevaluasi klaim serupa.
+- Meminta berkas tambahan dari provider untuk verifikasi lebih lanjut.
+- Mengonfirmasi dokter penanggung jawab untuk mendapatkan klarifikasi mengenai klaim ini.
+- Meminta data rekam medis lengkap untuk memastikan keabsahan klaim.
+- Melakukan pengecekan ulang Clinical Pathway dan Best Practice BPJS.
+- Mengoreksi kode diagnosis atau prosedur jika ditemukan kesalahan.
+- Mempertimbangkan potensi pengembalian klaim ke rumah sakit jika terbukti tidak valid.
+
+**Referensi Regulasi**:
+- PerBPJS No. 6/2020
+- Permenkes INA-CBG
+- Pedoman Anti-Fraud BPJS
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai klaim yang terdeteksi dan untuk mendukung langkah-langkah pengendalian yang diperlukan.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus graph_ring_network, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe graph_ring_network dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:46:42.546318
+C00008854,0,0.0064124717047708,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008094,0,0.0056626760116875,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001328,0,0.0116583840645413,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004847,0,0.008859190352496,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001089,0,0.0231017419892651,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008358,0,0.0055023289961217,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00002985,0,0.011610769130833,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005395,0,0.0177410787986698,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006502,0,0.0142346189154115,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006943,0,0.0200851799902057,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009623,0,0.024650611947647,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000086,0,0.0056180412618186,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009804,0,0.0037976220413725,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001129,0,0.0080308739249213,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00002622,0,0.0065168815451141,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004856,0,0.0443717639481638,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005373,0,0.0141956904588188,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000568,0,0.0133679346509786,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007096,0,0.0284682702125586,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001819,0,0.0323266956833376,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001426,0,0.0098234788195468,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001566,0,0.0174888796975231,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001886,0,0.0106456349061748,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008833,0,0.0059331506220232,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000993,0,0.0347749064771402,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006988,0,0.0571739457599869,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004573,0,0.0037635261545968,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003561,0,0.0155504476142942,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006739,1,0.4873939419071615,FRAUD,0.12,upcoding_diagnosis,0.02607267066058,0.0062717511518277,0.0115838746503731,0.008120562711661,0.0213276267609911,0.0095604045230331,0.0001605268084307,0.916902604696794,"billed_amount↑, procedure_ratio↑, provider_monthly_claims↑","[{'feature': 'billed_amount', 'value': -0.2238843381706029, 'shap_value': 4.295431177434511, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': -1.3051476004737192, 'shap_value': 1.4102600202313624, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': 1.5395754766362562, 'shap_value': 1.3686362398476921, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': 0.7467091937366958, 'shap_value': -1.1243882748729084, 'direction': '↓'}, {'feature': 'drug_ratio', 'value': -1.4004292296299101, 'shap_value': 1.04237053939607, 'direction': '↑'}]","# LAPORAN AUDIT KLAIM C00006739
+
+## 1. Gambaran Umum Kasus
+Klaim dengan ID C00006739 terdeteksi sebagai potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 48.74%. Klaim ini tidak memiliki informasi terkait diagnosis, prosedur, atau tarif INA-CBG, sehingga menimbulkan pertanyaan mengenai keabsahan dan kewajaran klaim yang diajukan. Dalam konteks ini, penting untuk melakukan audit komprehensif guna memastikan bahwa klaim tersebut sesuai dengan regulasi yang berlaku di BPJS Kesehatan.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio (claim_ratio, drug_ratio, procedure_ratio) terdeteksi sebagai 0, menunjukkan bahwa tidak ada klaim yang diajukan untuk obat atau prosedur, yang tidak biasa untuk klaim yang seharusnya mencakup pelayanan kesehatan.
+- **Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG, tagihan rumah sakit, dan selisih klaim semuanya bernilai 0, tidak ada dasar untuk menilai kewajaran klaim. Hal ini menunjukkan potensi manipulasi atau kesalahan dalam pengajuan klaim.
+- **Pola Abnormal**: Sesuai dengan SPO Audit BPJS, tidak adanya data yang relevan untuk diagnosis dan prosedur menunjukkan adanya ketidaknormalan yang signifikan dalam pengajuan klaim ini.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada informasi mengenai diagnosis yang dapat dievaluasi. Tanpa diagnosis yang jelas, tidak mungkin untuk menilai kesesuaian dengan ICD-10.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa prosedur yang dilaporkan, evaluasi kesesuaian prosedur tidak dapat dilakukan.
+- **Risiko Upcoding**: Mengacu pada penelitian UGM yang menunjukkan ketidaktepatan kode diagnosis sebesar 31%, klaim ini berpotensi mengindikasikan upcoding, meskipun tidak ada data yang mendukung.
+- **Lama Rawat dan Tindakan**: Dengan lama dirawat 0 hari, tidak ada tindakan yang dapat dievaluasi sesuai dengan clinical pathway yang mengharuskan justifikasi medis untuk perawatan lebih dari 7 hari.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+- **Upcoding**: Klaim ini berpotensi merupakan upcoding karena tidak adanya diagnosis dan prosedur yang dilaporkan.
+- **Unbundling, Inflated Bills, Phantom Billing, No Medical Value, Abuse/Overutilization, Graph Fraud**: Tidak ada bukti yang cukup untuk mendukung kategori ini, namun ketidakjelasan informasi mendukung dugaan adanya potensi fraud.
+- **Regulasi**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, klaim yang tidak wajar dapat dikenakan sanksi administratif berupa penundaan pembayaran dan pengembalian selisih klaim.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tanpa adanya diagnosis dan prosedur, tidak dapat dilakukan cross-check dengan grouper.
+- **Severity Level**: Tidak ada data yang dapat dievaluasi.
+- **Tarif Wajar**: Dengan tarif dan tagihan yang 0, tidak ada indikasi tarif yang wajar atau manipulasi.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia untuk mendukung dugaan fraud. Hal ini menunjukkan bahwa model tidak dapat memberikan informasi tambahan untuk menganalisis pola perilaku provider.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis di atas, klaim ini dikategorikan sebagai “Potensi Fraud Tinggi” karena tidak adanya informasi yang mendukung klaim dan indikasi kuat adanya upcoding.
+
+## 8. Rekomendasi Tindak Lanjut
+- Melakukan audit medis lanjutan untuk menginvestigasi lebih dalam mengenai klaim ini.
+- Meminta berkas tambahan terkait klaim untuk verifikasi.
+- Mengonfirmasi dokter penanggung jawab untuk mendapatkan penjelasan mengenai klaim.
+- Meminta data rekam medis lengkap untuk evaluasi lebih lanjut.
+- Melakukan pengecekan ulang Clinical Pathway dan Best Practices BPJS.
+- Mengoreksi kode diagnosis atau prosedur jika ditemukan ketidaksesuaian.
+- Mempertimbangkan potensi pengembalian klaim ke rumah sakit jika terbukti ada pelanggaran.
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai klaim yang terdeteksi sebagai potensi fraud dan untuk memastikan kepatuhan terhadap regulasi BPJS Kesehatan.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:47:08.854129
+C00007822,0,0.0204700706871383,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009597,0,0.0775156134410519,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00002657,0,0.0179193211961362,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00002783,0,0.0065781928720867,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004275,1,0.8943257521918423,FRAUD,0.12,inflated_bill,0.0131154975936483,4.335821784917118e-05,0.0067371539372389,0.0016588343492773,0.0102831934883482,0.939280045165066,0.0005590931043572,0.0283227893893904,"drug_ratio↑, billed_amount↑, provider_monthly_claims↑","[{'feature': 'drug_ratio', 'value': 5.77390766023377, 'shap_value': 10.340014936591032, 'direction': '↑'}, {'feature': 'billed_amount', 'value': 0.9259887892010611, 'shap_value': 2.682704840884544, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': 1.5395754766362562, 'shap_value': 1.1909603756407159, 'direction': '↑'}, {'feature': 'drug_cost', 'value': 5.721524468455091, 'shap_value': 1.1823273834807333, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': 0.6258530122880398, 'shap_value': -1.091374876354821, 'direction': '↓'}]","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+
+## 1. Gambaran Umum Kasus
+Klaim dengan ID C00004275 terdeteksi sebagai potensi fraud dengan prediksi ""inflated_bill"" dan probabilitas 89.43%. Data klaim menunjukkan bahwa tidak ada informasi mengenai diagnosis, prosedur, tarif INA-CBG, tagihan rumah sakit, atau jumlah yang dibayarkan oleh BPJS. Hal ini menimbulkan indikasi awal bahwa klaim ini mungkin tidak valid atau tidak sesuai dengan ketentuan yang berlaku.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio yang relevan (claim_ratio, drug_ratio, procedure_ratio) menunjukkan nilai 0, yang mengindikasikan tidak adanya klaim yang dapat dianalisis lebih lanjut. Hal ini menciptakan ketidakpastian dalam evaluasi kewajaran klaim.
+- **Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG dan tagihan rumah sakit yang semuanya bernilai 0, tidak ada basis untuk menilai kewajaran tagihan. Selisih klaim juga 0, menunjukkan bahwa tidak ada klaim yang diajukan untuk pembayaran.
+- **Pola Abnormal**: Ketidakadaan data yang relevan menunjukkan pola abnormal yang signifikan, sesuai dengan pedoman audit BPJS yang menyatakan bahwa klaim harus memiliki informasi yang lengkap dan sesuai.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada diagnosis yang dilaporkan, sehingga tidak ada evaluasi kesesuaian yang dapat dilakukan.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa adanya prosedur yang dilaporkan, evaluasi tidak dapat dilakukan.
+- **Risiko Upcoding**: Mengingat tidak ada data yang tersedia, risiko upcoding tidak dapat dievaluasi.
+- **Lama Rawat dan Tindakan**: Lama dirawat adalah 0, yang tidak sesuai dengan pedoman clinical pathway yang menyatakan bahwa perawatan untuk diagnosis tertentu memerlukan justifikasi medis.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+- **Inflated Bills**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, klaim dengan indikasi inflated_bill dapat dikenakan sanksi administratif. Dalam hal ini, tidak ada data yang mendukung klaim yang diajukan.
+- **Kewajiban Verifikasi**: Sesuai dengan Peraturan BPJS No.6 Tahun 2020, kewajiban verifikasi dan audit tidak dapat dilaksanakan tanpa data yang memadai.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tidak ada diagnosis atau prosedur yang dilaporkan, sehingga tidak ada evaluasi konsistensi yang dapat dilakukan.
+- **Severity Level**: Tanpa informasi mengenai severity level, evaluasi tidak dapat dilakukan.
+- **Tarif Wajar**: Dengan tarif dan tagihan yang semuanya 0, tidak ada indikasi manipulasi yang dapat diidentifikasi.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia untuk mendukung analisis lebih lanjut mengenai dugaan fraud. Ketidakadaan data ini memperkuat dugaan bahwa klaim ini tidak valid.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis yang dilakukan, klaim ini menunjukkan indikasi ""Potensi Fraud Tinggi"" karena tidak adanya data yang mendukung klaim yang diajukan. Semua parameter yang relevan menunjukkan nilai 0, yang tidak sesuai dengan ketentuan yang berlaku.
+
+## 8. Rekomendasi Tindak Lanjut
+- **Audit Medis Lanjutan**: Disarankan untuk melakukan audit medis lanjutan untuk mengidentifikasi kemungkinan kesalahan atau penipuan.
+- **Permintaan Berkas Tambahan**: Minta berkas tambahan dari rumah sakit untuk mendukung klaim.
+- **Konfirmasi Dokter Penanggung Jawab**: Lakukan konfirmasi dengan dokter yang bertanggung jawab atas klaim ini.
+- **Permintaan Data Rekam Medis Lengkap**: Minta data rekam medis lengkap untuk mengevaluasi keabsahan klaim.
+- **Pengecekan Ulang CP & BA BPJS**: Lakukan pengecekan ulang terhadap Clinical Pathway dan Best Available (BA) BPJS.
+- **Koreksi Kode Diagnosis atau Prosedur**: Jika ada data yang valid, lakukan koreksi sesuai dengan ketentuan yang berlaku.
+- **Potensi Pengembalian ke RS**: Jika terbukti ada penipuan, pertimbangkan untuk meminta pengembalian klaim dari rumah sakit.
+
+Laporan ini disusun berdasarkan regulasi yang berlaku dan data yang tersedia. Semua rekomendasi dan kesimpulan didasarkan pada analisis yang objektif dan sesuai dengan pedoman BPJS Kesehatan.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus inflated_bill, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe inflated_bill dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:47:28.290308
+C00001961,0,0.0045326057234605,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008232,0,0.0036867619598928,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007630,0,0.0048744791311093,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007415,0,0.0047536040335361,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006535,0,0.0055545512565624,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001613,0,0.0161932669929039,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003720,0,0.0204441235461043,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001112,0,0.01348731326328,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001210,0,0.0191857229061038,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009191,0,0.0052232042383904,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004867,0,0.0112719558729497,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009859,0,0.0071105313993147,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003647,0,0.0022919402379588,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003677,1,0.1356660211401404,FRAUD,0.12,graph_star_spoke,0.3387644694809408,0.0028265375072705,0.0200611726867323,0.0108513231679922,0.4346493850326339,0.0438446063847483,0.0060037958315766,0.1429986888175294,"billed_amount↑, paid_amount↓, provider_claim_share↓","[{'feature': 'billed_amount', 'value': 0.9098823933993757, 'shap_value': 3.7326008743525017, 'direction': '↑'}, {'feature': 'paid_amount', 'value': 0.45661110974884717, 'shap_value': -1.1139204849605449, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': -0.6341646434345132, 'shap_value': -1.1128005856950767, 'direction': '↓'}, {'feature': 'rolling_avg_cost_30d', 'value': 0.3619272578766689, 'shap_value': -0.6451380948431324, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': 0.7629616474571942, 'shap_value': 0.5813513209053781, 'direction': '↑'}]","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+
+## 1. Gambaran Umum Kasus
+Klaim ID: C00003677 teridentifikasi sebagai potensi fraud dengan prediksi model sebesar 13.57%. Data klaim menunjukkan bahwa tidak ada informasi mengenai diagnosis, prosedur, tarif INA-CBG, tagihan rumah sakit, atau jumlah yang dibayarkan oleh BPJS. Hal ini menunjukkan adanya kekurangan informasi yang signifikan, yang dapat mengindikasikan potensi penyimpangan dalam pengajuan klaim.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio yang relevan (claim_ratio, drug_ratio, procedure_ratio) tidak dapat dihitung karena tidak ada data yang tersedia. Hal ini menunjukkan bahwa klaim ini tidak memiliki substansi yang dapat dievaluasi.
+- **Hubungan Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG dan tagihan rumah sakit yang tidak ada, serta selisih klaim yang nol, tidak ada dasar untuk menilai kewajaran klaim ini. 
+- **Pola Abnormal**: Ketiadaan data yang lengkap dan relevan menunjukkan adanya pola abnormal yang sesuai dengan kategori fraud, terutama dalam konteks ""Phantom Billing"" di mana klaim diajukan tanpa adanya layanan medis yang nyata.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada diagnosis yang dilaporkan, sehingga tidak dapat dilakukan evaluasi kesesuaian dengan ICD-10.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa prosedur yang dilaporkan, evaluasi kesesuaian juga tidak dapat dilakukan.
+- **Risiko Upcoding**: Mengingat tidak ada data diagnosis, risiko upcoding tidak dapat dievaluasi, namun berdasarkan penelitian UGM, ketidaktepatan kode diagnosis dapat berimplikasi pada tarif klaim.
+- **Lama Rawat dan Tindakan**: Tidak ada lama rawat yang dilaporkan, sehingga tidak dapat dibandingkan dengan clinical pathway yang ada.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+Berdasarkan PerBPJS No. 6/2020 Pasal 15, klaim ini dapat dikategorikan sebagai ""Phantom Billing"" karena tidak ada bukti layanan medis yang diberikan. Selain itu, mengacu pada Permenkes INA-CBG, klaim ini tidak memenuhi syarat untuk dibayarkan karena tidak ada tarif yang dapat diterapkan.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tidak ada diagnosis atau prosedur yang dapat dievaluasi.
+- **Severity Level**: Tidak ada data untuk menentukan apakah severity level sesuai dengan parameter medis.
+- **Tarif Wajar**: Tanpa tarif yang dilaporkan, tidak ada indikasi manipulasi.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia untuk dianalisis. Namun, ketiadaan data yang substansial mendukung dugaan fraud, terutama dalam konteks pengajuan klaim yang tidak memiliki dasar medis yang jelas.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis di atas, klaim ini dapat dikategorikan sebagai “Potensi Fraud Tinggi” karena ketiadaan informasi yang substansial dan indikasi kuat bahwa klaim ini tidak mencerminkan layanan medis yang sebenarnya.
+
+## 8. Rekomendasi Tindak Lanjut
+- Melakukan audit medis lanjutan untuk mengevaluasi klaim ini secara mendalam.
+- Meminta berkas tambahan dari rumah sakit terkait untuk mendapatkan informasi lebih lanjut.
+- Mengonfirmasi dengan dokter penanggung jawab mengenai klaim ini.
+- Meminta data rekam medis lengkap untuk mendukung atau membantah klaim.
+- Melakukan pengecekan ulang Clinical Pathway dan Business Analysis BPJS untuk memastikan kepatuhan.
+- Mengoreksi kode diagnosis atau prosedur jika ditemukan kesalahan.
+- Mengajukan potensi pengembalian dana ke rumah sakit jika terbukti ada penyimpangan.
+
+Laporan ini disusun berdasarkan regulasi resmi dan pedoman yang berlaku, serta bertujuan untuk menjaga integritas sistem BPJS Kesehatan.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus graph_star_spoke, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe graph_star_spoke dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:47:49.928794
+C00001105,0,0.0098558282735535,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004276,0,0.0044088540676067,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00002882,0,0.0170779859888021,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001477,0,0.005107607975014,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006466,0,0.0059773599433408,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006189,0,0.017294501314885,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008518,0,0.0237367492577431,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009904,0,0.0105876927840358,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005567,0,0.0084194640042092,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009436,0,0.0078157423068324,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003311,0,0.0183829123412721,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004599,0,0.0128231612250708,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004664,0,0.0355662397469554,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003987,0,0.0143230236890759,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004934,0,0.0042501512418382,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008939,0,0.0262449574548027,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008579,0,0.0101736190598503,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005981,0,0.019358575960515,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000540,0,0.0322535349460048,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00003308,0,0.0059656499322575,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001978,0,0.0074403089629732,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00008199,0,0.0074912585961043,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004524,1,0.7509246285724935,FRAUD,0.12,upcoding_diagnosis,0.0411689465575208,0.0157881727727728,0.0579513739475401,0.0118648188742452,0.0917834892009031,0.0188956279730126,0.0095505583484704,0.7529970117046529,"billed_amount↑, provider_claim_share↑, procedure_ratio↑","[{'feature': 'billed_amount', 'value': -0.37620041591192893, 'shap_value': 3.62933818816673, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': -0.6611549251940342, 'shap_value': 1.48821171407355, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': -0.9383086955171221, 'shap_value': 1.3275723304925486, 'direction': '↑'}, {'feature': 'paid_amount', 'value': -0.55575232011103, 'shap_value': 1.3150647366279735, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': -0.5575690416280176, 'shap_value': 0.7143555495428154, 'direction': '↑'}]","# LAPORAN AUDIT KLAIM C00004524
+
+## 1. Gambaran Umum Kasus
+Klaim dengan ID C00004524 terdeteksi sebagai potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 75.09%. Data klaim menunjukkan bahwa tidak ada informasi terkait diagnosis, prosedur, atau tarif INA-CBG, serta tidak ada tagihan rumah sakit dan jumlah yang dibayarkan oleh BPJS. Hal ini menimbulkan indikasi awal bahwa klaim ini mungkin tidak memenuhi syarat untuk pembayaran atau terdapat manipulasi dalam pengajuan klaim.
+
+## 2. Analisis Data Klaim Kuantitatif
+- **Claim Ratio, Drug Ratio, Procedure Ratio**: Semua rasio yang relevan (claim_ratio, drug_ratio, procedure_ratio) tidak dapat dihitung karena tidak ada data yang tersedia. Hal ini menunjukkan ketidaklengkapan informasi yang dapat mengindikasikan potensi fraud.
+- **Hubungan Tarif INA-CBG, Tagihan RS, dan Selisih Klaim**: Dengan tarif INA-CBG, tagihan rumah sakit, dan selisih klaim semuanya bernilai nol, tidak ada dasar untuk menilai kewajaran klaim. Sesuai dengan Permenkes INA-CBG, markup tidak boleh melebihi 10% dari tarif dasar, namun dalam kasus ini, tidak ada tarif yang dapat dijadikan acuan.
+- **Identifikasi Pola Abnormal**: Ketidakadaan data yang relevan dan tidak adanya klaim yang diajukan menunjukkan pola abnormal yang mencolok dan berpotensi mencurigakan.
+
+## 3. Evaluasi Klinis & Kodefikasi
+- **Kesesuaian ICD-10**: Tidak ada diagnosis yang dicantumkan, sehingga tidak dapat dilakukan evaluasi kesesuaian ICD-10 dengan diagnosis medis.
+- **Kesesuaian Prosedur & Intervensi**: Tanpa adanya prosedur yang terdaftar, evaluasi kesesuaian prosedur dan intervensi tidak dapat dilakukan.
+- **Risiko Upcoding**: Berdasarkan penelitian UGM, terdapat ketidaktepatan kode diagnosis hingga 31%. Dalam kasus ini, tidak ada data untuk menilai apakah terdapat upcoding.
+- **Lama Rawat dan Tindakan**: Dengan lama dirawat yang tercatat sebagai nol, tidak ada tindakan yang dapat dievaluasi sesuai dengan clinical pathway yang ada.
+
+## 4. Analisis Fraud Berdasarkan Regulasi Resmi
+- **Upcoding**: Klaim ini berpotensi mencerminkan upcoding, namun tidak ada data yang mendukung diagnosis atau prosedur yang diajukan.
+- **Unbundling**: Tidak dapat dinilai karena tidak ada prosedur yang terdaftar.
+- **Inflated Bills**: Tidak ada tagihan yang dapat dievaluasi.
+- **Phantom Billing**: Dengan tidak adanya informasi yang jelas, klaim ini dapat dianggap sebagai phantom billing.
+- **No Medical Value**: Mengingat tidak ada data medis yang disertakan, klaim ini tidak menunjukkan nilai medis.
+- **Abuse / Overutilization**: Tidak dapat dievaluasi karena tidak ada data yang relevan.
+- **Graph Fraud**: Tidak ada data yang mendukung analisis ini.
+
+Dasar evaluasi mengacu pada PerBPJS No. 6/2020 yang mengatur tentang sanksi administratif untuk fraud tipe upcoding, serta Permenkes 16/2019 mengenai struktur INA-CBG.
+
+## 5. Cross-Check INA-CBG
+- **Konsistensi Diagnosis & Prosedur**: Tidak ada diagnosis atau prosedur yang dapat diperiksa konsistensinya dengan grouper.
+- **Severity Level**: Tidak ada severity level yang dapat dievaluasi.
+- **Tarif Wajar**: Tidak ada tarif yang dapat dianalisis untuk menentukan apakah ada indikasi manipulasi.
+
+## 6. Interpretasi Fitur SHAP
+Tidak ada fitur SHAP yang tersedia dalam klaim ini. Hal ini menyulitkan untuk mengaitkan dugaan fraud dengan pola perilaku provider.
+
+## 7. Kesimpulan Auditor Profesional
+Berdasarkan analisis yang dilakukan, klaim ini menunjukkan indikasi kuat potensi fraud. Dengan tidak adanya data yang relevan dan informasi yang lengkap, klaim ini dapat dikategorikan sebagai:
+- **“Potensi Fraud Tinggi”**
+
+## 8. Rekomendasi Tindak Lanjut
+- Melakukan audit medis lanjutan untuk mengevaluasi kelayakan klaim.
+- Meminta berkas tambahan dari provider untuk melengkapi informasi yang hilang.
+- Mengonfirmasi dengan dokter penanggung jawab mengenai klaim ini.
+- Meminta data rekam medis lengkap untuk analisis lebih lanjut.
+- Melakukan pengecekan ulang terhadap Clinical Pathway dan Business Analysis BPJS.
+- Mengoreksi kode diagnosis atau prosedur jika ditemukan kesalahan.
+- Mempertimbangkan potensi pengembalian klaim ke rumah sakit jika terbukti tidak valid.
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai potensi fraud dalam klaim C00004524 dan untuk mendukung langkah-langkah selanjutnya sesuai dengan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T17:48:11.556052
+C00004642,0,0.0068783833790807,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004923,0,0.0413453936056417,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000498,0,0.0955590085055516,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005924,0,0.0158914117008114,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000860,0,0.0085286812182892,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00004582,0,0.0056542125979283,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009480,0,0.007298654818005,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009490,0,0.0063402828053194,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006303,0,0.0057468002351004,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006553,0,0.002919800653044,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00000027,0,0.0150849195346455,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006407,0,0.0092298743521215,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00009781,0,0.0050173402993418,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00001487,0,0.0125558316973655,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006815,0,0.0314482543555267,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007054,0,0.0043495875083275,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00006253,0,0.0087909092573111,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00005057,0,0.0052066807962434,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,
+C00007826,0,0.006821748909905,BENIGN,0.12,benign,,,,,,,,,,,No explanation generated — claim classified as benign.,,,

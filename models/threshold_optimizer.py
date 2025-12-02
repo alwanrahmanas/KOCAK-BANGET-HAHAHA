@@ -1,140 +1,144 @@
 """
-Threshold optimization for binary classification
+Threshold Optimizer
+===================
+Optimizes classification thresholds for better performance.
 """
 
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_recall_curve, f1_score, precision_score, recall_score
-from typing import Tuple, Dict
-import warnings
-warnings.filterwarnings('ignore')
+import seaborn as sns
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 
 class ThresholdOptimizer:
-    """
-    Optimize classification threshold for different metrics
-    """
-    
-    def __init__(self, min_threshold: float = 0.1, max_threshold: float = 0.9, step: float = 0.01):
-        """
-        Initialize threshold optimizer
-        
-        Args:
-            min_threshold: Minimum threshold to test
-            max_threshold: Maximum threshold to test
-            step: Step size for threshold search
-        """
-        self.min_threshold = min_threshold
-        self.max_threshold = max_threshold
-        self.step = step
-        self.thresholds = np.arange(min_threshold, max_threshold + step, step)
-    
-    def optimize(
-        self,
-        y_true: np.ndarray,
-        y_proba: np.ndarray,
-        metric: str = 'f1'
-    ) -> Tuple[float, Dict]:
-        """
-        Find optimal threshold for given metric
-        
-        Args:
-            y_true: True labels (0/1)
-            y_proba: Predicted probabilities (0.0-1.0)
-            metric: Metric to optimize ('f1', 'f2', 'f0.5', 'balanced')
-        
-        Returns:
-            optimal_threshold: Best threshold value
-            results: Dictionary with optimization results
-        """
-        best_score = 0
-        best_threshold = 0.5
-        threshold_scores = []
-        
-        for threshold in self.thresholds:
-            y_pred = (y_proba >= threshold).astype(int)
-            
-            precision = precision_score(y_true, y_pred, zero_division=0)
-            recall = recall_score(y_true, y_pred, zero_division=0)
-            
-            if metric == 'f1':
-                score = f1_score(y_true, y_pred, zero_division=0)
-            elif metric == 'f2':
-                # F2 score (recall weighted 2x)
-                beta = 2
-                score = ((1 + beta**2) * precision * recall) / ((beta**2 * precision) + recall) if (precision + recall) > 0 else 0
-            elif metric == 'f0.5':
-                # F0.5 score (precision weighted 2x)
-                beta = 0.5
-                score = ((1 + beta**2) * precision * recall) / ((beta**2 * precision) + recall) if (precision + recall) > 0 else 0
-            elif metric == 'balanced':
-                # Balanced metric (average of precision and recall)
-                score = (precision + recall) / 2
-            else:
-                raise ValueError(f"Unknown metric: {metric}. Use 'f1', 'f2', 'f0.5', or 'balanced'")
-            
-            threshold_scores.append({
-                'threshold': float(threshold),
-                'score': float(score),
-                'precision': float(precision),
-                'recall': float(recall)
-            })
-            
-            if score > best_score:
-                best_score = score
-                best_threshold = threshold
-        
-        results = {
-            'optimal_threshold': float(best_threshold),
-            'best_score': float(best_score),
-            'metric': metric,
-            'all_scores': threshold_scores
-        }
-        
-        return best_threshold, results
-    
-    def plot_threshold_curve(
-        self,
-        results: Dict,
-        save_path: str = None
+    """🔧 FIXED: Robust threshold optimization"""
+
+    @staticmethod
+    def find_optimal_threshold(
+        y_true, 
+        y_pred_proba, 
+        metric='f1', 
+        beta=1.0,
+        min_threshold=0.1,
+        max_threshold=0.9,
+        step=0.01
     ):
         """
-        Plot threshold vs metrics curve
-        
-        Args:
-            results: Results from optimize()
-            save_path: Path to save plot (optional)
+        Find optimal threshold with better error handling
         """
-        scores_data = results['all_scores']
-        thresholds = [s['threshold'] for s in scores_data]
-        scores = [s['score'] for s in scores_data]
-        precisions = [s['precision'] for s in scores_data]
-        recalls = [s['recall'] for s in scores_data]
-        
-        plt.figure(figsize=(12, 6))
-        
-        plt.plot(thresholds, scores, 'b-', label=f'{results["metric"].upper()} Score', linewidth=2)
-        plt.plot(thresholds, precisions, 'g--', label='Precision', linewidth=1.5)
-        plt.plot(thresholds, recalls, 'r--', label='Recall', linewidth=1.5)
-        
-        # Mark optimal threshold
-        plt.axvline(
-            results['optimal_threshold'],
-            color='orange',
-            linestyle=':',
-            linewidth=2,
-            label=f'Optimal ({results["optimal_threshold"]:.3f})'
-        )
-        
-        plt.xlabel('Threshold', fontsize=12)
-        plt.ylabel('Score', fontsize=12)
-        plt.title(f'Threshold Optimization - {results["metric"].upper()}', fontsize=14, fontweight='bold')
-        plt.legend(loc='best', fontsize=10)
-        plt.grid(True, alpha=0.3)
-        plt.tight_layout()
-        
-        if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
-            print(f"Plot saved to {save_path}")
-        
-        plt.show()
+        # Validate inputs
+        if len(y_true) == 0 or len(y_pred_proba) == 0:
+            print("  ⚠️  Empty inputs - using default threshold 0.5")
+            return 0.5, 0.0, pd.DataFrame()
+
+        if len(np.unique(y_true)) < 2:
+            print("  ⚠️  Only one class in y_true - using default threshold 0.5")
+            return 0.5, 0.0, pd.DataFrame()
+
+        try:
+            thresholds = np.arange(min_threshold, max_threshold, step)
+            scores = []
+            metrics_list = []
+
+            for threshold in thresholds:
+                y_pred = (y_pred_proba >= threshold).astype(int)
+
+                # Handle edge case: all predictions same class
+                if len(np.unique(y_pred)) < 2:
+                    continue
+
+                precision = precision_score(y_true, y_pred, zero_division=0)
+                recall = recall_score(y_true, y_pred, zero_division=0)
+                f1 = f1_score(y_true, y_pred, zero_division=0)
+
+                if metric == 'f1':
+                    score = f1
+                elif metric == 'f2':
+                    score = (5 * precision * recall) / (4 * precision + recall) if (4 * precision + recall) > 0 else 0
+                elif metric == 'f0.5':
+                    score = (1.25 * precision * recall) / (0.25 * precision + recall) if (0.25 * precision + recall) > 0 else 0
+                elif metric == 'balanced':
+                    score = (precision + recall) / 2
+                else:
+                    score = f1
+
+                scores.append(score)
+                metrics_list.append({
+                    'threshold': threshold,
+                    'precision': precision,
+                    'recall': recall,
+                    'f1_score': f1,
+                    'score': score
+                })
+
+            if len(scores) == 0:
+                print("  ⚠️  No valid thresholds found - using default 0.5")
+                return 0.5, 0.0, pd.DataFrame()
+
+            best_idx = np.argmax(scores)
+            optimal_threshold = thresholds[best_idx]
+            best_score = scores[best_idx]
+
+            return optimal_threshold, best_score, pd.DataFrame(metrics_list)
+
+        except Exception as e:
+            print(f"  ❌ Threshold optimization failed: {e}")
+            print(f"     Using default threshold 0.5")
+            return 0.5, 0.0, pd.DataFrame()
+
+    @staticmethod
+    def plot_threshold_analysis(df_metrics, optimal_threshold, save_path=None):
+        """Plot threshold analysis"""
+        if df_metrics.empty:
+            print("  ⚠️  No metrics to plot")
+            return
+
+        try:
+            import matplotlib
+            matplotlib.use('Agg')  # ✅ Non-interactive backend untuk CLI
+            import matplotlib.pyplot as plt
+            import seaborn as sns
+            
+            fig, axes = plt.subplots(1, 2, figsize=(15, 5))
+
+            # Plot 1: Metrics vs threshold
+            axes[0].plot(df_metrics['threshold'], df_metrics['precision'], 
+                        label='Precision', linewidth=2)
+            axes[0].plot(df_metrics['threshold'], df_metrics['recall'], 
+                        label='Recall', linewidth=2)
+            axes[0].plot(df_metrics['threshold'], df_metrics['f1_score'], 
+                        label='F1-Score', linewidth=2, linestyle='--')
+            axes[0].axvline(optimal_threshold, color='red', linestyle=':', 
+                        label=f'Optimal = {optimal_threshold:.3f}')
+            axes[0].set_xlabel('Threshold')
+            axes[0].set_ylabel('Score')
+            axes[0].set_title('Metrics vs Classification Threshold')
+            axes[0].legend()
+            axes[0].grid(alpha=0.3)
+
+            # Plot 2: Precision-Recall curve
+            axes[1].plot(df_metrics['recall'], df_metrics['precision'], linewidth=2)
+            
+            # Find optimal point
+            optimal_row = df_metrics[df_metrics['threshold'] == optimal_threshold].iloc[0]
+            axes[1].scatter(optimal_row['recall'], optimal_row['precision'],
+                        color='red', s=100, zorder=5, 
+                        label=f'Optimal (t={optimal_threshold:.3f})')
+            axes[1].set_xlabel('Recall')
+            axes[1].set_ylabel('Precision')
+            axes[1].set_title('Precision-Recall Curve')
+            axes[1].legend()
+            axes[1].grid(alpha=0.3)
+
+            plt.tight_layout()
+            
+            if save_path:
+                plt.savefig(save_path, dpi=300, bbox_inches='tight')
+                print(f"  ✅ Threshold plot saved: {save_path}")
+            
+            plt.close(fig)  # ✅ Close figure tanpa show()
+            
+        except Exception as e:
+            print(f"  ⚠️  Plotting failed: {e}")
+

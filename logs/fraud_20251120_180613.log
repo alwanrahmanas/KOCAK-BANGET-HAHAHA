@@ -1,0 +1,11 @@
+2025-11-20 18:06:13,760 | __main__ | INFO | Starting inference workflow...
+2025-11-20 18:06:13,762 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 18:06:13,762 | workflows.inference_workflow | INFO | BATCH FRAUD PREDICTION (RAG-READY)
+2025-11-20 18:06:13,763 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 18:06:13,764 | workflows.inference_workflow | INFO | 📂 Loading data: bpjs_inference_small.csv
+2025-11-20 18:06:13,825 | workflows.inference_workflow | INFO |    ✅ Rows: 100
+2025-11-20 18:06:13,835 | workflows.inference_workflow | INFO |    ℹ️  Has labels: False
+2025-11-20 18:06:13,836 | workflows.inference_workflow | INFO | 🔧 Loading inference engine...
+2025-11-20 18:06:15,392 | workflows.inference_workflow | INFO | 🔮 Running predictions...
+2025-11-20 18:06:15,393 | workflows.inference_workflow | INFO |    - Generate explanations: True
+2025-11-20 18:06:15,394 | workflows.inference_workflow | INFO |    - Evaluate: False

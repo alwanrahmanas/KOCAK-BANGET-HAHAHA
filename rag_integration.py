@@ -44,35 +44,75 @@ class RAGIntegration:
         self._check_availability()
     
     def _check_availability(self) -> bool:
-        """Check if RAG system is available"""
+        """Check if RAG system is available with detailed debugging"""
+        
+        logger.info("="*80)
+        logger.info("🔍 DEBUGGING RAG SYSTEM AVAILABILITY")
+        logger.info("="*80)
+        
+        # Step 1: Check path
+        logger.info(f"[1] RAG_SYSTEM_PATH from init/env: {self.rag_system_path}")
+        
         if not self.rag_system_path:
-            logger.warning("RAG system path not configured")
+            logger.error("❌ No RAG system path configured (rag_system_path is None)")
             return False
-        
+
         if not os.path.exists(self.rag_system_path):
-            logger.warning(f"RAG system path not found: {self.rag_system_path}")
+            logger.error(f"❌ RAG system path does NOT exist: {self.rag_system_path}")
             return False
-        
+
+        logger.info("✓ Path exists")
+
+        # Step 2: Check folder contents
         try:
-            # Add RAG system to path
-            if self.rag_system_path not in sys.path:
-                sys.path.insert(0, self.rag_system_path)
+            files = os.listdir(self.rag_system_path)
+            logger.info(f"[2] Files in RAG directory: {files}")
+        except Exception as e:
+            logger.error(f"❌ Cannot list directory contents: {e}")
+            return False
+
+        # Step 3: Add to sys.path
+        if self.rag_system_path not in sys.path:
+            sys.path.insert(0, self.rag_system_path)
+            logger.info(f"✓ Added RAG path to sys.path")
+
+        # Step 4: Try imports — but with FULL TRACEBACK
+        logger.info("[3] Trying to import RAG modules...")
+        try:
+            import importlib
+
+            # Explicit import with diagnostic info
+            bpjs_module = importlib.import_module("bpjs_fraud_rag_system")
+            bridge_module = importlib.import_module("ml_pipeline_rag_bridge")
+
+            self.BPJSFraudRAGSystem = bpjs_module.BPJSFraudRAGSystem
+            self.MLPipelineRAGBridge = bridge_module.MLPipelineRAGBridge
             
-            # Try importing RAG modules
-            from bpjs_fraud_rag_system import BPJSFraudRAGSystem
-            from ml_pipeline_rag_bridge import MLPipelineRAGBridge
-            
-            self.BPJSFraudRAGSystem = BPJSFraudRAGSystem
-            self.MLPipelineRAGBridge = MLPipelineRAGBridge
-            
+            logger.info("✓ Successfully imported bpjs_fraud_rag_system")
+            logger.info("✓ Successfully imported ml_pipeline_rag_bridge")
+
             self.rag_available = True
-            logger.info(f"✓ RAG system available at: {self.rag_system_path}")
             return True
-            
-        except ImportError as e:
-            logger.warning(f"RAG system import failed: {e}")
+
+        except Exception as e:
+            # FULL traceback
+            import traceback
+            error_text = traceback.format_exc()
+
+            logger.error("❌ RAG system import FAILED")
+            logger.error(f"Error message: {e}")
+            logger.error("----- FULL TRACEBACK BELOW -----")
+            logger.error(error_text)
+            logger.error("----- END TRACEBACK -----")
+
+            logger.error("📌 TIP: Check if the following modules exist:")
+            logger.error("    - bpjs_fraud_rag_system.py")
+            logger.error("    - ml_pipeline_rag_bridge.py")
+            logger.error("    - exceptions.py  (jika modul RAG butuh)")
+
             self.rag_available = False
             return False
+
     
     def initialize_rag_system(self, rebuild_vectors: bool = False):
         """Initialize and setup RAG system"""

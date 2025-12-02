@@ -1,0 +1,26 @@
+2025-11-20 22:44:07,628 | __main__ | INFO | Starting inference workflow...
+2025-11-20 22:44:07,629 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 22:44:07,630 | workflows.inference_workflow | INFO | BATCH FRAUD PREDICTION (RAG-READY)
+2025-11-20 22:44:07,630 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 22:44:07,631 | workflows.inference_workflow | INFO | 📂 Loading data: bpjs_inference_small.csv
+2025-11-20 22:44:07,662 | workflows.inference_workflow | INFO |    ✅ Rows: 3
+2025-11-20 22:44:07,663 | workflows.inference_workflow | INFO |    ℹ️  Has labels: False
+2025-11-20 22:44:07,664 | workflows.inference_workflow | INFO | 🔧 Loading inference engine...
+2025-11-20 22:44:09,023 | workflows.inference_workflow | INFO | 🔮 Running predictions...
+2025-11-20 22:44:09,024 | workflows.inference_workflow | INFO |    - Generate explanations: True
+2025-11-20 22:44:09,024 | workflows.inference_workflow | INFO |    - Evaluate: False
+2025-11-20 22:44:24,916 | workflows.inference_workflow | INFO | 
+📊 Prediction Summary:
+2025-11-20 22:44:24,917 | workflows.inference_workflow | INFO |    Total: 3
+2025-11-20 22:44:24,918 | workflows.inference_workflow | INFO |    Fraud: 1 (33.33%)
+2025-11-20 22:44:24,928 | workflows.inference_workflow | INFO | 
+💾 Saved: C:\Users\US3R\OneDrive\Dokumen\Data_Science\Project\MLInference\outputs\predictions_20251120_224354.csv
+2025-11-20 22:44:24,929 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 22:44:24,930 | workflows.inference_workflow | INFO | ✅ INFERENCE COMPLETED
+2025-11-20 22:44:24,930 | workflows.inference_workflow | INFO | ================================================================================
+2025-11-20 22:44:24,985 | __main__ | INFO | ✅ Predictions saved to: C:\Users\US3R\OneDrive\Dokumen\Data_Science\Project\MLInference\outputs\predictions_20251120_224354.csv
+2025-11-20 22:44:24,987 | __main__ | INFO |    Total claims: 3
+2025-11-20 22:44:24,989 | __main__ | INFO |    Fraud cases: 1
+2025-11-20 22:44:24,990 | __main__ | INFO | 
+🔗 Next step - Generate RAG explanations:
+2025-11-20 22:44:24,991 | __main__ | INFO |    python RAGSystem/main.py explain --input C:\Users\US3R\OneDrive\Dokumen\Data_Science\Project\MLInference\outputs\predictions_20251120_224354.csv

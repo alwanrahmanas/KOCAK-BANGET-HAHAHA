@@ -1,0 +1,424 @@
+claim_id,episode_id,participant_id,nik_hash,age,sex,faskes_id,dpjp_id,faskes_level,provinsi,kabupaten,tgl_pelayanan,kode_icd10,kode_prosedur,jenis_pelayanan,room_class,lama_dirawat,billed_amount,paid_amount,drug_cost,procedure_cost,visit_count_30d,kapitasi_flag,referral_flag,referral_to_same_facility,referral_to,graph_pattern_id,kode_tarif_inacbg,tarif_inacbg,clinical_pathway_name,diagnosis_name,procedure_name,inacbg_code,inacbg_tarif,selisih_klaim,obat_keluar,obat_match_score,time_diff_prev_claim,claim_month,claim_quarter,rolling_avg_cost_30d,provider_monthly_claims,nik_hash_reuse_count,clinical_pathway_deviation_score,claim_ratio,prev_claim_1_kode_icd10,prev_claim_1_jenis_pelayanan,prev_claim_1_room_class,prev_claim_1_billed_amount,prev_claim_1_claim_ratio,prev_claim_1_clinical_pathway_deviation_score,prev_claim_1_visit_count_30d,prev_claim_1_faskes_id,prev_claim_2_kode_icd10,prev_claim_2_jenis_pelayanan,prev_claim_2_room_class,prev_claim_2_billed_amount,prev_claim_2_claim_ratio,prev_claim_2_clinical_pathway_deviation_score,prev_claim_2_visit_count_30d,prev_claim_2_faskes_id,prev_claim_3_kode_icd10,prev_claim_3_jenis_pelayanan,prev_claim_3_room_class,prev_claim_3_billed_amount,prev_claim_3_claim_ratio,prev_claim_3_clinical_pathway_deviation_score,prev_claim_3_visit_count_30d,prev_claim_3_faskes_id,prev_claim_4_kode_icd10,prev_claim_4_jenis_pelayanan,prev_claim_4_room_class,prev_claim_4_billed_amount,prev_claim_4_claim_ratio,prev_claim_4_clinical_pathway_deviation_score,prev_claim_4_visit_count_30d,prev_claim_4_faskes_id,prev_claim_5_kode_icd10,prev_claim_5_jenis_pelayanan,prev_claim_5_room_class,prev_claim_5_billed_amount,prev_claim_5_claim_ratio,prev_claim_5_clinical_pathway_deviation_score,prev_claim_5_visit_count_30d,prev_claim_5_faskes_id,total_klaim_5x,rerata_billed_5x,std_claim_ratio_5x,rerata_lama_dirawat_5x,total_rs_unique_visited_5x,total_diagnosis_unique_5x,visit_suspicious_flag,obat_mismatch_flag,billing_spike_flag,high_deviation_flag,phantom_suspect_score,drug_ratio,procedure_ratio,provider_claim_share,phantom_node_flag,predicted_fraud,fraud_probability,fraud_label,threshold_used,predicted_fraud_type,prob_cloning_claim,prob_graph_clique_collusion,prob_graph_ring_network,prob_graph_star_center,prob_graph_star_spoke,prob_inflated_bill,prob_phantom_billing,prob_upcoding_diagnosis,shap_top_features,shap_explanation_summary,explanation_text,retrieved_docs,model,timestamp
+C00000015,E00000015,P00002954,F35B20AC562435A8,27,F,F00286,STAR0_S7,FKTP,DKI Jakarta,Jakarta Selatan,2024-04-26,N39.0,89.03,Rawat Jalan,,0,417487,350747,53371,34232,4,True,False,False,STAR0_HUB,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,66740,"['ciprofloxacin', 'cefadroxil']",0.5,999.0,4,2,417487.0,1,1,0.0722511111111111,1.1902762097004116,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1278384049361897,0.0819951711186908,0.25,0,0,0.010497916138476,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -2.0845346975675785, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.115860157769639, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -1.1116896251623984, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.8697931153455284, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.8111518195539247, 'direction': '↓'}]","billed_amount↓, paid_amount↑, procedure_cost↓, procedure_ratio↑, provider_claim_share↓",No explanation generated — claim classified as benign.,,,
+C00000020,E00000020,P00004754,D5DEC2FEEDC4C268,14,M,F00474,STAR0_S5,FKTP,Jawa Barat,Bandung,2024-09-24,E11.9,89.03,Rawat Jalan,,0,614514,490108,176886,147314,8,False,False,False,STAR0_HUB,,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,124406,"['glimepiride', 'insulin', 'glibenclamide']",0.75,999.0,9,3,614514.0,1,1,0.180648,1.2538312905904605,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2878465131038298,0.2397240099916194,0.25,0,0,0.0137444107587365,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -0.7567370771861169, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.606881802076241, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.5274327275191899, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.5016010820982046, 'direction': '↑'}, {'feature': 'clinical_pathway_deviation_score', 'value': None, 'shap_value': 0.4317738352995366, 'direction': '↑'}]","billed_amount↓, provider_claim_share↓, paid_amount↑, provider_monthly_claims↑, clinical_pathway_deviation_score↑",No explanation generated — claim classified as benign.,,,
+C00000009,E00000009,P00009161,878907D0DE55440E,63,F,F00160,CLIQUE0_P0,FKTP,Sumatera Utara,Deli Serdang,2024-06-09,M-4-10-I,87.03,Rawat Inap,Kelas II,3,21969147,8303408,1107484,3014564,9,False,True,False,CLIQUE0_P3,CLIQUE_0,M-4-10-I,3756700,Fraktur Femur,Femur Fracture,Bone X-Ray,M-4-10-I,3756700,910808,"['heparin', 'tramadol']",0.4,999.0,6,2,9214216.0,1,1,0.3250034857142857,1.1096907306384642,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0504108761978389,0.1372180659896323,0.5,0,1,0.9083969133477312,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0357061665680623,0.0164750999248748,0.0181345715801104,0.0003697976351436,0.0004283520252341,0.0098962768229639,1.022716235282462e-05,0.9189795107793364,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 9.56547512390418, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 1.7858432834467386, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.1066362944734283, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.8896555285312934, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.7678843077307101, 'direction': '↑'}]","billed_amount↑, procedure_cost↑, paid_amount↓, tarif_inacbg↓, procedure_ratio↑","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Terdapat indikasi kuat terjadinya upcoding diagnosis pada klaim dengan ID C00000009. Tingkat risiko fraud ini dinilai TINGGI dengan confidence score sebesar 90.84%. Namun, tidak ada estimasi kerugian potensial yang dapat dihitung karena tidak ada data finansial yang tersedia.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data finansial yang tersedia untuk analisis kewajaran finansial. Oleh karena itu, tidak dapat dilakukan evaluasi claim_ratio, analisis selisih klaim vs tarif INA-CBG, evaluasi komponen biaya, dan identifikasi overclaim atau underclaim.
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data klinis yang tersedia untuk analisis klinis. Oleh karena itu, tidak dapat dilakukan evaluasi kesesuaian diagnosis dengan prosedur, kewajaran lama rawat, dan clinical pathway deviation.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data INA-CBG yang tersedia untuk validasi. Oleh karena itu, tidak dapat dilakukan evaluasi kesesuaian kode INA-CBG dengan diagnosis dan prosedur, serta evaluasi tarif terhadap layanan yang diberikan.
+
+ANALISIS FRAUD TYPE: upcoding_diagnosis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Upcoding diagnosis adalah tindakan fraud yang melibatkan peningkatan tingkat diagnosis untuk mendapatkan pembayaran klaim yang lebih tinggi. Meskipun tidak ada data numerik yang tersedia, indikasi kuat terjadinya upcoding diagnosis didukung oleh confidence score sebesar 90.84%. Regulasi yang berpotensi dilanggar adalah PerBPJS No. 6/2020 Pasal 15.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data SHAP yang tersedia untuk analisis fitur Machine Learning. Oleh karena itu, tidak dapat dilakukan analisis fitur SHAP teratas dan validasi prediksi model dengan bukti faktual.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Berdasarkan PerBPJS No. 6/2020 Pasal 15, fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar. Namun, tidak ada data klaim yang tersedia untuk membuktikan pelanggaran ini.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data fasilitas kesehatan dan riwayat pasien yang tersedia untuk analisis pola provider dan pasien. Oleh karena itu, tidak dapat dilakukan evaluasi volume klaim provider dan analisis pola kunjungan pasien.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Berdasarkan data yang tersedia, terdapat indikasi kuat terjadinya fraud tipe upcoding diagnosis dengan tingkat keyakinan sebesar 90.84%. Namun, tidak ada estimasi nilai kerugian negara yang dapat dihitung karena tidak ada data finansial yang tersedia.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Diperlukan investigasi lanjutan untuk memastikan temuan ini. Dokumen pendukung yang perlu diminta meliputi data klinis, data finansial, dan data INA-CBG. Sanksi yang direkomendasikan berdasarkan regulasi adalah penundaan pembayaran klaim dan pengembalian selisih klaim yang tidak wajar. Langkah pencegahan untuk kasus serupa meliputi peningkatan pengawasan dan pelatihan tentang regulasi klaim kepada provider.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:06:15.391123
+C00000006,E00000006,P00010217,4D8F99CBDE88FC7A,44,F,F00321,RING0_P1,FKRTL,Jawa Timur,Malang,2024-04-27,E11.9,89.03,Rawat Jalan,,0,1937783,904970,193513,389523,2,False,True,False,RING0_P2,RING_0,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,285515,"['insulin', 'glimepiride', 'metformin']",0.75,999.0,4,2,1190485.0,1,1,0.5873133333333334,1.3154951926636322,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0998630394306073,0.2010146641730966,0.25,0,1,0.3769192110726065,FRAUD,0.3199999999999999,upcoding_diagnosis,0.1389586140721836,0.0027132505959629,0.0305937807966812,0.0009475877105886,0.0107080181882854,0.0253284201810133,0.0006089967694865,0.7901413294059981,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.26311952533637, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.825347512391163, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.6922291177685839, 'direction': '↓'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.53781197166536, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': -0.232305846856907, 'direction': '↓'}]","billed_amount↑, paid_amount↑, provider_claim_share↓, provider_monthly_claims↑, procedure_ratio↓","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang cukup untuk menentukan temuan kunci, tingkat risiko fraud, dan estimasi kerugian potensial karena tidak ada informasi yang tersedia mengenai klaim ini.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis kewajaran finansial. 
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis klinis.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan validasi INA-CBG.
+
+ANALISIS FRAUD TYPE: upcoding_diagnosis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis fraud type.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan interpretasi machine learning.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk menemukan pelanggaran berdasarkan regulasi.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis pola provider dan pasien.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk membuat kesimpulan audit.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk membuat rekomendasi tindak lanjut.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:06:39.854499
+C00000002,E00000002,P00013901,A46958C435864E28,43,F,F00404,RING0_P0,FKTP,Jawa Tengah,Solo,2024-02-17,J18.9,96.72,Rawat Inap,Kelas III,2,10422744,4709715,475961,1531846,4,True,True,False,RING0_P1,RING_0,M-1-50-I,5448800,Pneumonia,Pneumonia,Blood Glucose Test,M-1-50-I,5448800,174743,['ambroxol'],0.2,999.0,2,1,4884458.0,1,1,0.3559583636363636,1.0371024494895231,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0456656092037174,0.1469714552164521,0.3333333333333333,0,1,0.6642308109447306,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0338841107370676,0.0105303524947632,0.026615876665046,0.0003150829699977,0.0039899342584299,0.009096625317085,2.543100576635339e-05,0.9155425458986436,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 6.486329031659989, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.7618716206168756, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5890069497260265, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.568661614486482, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5669869266857859, 'direction': '↓'}]","billed_amount↑, procedure_cost↑, tarif_inacbg↓, procedure_ratio↑, provider_claim_share↓","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Terdapat indikasi fraud tipe upcoding_diagnosis pada klaim dengan ID C00000002. Tingkat risiko fraud ini ditentukan sebagai UNKNOWN karena tidak ada data klinis dan finansial yang tersedia. Oleh karena itu, tidak dapat diestimasi kerugian potensial.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis kewajaran finansial. 
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data klinis yang tersedia untuk melakukan analisis klinis.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan validasi INA-CBG.
+
+ANALISIS FRAUD TYPE: upcoding_diagnosis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Upcoding_diagnosis adalah tipe fraud dimana diagnosis pasien ditingkatkan untuk mendapatkan pembayaran klaim yang lebih tinggi. Namun, tidak ada data numerik yang mendukung adanya fraud tipe ini pada klaim ini.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data SHAP yang tersedia untuk melakukan interpretasi machine learning.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan temuan berdasarkan regulasi.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis pola provider dan pasien.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan kesimpulan audit.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Diperlukan data lengkap terkait klaim ini untuk melakukan investigasi lanjutan. Dokumen yang perlu diminta meliputi data klinis pasien, detail finansial klaim, dan riwayat klaim provider.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:07:41.253882
+C00000014,E00000014,P00017004,BE5C65AECA98E103,11,F,F00159,CLIQUE0_P1,FKTP,Bali,Badung,2024-06-12,K29.7,89.03,Rawat Jalan,,0,473919,242591,115357,76237,4,True,True,False,CLIQUE0_P3,CLIQUE_0,M-1-60-I,426100,Gastritis,Gastritis,Physical Examination,M-1-60-I,426100,14721,['sucralfate'],0.25,999.0,6,2,257312.0,1,1,0.3138346666666666,1.060678010816515,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2434102802160702,0.1608647029034436,0.5,0,1,0.486300045680992,FRAUD,0.3199999999999999,upcoding_diagnosis,0.1508570229685333,0.005251174590508,0.0127943543469225,0.0009832067562462,0.0189132820037916,0.0142609803027273,0.0004864416884318,0.7964535432242381,"[{'feature': 'paid_amount', 'value': None, 'shap_value': 3.983037518064957, 'direction': '↑'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 1.1498418354458408, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 1.0132369489176198, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.7900445576861966, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.7010042440576945, 'direction': '↑'}]","paid_amount↑, selisih_klaim↑, rolling_avg_cost_30d↑, provider_claim_share↓, tarif_inacbg↑","1. EXECUTIVE SUMMARY
+   • Berdasarkan data yang tersedia, tidak ada temuan kunci yang dapat diidentifikasi karena tidak ada data yang cukup untuk melakukan analisis. 
+   • Tingkat risiko fraud tidak dapat ditentukan karena kurangnya data.
+   • Tidak ada estimasi kerugian potensial karena tidak ada data yang cukup.
+
+2. ANALISIS KEWAJARAN FINANSIAL
+   • Tidak ada data yang cukup untuk mengevaluasi claim_ratio.
+   • Tidak ada data yang cukup untuk menganalisis selisih klaim vs tarif INA-CBG.
+   • Tidak ada data yang cukup untuk mengevaluasi komponen biaya.
+   • Tidak ada bukti overclaim atau underclaim karena tidak ada data yang cukup.
+
+3. ANALISIS KLINIS
+   • Tidak ada data yang cukup untuk mengevaluasi kesesuaian diagnosis (ICD-10) dengan prosedur.
+   • Tidak ada data yang cukup untuk mengevaluasi kewajaran lama rawat.
+   • Tidak ada data yang cukup untuk mengevaluasi clinical pathway deviation dan implikasinya.
+
+4. VALIDASI INA-CBG
+   • Tidak ada data yang cukup untuk mengevaluasi kesesuaian kode INA-CBG dengan diagnosis dan prosedur.
+   • Tidak ada data yang cukup untuk mengevaluasi tarif terhadap layanan yang diberikan.
+
+5. ANALISIS FRAUD TYPE: upcoding_diagnosis
+   • Tidak ada data yang cukup untuk menganalisis karakteristik fraud type.
+   • Tidak ada data yang cukup untuk menemukan bukti numerik dari data klaim yang mendukung fraud type ini.
+   • Tidak ada data yang cukup untuk merujuk regulasi yang dilanggar.
+   • Tidak ada data yang cukup untuk mengidentifikasi modus operandi.
+
+6. INTERPRETASI MACHINE LEARNING
+   • Tidak ada data yang cukup untuk menganalisis 3 fitur SHAP teratas dan signifikansinya.
+   • Tidak ada data yang cukup untuk mengkorelasikan fitur ML dengan temuan manual audit.
+   • Tidak ada data yang cukup untuk memvalidasi prediksi model dengan bukti faktual.
+
+7. TEMUAN BERDASARKAN REGULASI
+   • Tidak ada data yang cukup untuk merujuk pasal/aturan spesifik yang berpotensi dilanggar.
+   • Tidak ada data yang cukup untuk menemukan bukti pelanggaran dari data klaim.
+   • Tidak ada data yang cukup untuk menentukan tingkat keparahan pelanggaran.
+
+8. POLA PROVIDER DAN PASIEN
+   • Tidak ada data yang cukup untuk mengevaluasi volume klaim provider.
+   • Tidak ada data yang cukup untuk menganalisis pola kunjungan pasien.
+   • Tidak ada data historis yang cukup untuk menemukan red flags.
+
+9. KESIMPULAN AUDIT
+   • Tidak ada temuan komprehensif yang dapat diringkas karena tidak ada data yang cukup.
+   • Tingkat keyakinan terhadap fraud tidak dapat ditentukan karena kurangnya data.
+   • Tidak ada estimasi nilai kerugian negara karena tidak ada data yang cukup.
+
+10. REKOMENDASI TINDAK LANJUT
+    • Tidak ada investigasi lanjutan yang diperlukan karena tidak ada temuan.
+    • Tidak ada dokumen pendukung yang perlu diminta karena tidak ada temuan.
+    • Tidak ada sanksi yang direkomendasikan karena tidak ada temuan.
+    • Tidak ada langkah pencegahan yang perlu diambil karena tidak ada temuan.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:08:38.422232
+C00000007,E00000007,P00017273,ABCD75D0BC1B55D0,11,F,F00143,RING0_P4,FKRTL,Jawa Barat,Bekasi,2024-03-17,J00,89.03,Rawat Jalan,,0,517508,245600,16566,121177,2,False,True,False,RING0_P0,RING_0,M-1-20-I,383300,Nasofaringitis Akut (Common Cold),Common Cold,Physical Examination,M-1-20-I,383300,81721,"['vitamin_c', 'paracetamol']",0.5,999.0,3,1,327321.0,1,1,0.09107,1.3327348015683975,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.032011037489203,0.2341543818561609,0.5,0,1,0.5491058180349835,FRAUD,0.3199999999999999,upcoding_diagnosis,0.2214208381723721,0.0056162048404163,0.0191075137559742,0.0031437295385116,0.0163160227758168,0.0155665215904616,0.0001132696171377,0.7187158641638312,"[{'feature': 'paid_amount', 'value': None, 'shap_value': 4.081550638715271, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.9275949755660258, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.8076204409275669, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.7173623828240671, 'direction': '↓'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 0.43083368222694846, 'direction': '↑'}]","paid_amount↑, provider_monthly_claims↑, tarif_inacbg↑, provider_claim_share↓, rolling_avg_cost_30d↑","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis. Oleh karena itu, tingkat risiko fraud dan estimasi kerugian potensial tidak dapat ditentukan.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis kewajaran finansial. Oleh karena itu, evaluasi claim_ratio, analisis selisih klaim vs tarif INA-CBG, evaluasi komponen biaya, dan identifikasi overclaim atau underclaim tidak dapat dilakukan.
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis klinis. Oleh karena itu, kesesuaian diagnosis (ICD-10) dengan prosedur, kewajaran lama rawat untuk diagnosis tersebut, dan clinical pathway deviation tidak dapat ditentukan.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan validasi INA-CBG. Oleh karena itu, kesesuaian kode INA-CBG dengan diagnosis dan prosedur, dan evaluasi tarif terhadap layanan yang diberikan tidak dapat dilakukan.
+
+ANALISIS FRAUD TYPE: upcoding_diagnosis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis fraud type. Oleh karena itu, karakteristik fraud type, bukti numerik dari data klaim yang mendukung fraud type ini, referensi regulasi yang dilanggar, dan modus operandi yang teridentifikasi tidak dapat ditentukan.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan interpretasi machine learning. Oleh karena itu, analisis 3 fitur SHAP teratas dan signifikansinya, korelasi fitur ML dengan temuan manual audit, dan validasi prediksi model dengan bukti faktual tidak dapat dilakukan.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk menentukan temuan berdasarkan regulasi. Oleh karena itu, pasal/aturan spesifik yang berpotensi dilanggar, bukti pelanggaran dari data klaim, dan tingkat keparahan pelanggaran tidak dapat ditentukan.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk menentukan pola provider dan pasien. Oleh karena itu, evaluasi volume klaim provider, analisis pola kunjungan pasien, dan red flags dari historical data tidak dapat dilakukan.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk membuat kesimpulan audit. Oleh karena itu, ringkasan temuan komprehensif, tingkat keyakinan terhadap fraud, dan estimasi nilai kerugian negara tidak dapat ditentukan.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk membuat rekomendasi tindak lanjut. Oleh karena itu, investigasi lanjutan yang diperlukan, dokumen pendukung yang perlu diminta, sanksi yang direkomendasikan berdasarkan regulasi, dan langkah pencegahan untuk kasus serupa tidak dapat ditentukan.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:09:19.888179
+C00000004,E00000004,P00017412,AEDB6FDEA8D331E6,33,F,F00040,STAR0_HUB,FKRTL,Jawa Timur,Surabaya,2024-01-20,J00,89.03,Rawat Jalan,,0,208451,199015,17428,33417,7,False,True,False,,STAR_0,M-1-20-I,383300,Nasofaringitis Akut (Common Cold),Common Cold,Physical Examination,M-1-20-I,383300,9436,"['paracetamol', 'cetirizine']",0.5,999.0,1,1,208451.0,1,1,0.3051633333333333,1.0474082485830285,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0836067775794907,0.1603102872603765,0.5,0,0,0.0115737339595695,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -3.3682181094889527, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.9916258036415093, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.8418821940734051, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 0.8313005272689042, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.6917269386886619, 'direction': '↓'}]","billed_amount↓, paid_amount↑, tarif_inacbg↑, rolling_avg_cost_30d↑, procedure_cost↓",No explanation generated — claim classified as benign.,,,
+C00000019,E00000019,P00021588,E56C65A7F1AF4113,20,M,F00358,RING0_P2,FKRTL,Bali,Badung,2024-01-08,K29.7,89.03,Rawat Jalan,,0,943506,398999,59930,90297,4,False,True,False,RING0_P3,RING_0,M-1-60-I,426100,Gastritis,Gastritis,Physical Examination,M-1-60-I,426100,150499,"['antacid', 'omeprazole']",0.5,999.0,1,1,549498.0,1,1,0.465328,1.377187969924812,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0635183416763203,0.0957035824853445,0.5,0,1,0.7391704591306588,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0262743342577912,0.0213941652632247,0.0215467777903882,2.831232886589075e-05,0.001787406222033,0.0087258107771195,2.0408822550390703e-05,0.9202228007719012,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 3.1854541726753816, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 3.047015011851909, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.2874954369093756, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.134485704761464, 'direction': '↑'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.8684540579316672, 'direction': '↑'}]","billed_amount↑, paid_amount↑, tarif_inacbg↑, procedure_ratio↑, drug_ratio↑","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis dan penilaian terhadap klaim dengan ID C00000019. Oleh karena itu, tingkat risiko fraud dan estimasi kerugian potensial tidak dapat ditentukan.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis kewajaran finansial, termasuk evaluasi claim_ratio, analisis selisih klaim vs tarif INA-CBG, evaluasi komponen biaya, dan identifikasi overclaim atau underclaim.
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis klinis, termasuk kesesuaian diagnosis (ICD-10) dengan prosedur, kewajaran lama rawat untuk diagnosis tersebut, dan clinical pathway deviation dan implikasinya.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan validasi INA-CBG, termasuk kesesuaian kode INA-CBG dengan diagnosis dan prosedur, dan evaluasi tarif terhadap layanan yang diberikan.
+
+ANALISIS FRAUD TYPE: upcoding_diagnosis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis fraud type, termasuk karakteristik fraud type berdasarkan literatur, bukti numerik dari data klaim yang mendukung fraud type ini, referensi regulasi yang dilanggar, dan modus operandi yang teridentifikasi.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan interpretasi Machine Learning, termasuk analisis 3 fitur SHAP teratas dan signifikansinya, korelasi fitur ML dengan temuan manual audit, dan validasi prediksi model dengan bukti faktual.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan temuan berdasarkan regulasi, termasuk pasal/aturan spesifik yang berpotensi dilanggar, bukti pelanggaran dari data klaim, dan tingkat keparahan pelanggaran.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis pola provider dan pasien, termasuk evaluasi volume klaim provider, analisis pola kunjungan pasien, dan red flags dari historical data.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk membuat kesimpulan audit, termasuk ringkasan temuan komprehensif, tingkat keyakinan terhadap fraud, dan estimasi nilai kerugian negara.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Dikarenakan tidak ada data yang tersedia, tidak ada investigasi lanjutan yang diperlukan, dokumen pendukung yang perlu diminta, sanksi yang direkomendasikan berdasarkan regulasi, dan langkah pencegahan untuk kasus serupa.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:09:54.416865
+C00000003,E00000003,P00022088,B9DA02CB35CEC387,30,M,F00225,STAR0_S4,FKRTL,Jawa Barat,Depok,2024-09-08,M-4-10-I,87.03,Rawat Inap,Kelas III,3,5560527,5552304,1278875,1765291,1,False,True,False,STAR0_HUB,,M-4-10-I,3124600,Fraktur Femur,Femur Fracture,Bone X-Ray,M-4-10-I,3124600,8223,"['calcium_supplement', 'tramadol', 'cefazolin']",0.6,999.0,9,3,5560527.0,1,1,0.5076879357142857,1.0014808264315451,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2299916482751278,0.3174682332325275,0.25,0,0,0.0165484550896504,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 2.522192745406646, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.612587143043056, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 1.57825746844057, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.9330454346409534, 'direction': '↓'}, {'feature': 'claim_ratio', 'value': None, 'shap_value': -0.8165409637033008, 'direction': '↓'}]","billed_amount↑, paid_amount↓, procedure_cost↑, tarif_inacbg↓, claim_ratio↓",No explanation generated — claim classified as benign.,,,
+C00000018,E00000018,P00026912,C32855591F4882F6,55,M,F00488,STAR0_S1,FKTP,Jawa Barat,Bogor,2024-09-09,N39.0,89.03,Rawat Jalan,,0,565147,526760,62435,160963,0,True,False,False,STAR0_HUB,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,38387,['cotrimoxazole'],0.25,999.0,9,3,565147.0,1,1,0.2558822222222222,1.072871757780094,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,0,0,0,0.3,0.1104754860673664,0.2848156589070473,0.25,0,0,0.0087979956472505,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -1.2443282021553024, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.7725471709948033, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.6388203556928783, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': -0.39613386979093773, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.28016697978950106, 'direction': '↑'}]","billed_amount↓, tarif_inacbg↑, provider_claim_share↓, procedure_ratio↓, paid_amount↑",No explanation generated — claim classified as benign.,,,
+C00000001,E00000001,P00028510,68AF78B18D68CF94,86,M,F00388,RING0_P3,FKRTL,Jawa Tengah,Magelang,2024-12-30,N39.0,88.72,Rawat Jalan,,0,1291689,380253,171681,55009,4,False,True,False,RING0_P4,RING_0,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Urine Analysis,M-1-70-I,590500,137305,"['cotrimoxazole', 'ciprofloxacin']",0.5,999.0,12,4,517558.0,1,1,0.1501288888888889,1.3610849590010887,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1329119215910938,0.0425868435925028,1.0,0,1,0.7882633621627327,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0184631452972181,0.0134615876268187,0.0265199702083628,1.674958469921496e-05,0.0030722635301865,0.0097866467714685,0.001289750826829,0.9273898819865062,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 5.585840679632965, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 2.9453244105097838, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.3858099736698204, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.2346423965832218, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.89691297128913, 'direction': '↓'}]","billed_amount↑, paid_amount↑, procedure_ratio↑, tarif_inacbg↑, procedure_cost↓","BEGIN REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. EXECUTIVE SUMMARY
+   • Pada klaim dengan ID C00000001, terdeteksi potensi fraud tipe upcoding_diagnosis dengan tingkat keyakinan 78.83%. 
+   • Tingkat risiko fraud: TIDAK DAPAT DITENTUKAN karena tidak ada data yang cukup.
+   • Estimasi kerugian potensial: TIDAK DAPAT DITENTUKAN karena tidak ada data yang cukup.
+
+2. ANALISIS KEWAJARAN FINANSIAL
+   • Tidak ada data yang cukup untuk melakukan evaluasi claim_ratio, analisis selisih klaim vs tarif INA-CBG, evaluasi komponen biaya, dan identifikasi overclaim atau underclaim.
+
+3. ANALISIS KLINIS
+   • Tidak ada data yang cukup untuk melakukan analisis klinis.
+
+4. VALIDASI INA-CBG
+   • Tidak ada data yang cukup untuk melakukan validasi INA-CBG.
+
+5. ANALISIS FRAUD TYPE: upcoding_diagnosis
+   • Upcoding_diagnosis adalah praktik dimana provider kesehatan melaporkan diagnosis yang lebih berat atau kompleks dari kondisi pasien sebenarnya untuk mendapatkan pembayaran yang lebih tinggi.
+   • Tidak ada data numerik yang mendukung tipe fraud ini.
+   • Regulasi yang berpotensi dilanggar adalah PerBPJS No. 6/2020 Pasal 15.
+   • Modus operandi tidak dapat diidentifikasi karena tidak ada data yang cukup.
+
+6. INTERPRETASI MACHINE LEARNING
+   • Tidak ada data SHAP yang tersedia untuk analisis.
+
+7. TEMUAN BERDASARKAN REGULASI
+   • Tidak ada data yang cukup untuk menentukan pasal/aturan spesifik yang berpotensi dilanggar, bukti pelanggaran dari data klaim, dan tingkat keparahan pelanggaran.
+
+8. POLA PROVIDER DAN PASIEN
+   • Tidak ada data yang cukup untuk melakukan evaluasi volume klaim provider dan analisis pola kunjungan pasien.
+
+9. KESIMPULAN AUDIT
+   • Tidak ada data yang cukup untuk membuat kesimpulan komprehensif.
+   • Tingkat keyakinan terhadap fraud: 78.83%
+   • Estimasi nilai kerugian negara: TIDAK DAPAT DITENTUKAN
+
+10. REKOMENDASI TINDAK LANJUT
+    • Diperlukan investigasi lanjutan untuk mengumpulkan data yang cukup.
+    • Dokumen pendukung yang perlu diminta termasuk data klinis, data finansial, dan data fasilitas kesehatan.
+    • Sanksi yang direkomendasikan berdasarkan regulasi: penundaan pembayaran klaim dan pengembalian selisih klaim yang tidak wajar (PerBPJS No. 6/2020 Pasal 15).
+    • Langkah pencegahan untuk kasus serupa termasuk peningkatan pengawasan dan pelatihan untuk provider kesehatan tentang regulasi klaim BPJS.
+
+END REPORT
+","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:10:24.224527
+C00000005,E00000005,P00029716,B1ED181F20F4CD6B,14,F,F00167,STAR0_S0,FKTP,Jawa Tengah,Magelang,2024-04-23,E11.9,89.03,Rawat Jalan,,0,922759,741596,11363,180329,8,True,False,False,STAR0_HUB,,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,181163,"['metformin', 'glibenclamide']",0.5,999.0,4,2,922759.0,1,1,0.2303453333333333,1.244286317231596,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0123141445229528,0.1954235120724782,0.25,0,0,0.0130486291409892,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 0.7666717696678824, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5922092446417082, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5305927283677738, 'direction': '↓'}, {'feature': 'drug_cost', 'value': None, 'shap_value': -0.39012772424845027, 'direction': '↓'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.33806282027275303, 'direction': '↑'}]","billed_amount↑, tarif_inacbg↓, provider_claim_share↓, drug_cost↓, drug_ratio↑",No explanation generated — claim classified as benign.,,,
+C00000010,E00000010,P00034092,11B7A7BEBF565467,53,F,F00461,D00461,FKTP,Sulawesi Selatan,Gowa,2024-03-17,N39.0,89.03,Rawat Jalan,,0,2228837,430414,482357,132948,0,True,False,False,,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,1798423,"['insulin', 'furosemide']",0.0,999.0,3,1,567479.0,1,1,1.0,1.3184461508079413,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,1,0,1,0.8,0.2164163568639802,0.0596490189058155,0.5,0,1,0.9996784036726916,FRAUD,0.3199999999999999,phantom_billing,3.798672056738587e-05,1.93179683530632e-05,2.0557850106877345e-05,9.448516516618386e-06,8.691736605546758e-06,8.758250000992986e-06,0.9998349762604782,6.028165487876989e-05,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.532452701120637, 'direction': '↑'}, {'feature': 'obat_match_score', 'value': None, 'shap_value': 3.8057392377313226, 'direction': '↑'}, {'feature': 'obat_mismatch_flag', 'value': None, 'shap_value': 2.018908505253494, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.9466486622707453, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.1541345788631587, 'direction': '↑'}]","billed_amount↑, obat_match_score↑, obat_mismatch_flag↑, paid_amount↑, tarif_inacbg↑","EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Klaim dengan ID C00000010 telah terdeteksi sebagai potensi fraud phantom_billing dengan tingkat keyakinan 99.97%. Namun, tidak ada data yang cukup untuk menentukan tingkat risiko fraud dan estimasi kerugian potensial.
+
+ANALISIS KEWAJARAN FINANSIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis kewajaran finansial.
+
+ANALISIS KLINIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis klinis.
+
+VALIDASI INA-CBG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan validasi INA-CBG.
+
+ANALISIS FRAUD TYPE: phantom_billing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phantom_billing adalah jenis fraud di mana pihak faskes mengajukan klaim untuk layanan atau prosedur yang tidak pernah diberikan. Namun, tidak ada data numerik yang mendukung jenis fraud ini dalam klaim ini.
+
+INTERPRETASI MACHINE LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data SHAP yang tersedia untuk melakukan interpretasi machine learning.
+
+TEMUAN BERDASARKAN REGULASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Berdasarkan PerBPJS No. 6/2020 Pasal 15, fraud tipe phantom_billing dikenakan sanksi administratif berupa penundaan pembayaran klaim. Namun, tidak ada data yang cukup untuk menentukan apakah aturan ini dilanggar.
+
+POLA PROVIDER DAN PASIEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tidak ada data yang tersedia untuk melakukan analisis pola provider dan pasien.
+
+KESIMPULAN AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Klaim ini telah terdeteksi sebagai potensi fraud phantom_billing dengan tingkat keyakinan 99.97%. Namun, tidak ada data yang cukup untuk menentukan tingkat risiko fraud dan estimasi kerugian potensial.
+
+REKOMENDASI TINDAK LANJUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Diperlukan investigasi lanjutan dan dokumen pendukung untuk memvalidasi klaim ini. Sanksi yang direkomendasikan berdasarkan regulasi adalah penundaan pembayaran klaim.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus phantom_billing, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe phantom_billing dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:11:24.530713
+C00000016,E00000016,P00037727,DCA497F61E14E7B8,14,M,F00161,CLIQUE0_P2,FKTP,Banten,Serang,2024-02-28,E11.9,89.03,Rawat Jalan,,0,2102193,780232,236534,117368,3,False,True,False,CLIQUE0_P3,CLIQUE_0,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,326853,['metformin'],0.25,999.0,2,1,1107085.0,1,1,0.4761133333333333,1.4189158879462929,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1125176839054816,0.0558311935054519,0.3333333333333333,0,1,0.7040587487874984,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0292595770263963,0.0046489741849393,0.0364066358281544,0.0006995198557949,0.0027048091772653,0.010883991989269,0.0017005594333731,0.9136959204994772,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.595629362672916, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.9060768663615455, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.99394571444951, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.9744947014097124, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.625358655139571, 'direction': '↓'}]","billed_amount↑, procedure_ratio↑, paid_amount↑, provider_monthly_claims↑, provider_claim_share↓","1. EXECUTIVE SUMMARY
+   • Klaim dengan ID C00000016 dideteksi sebagai potensi fraud tipe upcoding_diagnosis dengan tingkat keyakinan 70.41%. Namun, tidak ada data klinis, finansial, dan fasilitas kesehatan yang tersedia untuk analisis lebih lanjut. 
+   • Tingkat risiko fraud: TIDAK DAPAT DITENTUKAN
+   • Total estimasi kerugian potensial: TIDAK DAPAT DITENTUKAN
+
+2. ANALISIS KEWAJARAN FINANSIAL
+   • Tidak ada data yang tersedia untuk evaluasi claim_ratio, selisih klaim vs tarif INA-CBG, komponen biaya, dan identifikasi overclaim atau underclaim.
+
+3. ANALISIS KLINIS
+   • Tidak ada data yang tersedia untuk evaluasi kesesuaian diagnosis (ICD-10) dengan prosedur, kewajaran lama rawat, dan clinical pathway deviation.
+
+4. VALIDASI INA-CBG
+   • Tidak ada data yang tersedia untuk evaluasi kesesuaian kode INA-CBG dengan diagnosis dan prosedur, dan evaluasi tarif terhadap layanan yang diberikan.
+
+5. ANALISIS FRAUD TYPE: upcoding_diagnosis
+   • Upcoding_diagnosis adalah tipe fraud di mana diagnosis pasien ditingkatkan untuk mendapatkan pembayaran klaim yang lebih tinggi. Namun, tidak ada data numerik yang tersedia yang mendukung tipe fraud ini.
+   • Regulasi yang berpotensi dilanggar adalah PerBPJS No. 6/2020 Pasal 15 dan Permenkes INA-CBG.
+   • Modus operandi tidak dapat diidentifikasi tanpa data yang relevan.
+
+6. INTERPRETASI MACHINE LEARNING
+   • Tidak ada data SHAP yang tersedia untuk analisis.
+
+7. TEMUAN BERDASARKAN REGULASI
+   • Tidak ada pasal/aturan spesifik yang dapat diidentifikasi tanpa data klaim yang relevan.
+   • Tingkat keparahan pelanggaran tidak dapat ditentukan.
+
+8. POLA PROVIDER DAN PASIEN
+   • Tidak ada data yang tersedia untuk evaluasi volume klaim provider dan analisis pola kunjungan pasien.
+
+9. KESIMPULAN AUDIT
+   • Tidak ada temuan komprehensif yang dapat dibuat tanpa data yang relevan.
+   • Tingkat keyakinan terhadap fraud: 70.41%
+   • Estimasi nilai kerugian negara: TIDAK DAPAT DITENTUKAN
+
+10. REKOMENDASI TINDAK LANJUT
+    • Diperlukan investigasi lanjutan untuk mengumpulkan data yang relevan.
+    • Dokumen pendukung yang perlu diminta meliputi data klinis, finansial, dan fasilitas kesehatan.
+    • Sanksi yang direkomendasikan berdasarkan regulasi tidak dapat ditentukan tanpa data yang relevan.
+    • Langkah pencegahan untuk kasus serupa tidak dapat ditentukan tanpa data yang relevan.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:11:47.930968
+C00000011,E00000011,P00038142,35B93D377015E841,72,F,F00203,CLIQUE0_P3,FKRTL,DKI Jakarta,Jakarta Pusat,2024-10-19,J18.9,87.44,Rawat Inap,VIP,1,13592684,4587009,991538,399789,5,False,True,False,CLIQUE0_P2,CLIQUE_0,M-1-50-I,7246900,Pneumonia,Pneumonia,Chest X-Ray,M-1-50-I,7246900,938148,"['ceftriaxone', 'ambroxol', 'salbutamol']",0.6,999.0,10,4,5525157.0,1,1,0.402287,1.2045225539076654,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0729464414131571,0.0294120698007788,1.0,0,1,0.7364557002499157,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0311480903922045,0.0144582509374492,0.0093134560494083,6.28035050721588e-06,0.0011928341966179,0.0083537136787963,6.669260984209758e-06,0.9355207170584172,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 7.8187081422307525, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.6922725250327495, 'direction': '↑'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.5514012870483566, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5332542027375894, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.43534556024125776, 'direction': '↓'}]","billed_amount↑, procedure_ratio↑, drug_ratio↑, tarif_inacbg↓, provider_claim_share↓","1. EXECUTIVE SUMMARY
+   • Dari data klaim yang ada, terdeteksi adanya potensi fraud tipe upcoding_diagnosis dengan confidence score sebesar 73.65%. Namun, data klinis dan finansial tidak tersedia sehingga tingkat risiko fraud tidak dapat ditentukan. Tidak ada estimasi kerugian potensial karena tidak ada data tagihan dan pembayaran.
+
+2. ANALISIS KEWAJARAN FINANSIAL
+   • Tidak ada data claim_ratio, selisih klaim, dan tarif INA-CBG yang tersedia untuk dievaluasi.
+   • Komponen biaya seperti drug_ratio dan procedure_ratio juga tidak tersedia.
+   • Tidak dapat diidentifikasi adanya overclaim atau underclaim karena tidak ada data finansial.
+
+3. ANALISIS KLINIS
+   • Tidak ada data diagnosis (ICD-10) dan prosedur yang tersedia untuk dievaluasi.
+   • Lama rawat tidak tersedia sehingga kewajaran lama rawat tidak dapat ditentukan.
+   • Tidak ada data tentang clinical pathway deviation.
+
+4. VALIDASI INA-CBG
+   • Tidak ada data kode INA-CBG dan tarif yang tersedia untuk dievaluasi.
+
+5. ANALISIS FRAUD TYPE: upcoding_diagnosis
+   • Upcoding_diagnosis adalah tipe fraud dimana diagnosis pasien dinaikkan tingkatannya untuk mendapatkan pembayaran yang lebih tinggi. Namun, tidak ada data numerik yang mendukung tipe fraud ini.
+   • Tidak ada referensi regulasi yang dilanggar karena tidak ada data klaim.
+   • Tidak ada modus operandi yang teridentifikasi karena tidak ada data.
+
+6. INTERPRETASI MACHINE LEARNING
+   • Tidak ada data SHAP yang tersedia untuk dianalisis.
+   • Tidak ada fitur ML yang dapat dikorelasikan dengan temuan manual audit karena tidak ada data.
+   • Tidak ada bukti faktual yang dapat digunakan untuk validasi prediksi model.
+
+7. TEMUAN BERDASARKAN REGULASI
+   • Tidak ada pasal/aturan spesifik yang berpotensi dilanggar karena tidak ada data klaim.
+   • Tidak ada bukti pelanggaran dari data klaim.
+   • Tingkat keparahan pelanggaran tidak dapat ditentukan karena tidak ada data.
+
+8. POLA PROVIDER DAN PASIEN
+   • Tidak ada data volume klaim provider dan pola kunjungan pasien yang tersedia untuk dievaluasi.
+   • Tidak ada red flags dari historical data karena tidak ada data.
+
+9. KESIMPULAN AUDIT
+   • Tidak ada temuan komprehensif karena tidak ada data.
+   • Tingkat keyakinan terhadap fraud tidak dapat ditentukan karena tidak ada data.
+   • Tidak ada estimasi nilai kerugian negara karena tidak ada data.
+
+10. REKOMENDASI TINDAK LANJUT
+    • Tidak ada investigasi lanjutan yang diperlukan karena tidak ada data.
+    • Tidak ada dokumen pendukung yang perlu diminta karena tidak ada data.
+    • Tidak ada sanksi yang direkomendasikan karena tidak ada data.
+    • Tidak ada langkah pencegahan yang dapat diambil karena tidak ada data.","[{'title': 'INA-CBG Tariff Reference', 'type': 'regulation', 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': 'regulation', 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': 'regulation', 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4,2025-11-20T21:12:16.286056
+C00000012,E00000012,P00038934,DA430EE20D1E51EC,58,M,F00067,STAR0_S3,FKTP,Bali,Denpasar,2024-02-25,I10,89.03,Rawat Jalan,,0,417528,409163,142394,141705,0,True,False,False,STAR0_HUB,,M-1-30-I,605400,Hipertensi Esensial,Hypertension,Physical Examination,M-1-30-I,605400,8365,"['amlodipine', 'losartan']",0.5,999.0,2,1,417528.0,1,1,0.164944,1.0204416810863126,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,0,0,0,0.3,0.3410397840629034,0.3393895992853191,0.3333333333333333,0,0,0.0101774578885189,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -1.585728606673656, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.8632331353693735, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.8029861053801142, 'direction': '↓'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 0.34486766592308415, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.315542416657554, 'direction': '↑'}]","billed_amount↓, paid_amount↑, provider_claim_share↓, selisih_klaim↑, tarif_inacbg↑",No explanation generated — claim classified as benign.,,,
+C00000017,E00000017,P00040397,1DEEF5F642E78B69,31,F,F00133,STAR0_S2,FKTP,DKI Jakarta,Jakarta Pusat,2024-09-30,I10,89.03,Rawat Jalan,,0,703003,701408,129369,274525,7,True,False,False,STAR0_HUB,,M-1-30-I,605400,Hipertensi Esensial,Hypertension,Physical Examination,M-1-30-I,605400,1595,"['hydrochlorothiazide', 'captopril']",0.5,999.0,9,3,703003.0,1,1,0.406006,1.0022725685014022,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1840231350034992,0.3905027567410711,0.25,0,0,0.0138149589770116,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.49812249443726614, 'direction': '↓'}, {'feature': 'billed_amount', 'value': None, 'shap_value': -0.42867524599889295, 'direction': '↓'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 0.4120290943517466, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.35389280281728136, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.35380087612429634, 'direction': '↑'}]","provider_claim_share↓, billed_amount↓, selisih_klaim↑, provider_monthly_claims↑, procedure_cost↑",No explanation generated — claim classified as benign.,,,
+C00000008,E00000008,P00043089,DCE183DA5542D274,38,M,F00480,STAR0_S6,FKRTL,Jawa Barat,Bogor,2024-04-21,J18.9,87.44,Rawat Inap,Kelas III,6,5909006,5293959,357605,1336344,1,False,False,False,STAR0_HUB,,M-1-50-I,5448800,Pneumonia,Pneumonia,Chest X-Ray,M-1-50-I,5448800,615047,['azithromycin'],0.2,999.0,4,2,5909006.0,1,1,0.1371823636363636,1.116178815102494,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0605186285952952,0.2261537344599524,0.25,0,0,0.0106161775340998,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 2.135291814643133, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.0953399441658984, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.9599403215898201, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.6706467121292371, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5633659360941965, 'direction': '↓'}]","billed_amount↑, paid_amount↓, tarif_inacbg↓, procedure_cost↑, provider_claim_share↓",No explanation generated — claim classified as benign.,,,
+C00000013,E00000013,P00043472,08154F0D1ED1E60F,47,M,F00339,D00339,FKRTL,Jawa Tengah,Semarang,2024-08-09,N39.0,88.72,Rawat Jalan,,0,292866,262188,27494,45510,3,False,False,False,,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Urine Analysis,M-1-70-I,590500,30678,"['cotrimoxazole', 'ciprofloxacin']",0.5,999.0,8,3,292866.0,1,1,0.3491866666666666,1.1170033830557349,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0938787913967773,0.1553947696394609,1.0,0,0,0.0093046863098529,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -2.3534229538205547, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.2123575231875292, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.90533096758998, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.8603277693025302, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.775455881691305, 'direction': '↑'}]","billed_amount↓, paid_amount↑, provider_claim_share↓, procedure_cost↓, tarif_inacbg↑",No explanation generated — claim classified as benign.,,,

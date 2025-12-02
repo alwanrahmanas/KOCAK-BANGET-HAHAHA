@@ -1234,3 +1234,60 @@ Full output saved to: output\fraud_detection_with_rag_20251119_172600.csv
 
 ### 2. Analisis Fitur Kunci (SHAP)
 - **Kode Diagnosis**: Tidak diketahui. Ketid...
+2025-11-19 18:54:16,058 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 18:54:16,060 - bpjs_fraud_detection - INFO - TRAINING MODE
+2025-11-19 18:54:16,062 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 18:54:36,944 - bpjs_fraud_detection - INFO - 
+Training data loaded: 100000 samples
+2025-11-19 18:54:36,947 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 18:54:36,948 - bpjs_fraud_detection - INFO - STARTING STAGE 1: BINARY CLASSIFICATION
+2025-11-19 18:54:36,949 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 18:56:38,483 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 18:56:38,485 - bpjs_fraud_detection - INFO - STARTING STAGE 2: MULTICLASS CLASSIFICATION
+2025-11-19 18:56:38,485 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 18:56:38,521 - bpjs_fraud_detection - INFO - Found 26980 fraud cases for Stage 2 training
+2025-11-19 19:00:09,859 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 19:00:09,861 - bpjs_fraud_detection - INFO - SAVING MODEL ARTIFACTS
+2025-11-19 19:00:09,862 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 19:00:10,576 - bpjs_fraud_detection - INFO - ✓ Binary model saved: artifacts\binary_ensemble_20251119_190009
+2025-11-19 19:00:10,577 - bpjs_fraud_detection - INFO -   ✓ SHAP explainer file exists
+2025-11-19 19:00:10,579 - bpjs_fraud_detection - INFO -   ✓ Label encoders file exists
+2025-11-19 19:00:10,581 - bpjs_fraud_detection - INFO -   ✓ Feature config file exists
+2025-11-19 19:00:12,524 - bpjs_fraud_detection - INFO - ✓ Multiclass model saved: artifacts\multiclass_ensemble_20251119_190010
+2025-11-19 19:00:12,528 - bpjs_fraud_detection - INFO - 
+================================================================================
+2025-11-19 19:00:12,529 - bpjs_fraud_detection - INFO - ✅ TRAINING COMPLETED!
+2025-11-19 19:00:12,531 - bpjs_fraud_detection - INFO - ================================================================================
+2025-11-19 19:00:12,532 - bpjs_fraud_detection - INFO - 
+📊 Training Summary:
+2025-11-19 19:00:12,534 - bpjs_fraud_detection - INFO -   Total samples: 100,000
+2025-11-19 19:00:12,536 - bpjs_fraud_detection - INFO -   Fraud cases: 26980 (26.98%)
+2025-11-19 19:00:12,537 - bpjs_fraud_detection - INFO - 
+📁 Model Artifacts:
+2025-11-19 19:00:12,541 - bpjs_fraud_detection - INFO -   Binary (Stage 1):  artifacts\binary_ensemble_20251119_190009
+2025-11-19 19:00:12,544 - bpjs_fraud_detection - INFO -   Multiclass (Stage 2): artifacts\multiclass_ensemble_20251119_190010
+2025-11-19 19:00:12,546 - bpjs_fraud_detection - INFO - 
+📈 Binary Model Performance:
+2025-11-19 19:00:12,547 - bpjs_fraud_detection - INFO -   Accuracy:  0.9667
+2025-11-19 19:00:12,548 - bpjs_fraud_detection - INFO -   F1-Score:  0.9345
+2025-11-19 19:00:12,550 - bpjs_fraud_detection - INFO -   ROC-AUC:   0.9468
+2025-11-19 19:00:12,551 - bpjs_fraud_detection - INFO -   Threshold: 0.3700
+2025-11-19 19:00:12,554 - bpjs_fraud_detection - INFO - 
+📈 Multiclass Model Performance:
+2025-11-19 19:00:12,556 - bpjs_fraud_detection - INFO -   Accuracy:  0.9261
+2025-11-19 19:00:12,558 - bpjs_fraud_detection - INFO -   F1-Score:  0.9104
+2025-11-19 19:00:12,560 - bpjs_fraud_detection - INFO -   F1-Macro:  0.6111
+2025-11-19 19:00:12,561 - bpjs_fraud_detection - INFO - 
+🎯 Next Steps:
+2025-11-19 19:00:12,562 - bpjs_fraud_detection - INFO -   1. Verify artifacts:
+2025-11-19 19:00:12,563 - bpjs_fraud_detection - INFO -      python verify_encoder.py
+2025-11-19 19:00:12,564 - bpjs_fraud_detection - INFO -   2. Run inference:
+2025-11-19 19:00:12,567 - bpjs_fraud_detection - INFO -      python main.py inference
+2025-11-19 19:00:12,568 - bpjs_fraud_detection - INFO -   3. Check fraud_type_encoder:
+2025-11-19 19:00:12,569 - bpjs_fraud_detection - INFO -      The encoder will be validated during inference
+2025-11-19 19:00:12,570 - bpjs_fraud_detection - INFO - 
+================================================================================

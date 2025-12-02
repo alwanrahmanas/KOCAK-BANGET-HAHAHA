@@ -1,0 +1,497 @@
+claim_id,episode_id,participant_id,nik_hash,age,sex,faskes_id,dpjp_id,faskes_level,provinsi,kabupaten,tgl_pelayanan,kode_icd10,kode_prosedur,jenis_pelayanan,room_class,lama_dirawat,billed_amount,paid_amount,drug_cost,procedure_cost,visit_count_30d,kapitasi_flag,referral_flag,referral_to_same_facility,referral_to,graph_pattern_id,kode_tarif_inacbg,tarif_inacbg,clinical_pathway_name,diagnosis_name,procedure_name,inacbg_code,inacbg_tarif,selisih_klaim,obat_keluar,obat_match_score,time_diff_prev_claim,claim_month,claim_quarter,rolling_avg_cost_30d,provider_monthly_claims,nik_hash_reuse_count,clinical_pathway_deviation_score,claim_ratio,prev_claim_1_kode_icd10,prev_claim_1_jenis_pelayanan,prev_claim_1_room_class,prev_claim_1_billed_amount,prev_claim_1_claim_ratio,prev_claim_1_clinical_pathway_deviation_score,prev_claim_1_visit_count_30d,prev_claim_1_faskes_id,prev_claim_2_kode_icd10,prev_claim_2_jenis_pelayanan,prev_claim_2_room_class,prev_claim_2_billed_amount,prev_claim_2_claim_ratio,prev_claim_2_clinical_pathway_deviation_score,prev_claim_2_visit_count_30d,prev_claim_2_faskes_id,prev_claim_3_kode_icd10,prev_claim_3_jenis_pelayanan,prev_claim_3_room_class,prev_claim_3_billed_amount,prev_claim_3_claim_ratio,prev_claim_3_clinical_pathway_deviation_score,prev_claim_3_visit_count_30d,prev_claim_3_faskes_id,prev_claim_4_kode_icd10,prev_claim_4_jenis_pelayanan,prev_claim_4_room_class,prev_claim_4_billed_amount,prev_claim_4_claim_ratio,prev_claim_4_clinical_pathway_deviation_score,prev_claim_4_visit_count_30d,prev_claim_4_faskes_id,prev_claim_5_kode_icd10,prev_claim_5_jenis_pelayanan,prev_claim_5_room_class,prev_claim_5_billed_amount,prev_claim_5_claim_ratio,prev_claim_5_clinical_pathway_deviation_score,prev_claim_5_visit_count_30d,prev_claim_5_faskes_id,total_klaim_5x,rerata_billed_5x,std_claim_ratio_5x,rerata_lama_dirawat_5x,total_rs_unique_visited_5x,total_diagnosis_unique_5x,visit_suspicious_flag,obat_mismatch_flag,billing_spike_flag,high_deviation_flag,phantom_suspect_score,drug_ratio,procedure_ratio,provider_claim_share,phantom_node_flag,predicted_fraud,fraud_probability,fraud_label,threshold_used,predicted_fraud_type,prob_cloning_claim,prob_graph_clique_collusion,prob_graph_ring_network,prob_graph_star_center,prob_graph_star_spoke,prob_inflated_bill,prob_phantom_billing,prob_upcoding_diagnosis,shap_top_features,shap_explanation_summary,explanation_text,retrieved_docs,model,timestamp
+C00000015,E00000015,P00002954,F35B20AC562435A8,27,F,F00286,STAR0_S7,FKTP,DKI Jakarta,Jakarta Selatan,2024-04-26,N39.0,89.03,Rawat Jalan,,0,417487,350747,53371,34232,4,True,False,False,STAR0_HUB,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,66740,"['ciprofloxacin', 'cefadroxil']",0.5,999.0,4,2,417487.0,1,1,0.0722511111111111,1.1902762097004116,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1278384049361897,0.0819951711186908,0.25,0,0,0.010497916138476,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -2.0845346975675785, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.115860157769639, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -1.1116896251623984, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.8697931153455284, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.8111518195539247, 'direction': '↓'}]","billed_amount↓, paid_amount↑, procedure_cost↓, procedure_ratio↑, provider_claim_share↓",No explanation generated — claim classified as benign.,,,
+C00000020,E00000020,P00004754,D5DEC2FEEDC4C268,14,M,F00474,STAR0_S5,FKTP,Jawa Barat,Bandung,2024-09-24,E11.9,89.03,Rawat Jalan,,0,614514,490108,176886,147314,8,False,False,False,STAR0_HUB,,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,124406,"['glimepiride', 'insulin', 'glibenclamide']",0.75,999.0,9,3,614514.0,1,1,0.180648,1.2538312905904605,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2878465131038298,0.2397240099916194,0.25,0,0,0.0137444107587365,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -0.7567370771861169, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.606881802076241, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.5274327275191899, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.5016010820982046, 'direction': '↑'}, {'feature': 'clinical_pathway_deviation_score', 'value': None, 'shap_value': 0.4317738352995366, 'direction': '↑'}]","billed_amount↓, provider_claim_share↓, paid_amount↑, provider_monthly_claims↑, clinical_pathway_deviation_score↑",No explanation generated — claim classified as benign.,,,
+C00000009,E00000009,P00009161,878907D0DE55440E,63,F,F00160,CLIQUE0_P0,FKTP,Sumatera Utara,Deli Serdang,2024-06-09,M-4-10-I,87.03,Rawat Inap,Kelas II,3,21969147,8303408,1107484,3014564,9,False,True,False,CLIQUE0_P3,CLIQUE_0,M-4-10-I,3756700,Fraktur Femur,Femur Fracture,Bone X-Ray,M-4-10-I,3756700,910808,"['heparin', 'tramadol']",0.4,999.0,6,2,9214216.0,1,1,0.3250034857142857,1.1096907306384642,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0504108761978389,0.1372180659896323,0.5,0,1,0.9083969133477312,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0357061665680623,0.0164750999248748,0.0181345715801104,0.0003697976351436,0.0004283520252341,0.0098962768229639,1.022716235282462e-05,0.9189795107793364,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 9.56547512390418, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 1.7858432834467386, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.1066362944734283, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.8896555285312934, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.7678843077307101, 'direction': '↑'}]","billed_amount↑, procedure_cost↑, paid_amount↓, tarif_inacbg↓, procedure_ratio↑","# LAPORAN AUDIT KLAIM C00000009
+
+## 1. RINGKASAN AWAL
+Klaim ID C00000009 menunjukkan potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 90.84%. Total tagihan rumah sakit sebesar Rp 21.969.147, jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 3.756.700. Selisih klaim sebesar Rp 910.808 menunjukkan adanya ketidakwajaran dalam tagihan yang diajukan. Klaim ini memerlukan perhatian serius karena besarnya tagihan dapat berdampak signifikan pada keuangan BPJS Kesehatan.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.1097 (lebih dari 1)
+- **Tagihan vs INA-CBG**: Tagihan sebesar Rp 21.969.147 jauh melebihi tarif INA-CBG Rp 3.756.700.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{910808}{3756700} \times 100 \approx 24.24\%
+  \]
+  Persentase selisih klaim yang mencapai 24.24% menunjukkan adanya markup yang tidak wajar.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang tersedia.
+- **ICD-10**: Tidak ada kode ICD-10 yang terdaftar.
+- **Prosedur**: Tidak ada data prosedur yang tersedia. 
+  - **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak adanya justifikasi medis untuk klaim yang diajukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia.
+- **Kesesuaian INA-CBG**: INA-CBG M-4-10-I tidak dapat diverifikasi dengan diagnosis dan prosedur yang tidak ada, sehingga kesesuaian tidak dapat dipastikan.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik dari Data Klaim**: 
+  - Tagihan melebihi batas wajar yang ditentukan, dengan persentase selisih klaim 24.24% yang jauh di atas batas 10%.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini dinyatakan **tinggi**. Dasar matematisnya adalah claim ratio yang lebih dari 1, tagihan yang jauh melebihi tarif INA-CBG, dan persentase selisih klaim yang signifikan. Dasar regulatifnya adalah pelanggaran terhadap Permenkes dan PerBPJS terkait upcoding_diagnosis.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. Penundaan pembayaran klaim hingga investigasi lebih lanjut dilakukan.
+2. Meminta pihak rumah sakit untuk memberikan justifikasi medis yang valid terkait klaim ini.
+3. Melakukan audit lebih mendalam terhadap rumah sakit terkait untuk mengevaluasi pola klaim yang mencurigakan.
+4. Meningkatkan pelatihan dan sosialisasi kepada faskes mengenai regulasi dan konsekuensi dari praktik klaim yang tidak sesuai.
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai potensi fraud dalam klaim C00000009 dan sebagai dasar untuk tindakan lebih lanjut sesuai dengan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:04:25.946668
+C00000006,E00000006,P00010217,4D8F99CBDE88FC7A,44,F,F00321,RING0_P1,FKRTL,Jawa Timur,Malang,2024-04-27,E11.9,89.03,Rawat Jalan,,0,1937783,904970,193513,389523,2,False,True,False,RING0_P2,RING_0,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,285515,"['insulin', 'glimepiride', 'metformin']",0.75,999.0,4,2,1190485.0,1,1,0.5873133333333334,1.3154951926636322,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0998630394306073,0.2010146641730966,0.25,0,1,0.3769192110726065,FRAUD,0.3199999999999999,upcoding_diagnosis,0.1389586140721837,0.0027132505959629,0.0305937807966812,0.0009475877105886,0.0107080181882854,0.0253284201810133,0.0006089967694865,0.7901413294059981,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.26311952533637, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.825347512391163, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.6922291177685839, 'direction': '↓'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.53781197166536, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': -0.232305846856907, 'direction': '↓'}]","billed_amount↑, paid_amount↑, provider_claim_share↓, provider_monthly_claims↑, procedure_ratio↓","# LAPORAN AUDIT KLAIM C00000006
+
+## 1. RINGKASAN AWAL
+Klaim ID C00000006 menunjukkan potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 37.69%. Tagihan rumah sakit sebesar Rp 1.937.783 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 906.900. Selisih klaim sebesar Rp 285.515 menunjukkan adanya ketidakwajaran dalam pengajuan klaim ini. Klaim ini berpotensi merugikan BPJS Kesehatan dan memerlukan audit lebih lanjut.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.3154951926636322 (lebih dari 1, menunjukkan klaim tidak wajar).
+- **Tagihan vs INA-CBG**: Tagihan rumah sakit Rp 1.937.783 jauh melebihi tarif INA-CBG Rp 906.900.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \left( \frac{285515}{906900} \right) \times 100 \approx 31.5\%
+  \]
+  Persentase selisih klaim di atas 10% menunjukkan adanya markup yang tidak wajar sesuai dengan regulasi.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang tersedia.
+- **ICD-10**: Tidak ada kode diagnosis yang dilaporkan.
+- **Prosedur**: Tidak ada data prosedur yang dilaporkan.
+- **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak ada justifikasi klinis untuk klaim yang diajukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia.
+- **Kesesuaian INA-CBG**: INA-CBG M-1-40-I tidak dapat diverifikasi tanpa diagnosis dan prosedur yang jelas.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik dari Data Klaim**: 
+  - Selisih klaim sebesar Rp 285.515 (31.5% dari tarif INA-CBG) menunjukkan adanya markup yang tidak wajar.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+- **Tingkat Risiko**: Tinggi
+- **Dasar Matematis & Regulatif**: Claim ratio di atas 1, tagihan jauh melebihi tarif INA-CBG, dan persentase selisih klaim di atas batas yang diizinkan menunjukkan potensi fraud yang signifikan.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, klaim ini harus ditunda sampai investigasi lebih lanjut dilakukan.
+2. **Pengembalian Selisih Klaim**: Fasilitas kesehatan harus diminta untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lanjutan**: Lakukan audit mendalam terhadap fasilitas kesehatan terkait untuk menilai pola klaim dan kepatuhan terhadap regulasi.
+4. **Pendidikan dan Pelatihan**: Berikan pelatihan kepada penyedia layanan kesehatan mengenai kepatuhan terhadap regulasi BPJS Kesehatan dan pengajuan klaim yang benar.
+
+Laporan ini disusun untuk memberikan gambaran yang jelas mengenai potensi fraud dalam klaim ini dan sebagai dasar untuk tindakan lebih lanjut.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:04:53.863023
+C00000002,E00000002,P00013901,A46958C435864E28,43,F,F00404,RING0_P0,FKTP,Jawa Tengah,Solo,2024-02-17,J18.9,96.72,Rawat Inap,Kelas III,2,10422744,4709715,475961,1531846,4,True,True,False,RING0_P1,RING_0,M-1-50-I,5448800,Pneumonia,Pneumonia,Blood Glucose Test,M-1-50-I,5448800,174743,['ambroxol'],0.2,999.0,2,1,4884458.0,1,1,0.3559583636363636,1.0371024494895231,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0456656092037174,0.1469714552164521,0.3333333333333333,0,1,0.6642308109447306,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0338841107370676,0.0105303524947632,0.026615876665046,0.0003150829699977,0.0039899342584299,0.009096625317085,2.543100576635339e-05,0.9155425458986436,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 6.486329031659989, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.7618716206168756, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5890069497260265, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 0.568661614486482, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5669869266857859, 'direction': '↓'}]","billed_amount↑, procedure_cost↑, tarif_inacbg↓, procedure_ratio↑, provider_claim_share↓","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+## KLAIM ID: C00000002
+### Tanggal Audit: [Tanggal Audit]
+
+---
+
+## 1. RINGKASAN AWAL
+Klaim ini menunjukkan adanya potensi fraud dengan prediksi upcoding_diagnosis oleh model dengan probabilitas 66.42%. Tagihan rumah sakit sebesar Rp10.422.744 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp5.448.800, dengan selisih klaim sebesar Rp174.743. Klaim ini berpotensi merugikan BPJS Kesehatan dan memerlukan audit lebih lanjut.
+
+---
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.0371 (lebih dari 1, menunjukkan klaim melebihi tarif yang ditetapkan).
+- **Tagihan vs INA-CBG**: Tagihan rumah sakit Rp10.422.744 jauh melebihi tarif INA-CBG Rp5.448.800.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih} = \left( \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \right) \times 100 = \left( \frac{174743}{5448800} \right) \times 100 \approx 3.21\%
+  \]
+  Persentase selisih klaim 3.21% masih dalam batas wajar, namun klaim total yang jauh melebihi tarif INA-CBG menunjukkan potensi penyimpangan.
+
+---
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang tersedia.
+- **ICD-10**: Tidak ada kode diagnosis yang terdaftar.
+- **Prosedur**: Tidak ada data prosedur yang tersedia.
+- **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak ada justifikasi klinis untuk klaim yang diajukan.
+
+---
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak tersedia.
+- **Kesesuaian INA-CBG**: INA-CBG M-1-50-I tidak dapat diverifikasi dengan diagnosis dan prosedur yang tidak ada. Hal ini menunjukkan ketidakpastian dalam validitas klaim.
+
+---
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+### Fraud Type: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. 
+- **Bukti Numerik dari Data Klaim**: 
+  - Tagihan yang jauh melebihi tarif INA-CBG dan tidak adanya data diagnosis/prosedur yang valid menunjukkan adanya potensi upcoding.
+
+---
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut. Hal ini mengurangi kemampuan untuk mengidentifikasi faktor-faktor spesifik yang berkontribusi terhadap prediksi fraud.
+
+---
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+- **Tingkat Risiko**: Tinggi. 
+- **Dasar Matematis & Regulatif**: Claim ratio yang lebih dari 1, tagihan yang jauh melebihi tarif INA-CBG, dan tidak adanya data diagnosis/prosedur yang valid menunjukkan potensi fraud yang signifikan.
+
+---
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, sanksi administratif berupa penundaan pembayaran klaim harus diterapkan.
+2. **Pengembalian Selisih Klaim**: Faskes harus diminta untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lanjutan**: Lakukan investigasi lebih lanjut terhadap faskes terkait untuk mengevaluasi pola klaim dan kepatuhan terhadap regulasi.
+4. **Peningkatan Pelatihan**: Berikan pelatihan kepada faskes mengenai kepatuhan terhadap regulasi dan prosedur klaim yang benar.
+
+---
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai potensi fraud dalam klaim ini dan untuk mendukung tindakan yang tepat sesuai dengan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:05:15.335324
+C00000014,E00000014,P00017004,BE5C65AECA98E103,11,F,F00159,CLIQUE0_P1,FKTP,Bali,Badung,2024-06-12,K29.7,89.03,Rawat Jalan,,0,473919,242591,115357,76237,4,True,True,False,CLIQUE0_P3,CLIQUE_0,M-1-60-I,426100,Gastritis,Gastritis,Physical Examination,M-1-60-I,426100,14721,['sucralfate'],0.25,999.0,6,2,257312.0,1,1,0.3138346666666666,1.060678010816515,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2434102802160702,0.1608647029034436,0.5,0,1,0.486300045680992,FRAUD,0.3199999999999999,upcoding_diagnosis,0.1508570229685333,0.005251174590508,0.0127943543469225,0.0009832067562462,0.0189132820037916,0.0142609803027273,0.0004864416884318,0.7964535432242381,"[{'feature': 'paid_amount', 'value': None, 'shap_value': 3.983037518064957, 'direction': '↑'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 1.1498418354458408, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 1.0132369489176198, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.7900445576861966, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.7010042440576945, 'direction': '↑'}]","paid_amount↑, selisih_klaim↑, rolling_avg_cost_30d↑, provider_claim_share↓, tarif_inacbg↑","# LAPORAN AUDIT KLAIM C00000014
+
+## 1. RINGKASAN AWAL
+Klaim ID C00000014 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 48.63%. Tagihan rumah sakit sebesar Rp 473.919 melebihi tarif INA-CBG yang ditetapkan sebesar Rp 426.100. Selisih klaim sebesar Rp 14.721 menunjukkan adanya markup yang tidak wajar. Jenis pelayanan adalah rawat jalan dengan tidak adanya data diagnosis dan prosedur yang jelas, yang meningkatkan risiko ketidakpatuhan terhadap regulasi.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.060678010816515 (lebih dari 1, menunjukkan klaim melebihi batas yang wajar).
+- **Tagihan vs. INA-CBG**: Tagihan rumah sakit Rp 473.919 jauh melebihi tarif INA-CBG Rp 426.100, menunjukkan potensi markup yang tidak sesuai.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{14.721}{426.100} \times 100 \approx 3.45\%
+  \]
+  Persentase ini menunjukkan bahwa selisih klaim masih dalam batas wajar, namun perlu dicermati dalam konteks total tagihan.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name dan ICD-10**: Tidak ada data diagnosis yang terdaftar, sehingga tidak dapat dilakukan pencocokan dengan kode ICD-10.
+- **Prosedur**: Tidak ada data prosedur yang tersedia. Hal ini menimbulkan risiko tinggi terkait keabsahan klaim, karena tidak adanya justifikasi untuk tagihan yang tinggi.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia, sehingga tidak dapat dilakukan analisis lebih lanjut.
+- **Kesesuaian INA-CBG**: INA-CBG yang terdaftar adalah M-1-60-I, namun tanpa diagnosis dan prosedur yang jelas, kesesuaian ini tidak dapat dipastikan.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG mengenai batas markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15 mengenai sanksi administratif untuk fraud tipe upcoding_diagnosis.
+- **Bukti Numerik dari Data Klaim**: 
+  - Claim Ratio > 1 menunjukkan klaim tidak wajar.
+  - Tagihan melebihi tarif INA-CBG yang ditetapkan.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia dalam data klaim ini, sehingga analisis fitur dominan tidak dapat dilakukan.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+- **Tingkat Risiko**: Tinggi
+- **Dasar Matematis & Regulatif**: 
+  - Claim Ratio > 1 dan tagihan melebihi tarif INA-CBG menunjukkan indikasi fraud.
+  - Tidak adanya data diagnosis dan prosedur yang jelas meningkatkan risiko ketidakpatuhan terhadap regulasi.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, klaim ini harus ditunda hingga investigasi lebih lanjut dilakukan.
+2. **Permintaan Dokumen Tambahan**: Minta rumah sakit untuk menyediakan dokumen pendukung yang menjelaskan diagnosis dan prosedur yang dilakukan.
+3. **Audit Internal**: Lakukan audit internal pada rumah sakit untuk menilai kepatuhan terhadap regulasi BPJS Kesehatan dan untuk mencegah potensi fraud di masa mendatang.
+4. **Pelatihan dan Sosialisasi**: Berikan pelatihan kepada tenaga medis dan administrasi rumah sakit mengenai regulasi dan kepatuhan klaim BPJS Kesehatan. 
+
+Laporan ini disusun untuk memberikan gambaran yang jelas mengenai potensi fraud dalam klaim ini dan untuk mendukung tindakan yang tepat sesuai dengan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:05:39.544769
+C00000007,E00000007,P00017273,ABCD75D0BC1B55D0,11,F,F00143,RING0_P4,FKRTL,Jawa Barat,Bekasi,2024-03-17,J00,89.03,Rawat Jalan,,0,517508,245600,16566,121177,2,False,True,False,RING0_P0,RING_0,M-1-20-I,383300,Nasofaringitis Akut (Common Cold),Common Cold,Physical Examination,M-1-20-I,383300,81721,"['vitamin_c', 'paracetamol']",0.5,999.0,3,1,327321.0,1,1,0.09107,1.3327348015683975,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.032011037489203,0.2341543818561609,0.5,0,1,0.5491058180349835,FRAUD,0.3199999999999999,upcoding_diagnosis,0.2214208381723721,0.0056162048404163,0.0191075137559742,0.0031437295385116,0.0163160227758168,0.0155665215904616,0.0001132696171377,0.718715864163831,"[{'feature': 'paid_amount', 'value': None, 'shap_value': 4.081550638715271, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.9275949755660258, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.8076204409275669, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.7173623828240671, 'direction': '↓'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 0.43083368222694846, 'direction': '↑'}]","paid_amount↑, provider_monthly_claims↑, tarif_inacbg↑, provider_claim_share↓, rolling_avg_cost_30d↑","# LAPORAN AUDIT KLAIM C00000007
+
+## 1. RINGKASAN AWAL
+Klaim ID C00000007 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 54.91%. Tagihan rumah sakit sebesar Rp 517.508 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 383.300. Selisih klaim sebesar Rp 81.721 menunjukkan adanya potensi markup yang tidak wajar. Jenis pelayanan adalah rawat jalan, namun tidak terdapat diagnosis atau prosedur yang terdaftar, yang menambah kompleksitas analisis.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.3327, yang menunjukkan bahwa klaim yang diajukan lebih dari 1 kali tarif INA-CBG, mengindikasikan potensi markup.
+- **Tagihan vs INA-CBG**: Tagihan rumah sakit (Rp 517.508) melebihi tarif INA-CBG (Rp 383.300) sebesar Rp 134.208, atau sekitar 35% lebih tinggi.
+- **Persentase Selisih Klaim**: Selisih klaim (Rp 81.721) terhadap tarif INA-CBG (Rp 383.300) adalah sekitar 21.3%, yang melebihi batas markup yang diizinkan sebesar 10%.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang terdaftar, sehingga tidak dapat dicocokkan dengan kode ICD-10.
+- **Prosedur**: Tidak ada data prosedur yang terdaftar, sehingga tidak dapat dicocokkan dengan severity INA-CBG. 
+- **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak adanya justifikasi medis untuk klaim yang diajukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia untuk INA-CBG yang diajukan.
+- **Keselarasan INA-CBG**: INA-CBG M-1-20-I tidak dapat diverifikasi dengan diagnosis dan prosedur yang tidak ada, menambah keraguan terhadap keabsahan klaim.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Sanksi administratif berupa penundaan pembayaran klaim dan kewajiban untuk mengembalikan selisih klaim yang tidak wajar.
+- **Bukti Numerik**: Selisih klaim sebesar Rp 81.721 melebihi batas yang diizinkan, dan claim ratio yang lebih dari 1 menunjukkan potensi upcoding.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia dalam data klaim ini, sehingga tidak dapat dilakukan analisis lebih lanjut terkait fitur dominan.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini adalah **Tinggi**. Dasar matematisnya adalah claim ratio yang lebih dari 1, selisih klaim yang signifikan, dan tidak adanya data diagnosis dan prosedur yang mendukung klaim. Regulasi yang dilanggar juga mendukung penilaian risiko ini.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, lakukan penundaan pembayaran klaim ini hingga investigasi lebih lanjut.
+2. **Pengembalian Selisih Klaim**: Minta rumah sakit untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lebih Lanjut**: Lakukan audit mendalam terhadap rumah sakit terkait untuk memeriksa pola klaim dan kepatuhan terhadap regulasi.
+4. **Pelatihan dan Sosialisasi**: Berikan pelatihan kepada faskes tentang kepatuhan regulasi dan konsekuensi dari praktik klaim yang tidak sesuai.
+
+Laporan ini disusun untuk memberikan gambaran komprehensif mengenai potensi fraud dalam klaim C00000007 dan sebagai dasar untuk tindakan lebih lanjut.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:05:58.174006
+C00000004,E00000004,P00017412,AEDB6FDEA8D331E6,33,F,F00040,STAR0_HUB,FKRTL,Jawa Timur,Surabaya,2024-01-20,J00,89.03,Rawat Jalan,,0,208451,199015,17428,33417,7,False,True,False,,STAR_0,M-1-20-I,383300,Nasofaringitis Akut (Common Cold),Common Cold,Physical Examination,M-1-20-I,383300,9436,"['paracetamol', 'cetirizine']",0.5,999.0,1,1,208451.0,1,1,0.3051633333333333,1.0474082485830285,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0836067775794907,0.1603102872603765,0.5,0,0,0.0115737339595695,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -3.3682181094889527, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.9916258036415093, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.8418821940734051, 'direction': '↑'}, {'feature': 'rolling_avg_cost_30d', 'value': None, 'shap_value': 0.8313005272689042, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.6917269386886619, 'direction': '↓'}]","billed_amount↓, paid_amount↑, tarif_inacbg↑, rolling_avg_cost_30d↑, procedure_cost↓",No explanation generated — claim classified as benign.,,,
+C00000019,E00000019,P00021588,E56C65A7F1AF4113,20,M,F00358,RING0_P2,FKRTL,Bali,Badung,2024-01-08,K29.7,89.03,Rawat Jalan,,0,943506,398999,59930,90297,4,False,True,False,RING0_P3,RING_0,M-1-60-I,426100,Gastritis,Gastritis,Physical Examination,M-1-60-I,426100,150499,"['antacid', 'omeprazole']",0.5,999.0,1,1,549498.0,1,1,0.465328,1.377187969924812,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0635183416763203,0.0957035824853445,0.5,0,1,0.7391704591306588,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0262743342577912,0.0213941652632247,0.0215467777903882,2.831232886589075e-05,0.001787406222033,0.0087258107771195,2.0408822550390703e-05,0.920222800771901,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 3.1854541726753816, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 3.047015011851909, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.2874954369093756, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.134485704761464, 'direction': '↑'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.8684540579316672, 'direction': '↑'}]","billed_amount↑, paid_amount↑, tarif_inacbg↑, procedure_ratio↑, drug_ratio↑","# LAPORAN AUDIT KLAIM C00000019
+
+## 1. RINGKASAN AWAL
+Klaim ID: C00000019 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 73.92%. Tagihan rumah sakit sebesar Rp 943.506 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 426.100. Selisih klaim mencapai Rp 150.499, yang menunjukkan adanya ketidakwajaran dalam pengajuan klaim ini. Klaim ini berpotensi merugikan BPJS Kesehatan dan perlu ditindaklanjuti.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.377187969924812 (Claim ratio > 1, menunjukkan klaim tidak wajar).
+- **Tagihan vs INA-CBG**: Tagihan rumah sakit Rp 943.506 jauh melebihi tarif INA-CBG Rp 426.100, menunjukkan adanya markup yang tidak wajar.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{150499}{426100} \times 100 \approx 35.3\%
+  \]
+  Persentase selisih klaim sebesar 35.3% menunjukkan adanya ketidakwajaran yang signifikan.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang tersedia (risiko tinggi karena tidak ada informasi untuk menilai keabsahan klaim).
+- **ICD-10**: Tidak ada kode ICD-10 yang terlampir, sehingga tidak dapat dilakukan pencocokan dengan diagnosis yang seharusnya.
+- **Prosedur**: Tidak ada data prosedur yang tersedia (risiko tinggi karena tidak ada informasi untuk menilai keabsahan klaim).
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada informasi mengenai severity level yang tersedia.
+- **Cocokkan INA-CBG**: INA-CBG yang diajukan adalah M-1-60-I, namun tidak ada data diagnosis dan prosedur yang mendukung klaim ini. Hal ini menimbulkan keraguan terhadap keabsahan klaim.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik dari Data Klaim**: 
+  - Tagihan rumah sakit Rp 943.506 melebihi batas wajar yang ditetapkan (markup lebih dari 10% dari tarif INA-CBG).
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut. Oleh karena itu, tidak dapat dilakukan analisis terhadap fitur dominan.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko klaim ini dinilai **Tinggi**. Dasar matematisnya adalah claim ratio yang lebih dari 1 dan selisih klaim yang signifikan. Berdasarkan regulasi, terdapat pelanggaran terkait markup yang tidak wajar dan tidak adanya data diagnosis serta prosedur yang mendukung klaim.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, klaim ini harus ditunda pembayarannya hingga klarifikasi lebih lanjut dilakukan.
+2. **Pengembalian Selisih Klaim**: Fasilitas kesehatan harus diminta untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lebih Lanjut**: Lakukan investigasi mendalam terhadap fasilitas kesehatan yang mengajukan klaim ini untuk mencegah potensi fraud di masa mendatang.
+4. **Peningkatan Pengawasan**: Perkuat sistem pengawasan dan audit terhadap klaim yang mencurigakan untuk mengurangi risiko fraud di masa depan.
+
+Laporan ini disusun untuk memberikan gambaran yang jelas mengenai potensi fraud dalam klaim ini dan sebagai dasar untuk tindakan lebih lanjut sesuai dengan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:06:27.277073
+C00000003,E00000003,P00022088,B9DA02CB35CEC387,30,M,F00225,STAR0_S4,FKRTL,Jawa Barat,Depok,2024-09-08,M-4-10-I,87.03,Rawat Inap,Kelas III,3,5560527,5552304,1278875,1765291,1,False,True,False,STAR0_HUB,,M-4-10-I,3124600,Fraktur Femur,Femur Fracture,Bone X-Ray,M-4-10-I,3124600,8223,"['calcium_supplement', 'tramadol', 'cefazolin']",0.6,999.0,9,3,5560527.0,1,1,0.5076879357142857,1.0014808264315451,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.2299916482751278,0.3174682332325275,0.25,0,0,0.0165484550896504,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 2.522192745406646, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.612587143043056, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 1.57825746844057, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.9330454346409534, 'direction': '↓'}, {'feature': 'claim_ratio', 'value': None, 'shap_value': -0.8165409637033008, 'direction': '↓'}]","billed_amount↑, paid_amount↓, procedure_cost↑, tarif_inacbg↓, claim_ratio↓",No explanation generated — claim classified as benign.,,,
+C00000018,E00000018,P00026912,C32855591F4882F6,55,M,F00488,STAR0_S1,FKTP,Jawa Barat,Bogor,2024-09-09,N39.0,89.03,Rawat Jalan,,0,565147,526760,62435,160963,0,True,False,False,STAR0_HUB,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,38387,['cotrimoxazole'],0.25,999.0,9,3,565147.0,1,1,0.2558822222222222,1.072871757780094,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,0,0,0,0.3,0.1104754860673664,0.2848156589070473,0.25,0,0,0.0087979956472505,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -1.2443282021553024, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.7725471709948033, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.6388203556928783, 'direction': '↓'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': -0.39613386979093773, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.28016697978950106, 'direction': '↑'}]","billed_amount↓, tarif_inacbg↑, provider_claim_share↓, procedure_ratio↓, paid_amount↑",No explanation generated — claim classified as benign.,,,
+C00000001,E00000001,P00028510,68AF78B18D68CF94,86,M,F00388,RING0_P3,FKRTL,Jawa Tengah,Magelang,2024-12-30,N39.0,88.72,Rawat Jalan,,0,1291689,380253,171681,55009,4,False,True,False,RING0_P4,RING_0,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Urine Analysis,M-1-70-I,590500,137305,"['cotrimoxazole', 'ciprofloxacin']",0.5,999.0,12,4,517558.0,1,1,0.1501288888888889,1.3610849590010887,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1329119215910938,0.0425868435925028,1.0,0,1,0.7882633621627327,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0184631452972181,0.0134615876268187,0.0265199702083628,1.674958469921496e-05,0.0030722635301865,0.0097866467714685,0.001289750826829,0.9273898819865062,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 5.585840679632965, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 2.9453244105097838, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.3858099736698204, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.2346423965832218, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.89691297128913, 'direction': '↓'}]","billed_amount↑, paid_amount↑, procedure_ratio↑, tarif_inacbg↑, procedure_cost↓","# LAPORAN AUDIT KLAIM BPJS KESEHATAN
+
+## 1. RINGKASAN AWAL
+Klaim dengan ID C00000001 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 78.83%. Tagihan rumah sakit sebesar Rp 1.291.689 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 590.500. Selisih klaim sebesar Rp 137.305 menunjukkan adanya ketidakwajaran dalam pengajuan klaim ini. Dengan tidak adanya kode diagnosis dan prosedur yang jelas, klaim ini berpotensi melanggar regulasi yang berlaku.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.3610849590010887, yang berarti klaim ini lebih dari satu kali lipat dari tarif INA-CBG.
+- **Tagihan vs INA-CBG**: Tagihan sebesar Rp 1.291.689 jauh melebihi tarif INA-CBG sebesar Rp 590.500, menunjukkan adanya markup yang tidak wajar.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{137305}{590500} \times 100 \approx 23.27\%
+  \]
+  Persentase ini menunjukkan bahwa selisih klaim melebihi batas wajar yang diizinkan.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name dan ICD-10**: Tidak ada data diagnosis yang tersedia, sehingga tidak dapat dilakukan pencocokan dengan kode ICD-10.
+- **Prosedur**: Tidak ada data prosedur yang tersedia, sehingga tidak dapat dilakukan pencocokan dengan severity INA-CBG. 
+- **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak adanya justifikasi medis untuk klaim yang diajukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia, sehingga tidak dapat dilakukan analisis lebih lanjut.
+- **Kesesuaian INA-CBG**: INA-CBG yang diajukan adalah M-1-70-I, namun tanpa diagnosis dan prosedur yang jelas, kesesuaian tidak dapat dipastikan.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik**: 
+  - Tagihan melebihi tarif INA-CBG sebesar 118.5% (Rp 1.291.689 - Rp 590.500) dan selisih klaim sebesar 23.27% dari tarif INA-CBG.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini adalah **tinggi**. Dasar matematisnya adalah claim ratio yang lebih dari 1, tagihan yang jauh melebihi tarif INA-CBG, dan tidak adanya data diagnosis serta prosedur yang dapat dipertanggungjawabkan. Dasar regulatifnya adalah pelanggaran terhadap Permenkes dan PerBPJS yang berlaku.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, klaim ini harus ditunda pembayarannya hingga klarifikasi lebih lanjut dilakukan.
+2. **Pengembalian Selisih Klaim**: Faskes harus diminta untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Penyelidikan Lanjutan**: Lakukan audit lebih lanjut terhadap faskes terkait untuk menilai pola klaim yang mencurigakan dan potensi fraud lainnya.
+4. **Peningkatan Pelatihan**: Faskes perlu diberikan pelatihan mengenai pengajuan klaim yang sesuai dengan regulasi dan pentingnya dokumentasi yang lengkap. 
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai klaim yang diajukan dan potensi fraud yang terindikasi.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:06:55.679015
+C00000005,E00000005,P00029716,B1ED181F20F4CD6B,14,F,F00167,STAR0_S0,FKTP,Jawa Tengah,Magelang,2024-04-23,E11.9,89.03,Rawat Jalan,,0,922759,741596,11363,180329,8,True,False,False,STAR0_HUB,,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,181163,"['metformin', 'glibenclamide']",0.5,999.0,4,2,922759.0,1,1,0.2303453333333333,1.244286317231596,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0123141445229528,0.1954235120724782,0.25,0,0,0.0130486291409892,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 0.7666717696678824, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5922092446417082, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5305927283677738, 'direction': '↓'}, {'feature': 'drug_cost', 'value': None, 'shap_value': -0.39012772424845027, 'direction': '↓'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.33806282027275303, 'direction': '↑'}]","billed_amount↑, tarif_inacbg↓, provider_claim_share↓, drug_cost↓, drug_ratio↑",No explanation generated — claim classified as benign.,,,
+C00000010,E00000010,P00034092,11B7A7BEBF565467,53,F,F00461,D00461,FKTP,Sulawesi Selatan,Gowa,2024-03-17,N39.0,89.03,Rawat Jalan,,0,2228837,430414,482357,132948,0,True,False,False,,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Physical Examination,M-1-70-I,590500,1798423,"['insulin', 'furosemide']",0.0,999.0,3,1,567479.0,1,1,1.0,1.3184461508079413,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,1,0,1,0.8,0.2164163568639802,0.0596490189058155,0.5,0,1,0.9996784036726916,FRAUD,0.3199999999999999,phantom_billing,3.798672056738587e-05,1.93179683530632e-05,2.0557850106877345e-05,9.448516516618386e-06,8.691736605546758e-06,8.758250000992986e-06,0.9998349762604782,6.028165487876989e-05,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.532452701120637, 'direction': '↑'}, {'feature': 'obat_match_score', 'value': None, 'shap_value': 3.8057392377313226, 'direction': '↑'}, {'feature': 'obat_mismatch_flag', 'value': None, 'shap_value': 2.018908505253494, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.9466486622707453, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 1.1541345788631587, 'direction': '↑'}]","billed_amount↑, obat_match_score↑, obat_mismatch_flag↑, paid_amount↑, tarif_inacbg↑","# LAPORAN AUDIT KLAIM Kesehatan BPJS
+## Claim ID: C00000010
+### Tanggal Audit: [Tanggal Audit]
+### Auditor: [Nama Auditor]
+
+---
+
+## 1. RINGKASAN AWAL
+Klaim ini teridentifikasi sebagai potensi fraud dengan prediksi tipe **phantom_billing** dan probabilitas 99.97%. Total tagihan rumah sakit sebesar Rp 2.228.837, jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 590.500. Selisih klaim mencapai Rp 1.798.423, yang menunjukkan adanya ketidakwajaran dalam klaim ini. Tidak terdapat diagnosis atau prosedur yang dilaporkan, yang menambah risiko dan kompleksitas audit ini.
+
+---
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.3184461508079413 (≥ 1, menunjukkan klaim tidak wajar)
+- **Tagihan vs. INA-CBG**: Tagihan rumah sakit (Rp 2.228.837) jauh melebihi tarif INA-CBG (Rp 590.500).
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \left( \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \right) \times 100 = \left( \frac{1.798.423}{590.500} \right) \times 100 \approx 304.5\%
+  \]
+  Persentase selisih klaim yang sangat tinggi ini menunjukkan adanya potensi penipuan.
+
+---
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang dilaporkan.
+- **ICD-10**: Tidak ada kode diagnosis yang dilaporkan.
+- **Prosedur**: Tidak ada data prosedur yang dilaporkan.
+  
+  **Risiko**: Tidak ada data prosedur dan diagnosis meningkatkan risiko penipuan karena tidak ada justifikasi medis yang mendukung klaim.
+
+---
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak ada data severity level yang tersedia.
+- **Kesesuaian INA-CBG**: INA-CBG yang diajukan (M-1-70-I) tidak dapat diverifikasi karena tidak ada diagnosis atau prosedur yang sesuai.
+
+---
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+### Fraud Type: phantom_billing
+- **Dasar Regulasi yang Dilanggar**:
+  - **PerBPJS No. 6/2020 Pasal 15**: Menyatakan bahwa klaim yang tidak wajar harus dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik dari Data Klaim**:
+  - Claim Ratio > 1 menunjukkan klaim yang tidak wajar.
+  - Selisih klaim yang mencapai 304.5% dari tarif INA-CBG menunjukkan adanya potensi penipuan.
+
+---
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut.
+
+---
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini dinyatakan **Tinggi**. Dasar matematis dan regulatifnya adalah:
+- Claim Ratio > 1 dan persentase selisih klaim yang sangat tinggi (304.5%).
+- Tidak adanya diagnosis dan prosedur yang dilaporkan, serta ketidaksesuaian dengan regulasi BPJS.
+
+---
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, klaim ini harus ditunda hingga investigasi lebih lanjut dilakukan.
+2. **Pengembalian Selisih Klaim**: Faskes wajib mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lanjutan**: Lakukan investigasi lebih mendalam terhadap faskes terkait untuk mengidentifikasi pola penipuan lebih lanjut.
+4. **Peningkatan Pengawasan**: Meningkatkan pengawasan terhadap klaim yang tidak memiliki diagnosis dan prosedur yang jelas.
+
+---
+
+Laporan ini disusun untuk memberikan gambaran yang jelas dan sistematis mengenai potensi penipuan dalam klaim ini, berdasarkan data yang tersedia dan regulasi yang berlaku.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus phantom_billing, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe phantom_billing dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:07:16.588316
+C00000016,E00000016,P00037727,DCA497F61E14E7B8,14,M,F00161,CLIQUE0_P2,FKTP,Banten,Serang,2024-02-28,E11.9,89.03,Rawat Jalan,,0,2102193,780232,236534,117368,3,False,True,False,CLIQUE0_P3,CLIQUE_0,M-1-40-I,906900,Diabetes Melitus Tipe 2,Diabetes Type 2,Physical Examination,M-1-40-I,906900,326853,['metformin'],0.25,999.0,2,1,1107085.0,1,1,0.4761133333333333,1.4189158879462929,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1125176839054816,0.0558311935054519,0.3333333333333333,0,1,0.7040587487874984,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0292595770263963,0.0046489741849393,0.0364066358281544,0.0006995198557949,0.0027048091772653,0.010883991989269,0.0017005594333731,0.9136959204994772,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 4.595629362672916, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.9060768663615455, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.99394571444951, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.9744947014097124, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.625358655139571, 'direction': '↓'}]","billed_amount↑, procedure_ratio↑, paid_amount↑, provider_monthly_claims↑, provider_claim_share↓","# LAPORAN AUDIT KLAIM C00000016
+
+## 1. RINGKASAN AWAL
+Klaim ID C00000016 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 70.41%. Tagihan rumah sakit sebesar Rp 2.102.193 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 906.900. Selisih klaim sebesar Rp 326.853 menunjukkan adanya ketidakwajaran dalam pengajuan klaim ini, yang berpotensi merugikan BPJS Kesehatan.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.4189 (lebih dari 1, menunjukkan klaim tidak wajar).
+- **Tagihan vs. INA-CBG**: Tagihan Rp 2.102.193 jauh melebihi tarif INA-CBG Rp 906.900.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{326.853}{906.900} \times 100 \approx 36\%
+  \]
+  Selisih klaim sebesar 36% dari tarif INA-CBG menunjukkan adanya markup yang tidak wajar.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name**: Tidak ada data diagnosis yang tersedia.
+- **ICD-10**: Tidak ada data kode ICD-10 yang tersedia.
+- **Prosedur**: Tidak ada data prosedur yang tersedia.
+- **Risiko**: Tidak ada data prosedur → risiko tinggi karena tidak dapat menilai kesesuaian perawatan dengan diagnosis yang diajukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak tersedia.
+- **Kesesuaian INA-CBG**: INA-CBG M-1-40-I tidak dapat diverifikasi tanpa diagnosis dan prosedur yang jelas, sehingga kesesuaian tidak dapat dinilai.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**:
+  - **Permenkes INA-CBG**: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - **PerBPJS No. 6/2020 Pasal 15**: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim.
+- **Bukti Numerik**: 
+  - Tagihan Rp 2.102.193 melebihi batas wajar yang ditetapkan, dengan persentase selisih klaim 36%.
+
+## 6. ANALISIS FITUR SHAP
+- **Tidak ada fitur SHAP yang tersedia**: Oleh karena itu, analisis fitur SHAP tidak dapat dilakukan.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini dinyatakan **tinggi**. Dasar matematisnya adalah claim_ratio yang lebih dari 1, tagihan yang jauh melebihi tarif INA-CBG, dan persentase selisih klaim yang signifikan. Dasar regulatifnya adalah pelanggaran terhadap Permenkes dan PerBPJS terkait upcoding_diagnosis.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020 Pasal 15, klaim ini harus ditunda hingga klarifikasi lebih lanjut.
+2. **Pengembalian Selisih Klaim**: Fasilitas kesehatan wajib mengembalikan selisih klaim yang tidak wajar.
+3. **Pemeriksaan Lebih Lanjut**: Lakukan audit mendalam terhadap fasilitas kesehatan terkait untuk menilai pola klaim dan kepatuhan terhadap regulasi.
+4. **Peningkatan Pengawasan**: Tingkatkan pengawasan terhadap klaim yang menunjukkan pola serupa untuk mencegah potensi fraud di masa mendatang.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:07:45.958079
+C00000011,E00000011,P00038142,35B93D377015E841,72,F,F00203,CLIQUE0_P3,FKRTL,DKI Jakarta,Jakarta Pusat,2024-10-19,J18.9,87.44,Rawat Inap,VIP,1,13592684,4587009,991538,399789,5,False,True,False,CLIQUE0_P2,CLIQUE_0,M-1-50-I,7246900,Pneumonia,Pneumonia,Chest X-Ray,M-1-50-I,7246900,938148,"['ceftriaxone', 'ambroxol', 'salbutamol']",0.6,999.0,10,4,5525157.0,1,1,0.402287,1.2045225539076654,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0729464414131571,0.0294120698007788,1.0,0,1,0.7364557002499157,FRAUD,0.3199999999999999,upcoding_diagnosis,0.0311480903922045,0.0144582509374492,0.0093134560494083,6.28035050721588e-06,0.0011928341966179,0.0083537136787963,6.669260984209758e-06,0.9355207170584172,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 7.8187081422307525, 'direction': '↑'}, {'feature': 'procedure_ratio', 'value': None, 'shap_value': 1.6922725250327495, 'direction': '↑'}, {'feature': 'drug_ratio', 'value': None, 'shap_value': 0.5514012870483566, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.5332542027375894, 'direction': '↓'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.43534556024125776, 'direction': '↓'}]","billed_amount↑, procedure_ratio↑, drug_ratio↑, tarif_inacbg↓, provider_claim_share↓","# LAPORAN AUDIT KLAIM C00000011
+
+## 1. RINGKASAN AWAL
+Klaim ID: C00000011 menunjukkan indikasi potensi fraud dengan prediksi upcoding_diagnosis dan probabilitas 73.65%. Tagihan rumah sakit sebesar Rp 13.592.684 jauh melebihi tarif INA-CBG yang ditetapkan sebesar Rp 7.246.900. Selisih klaim sebesar Rp 938.148 menunjukkan adanya ketidakwajaran dalam klaim ini, yang perlu ditindaklanjuti sesuai dengan regulasi yang berlaku.
+
+## 2. ANALISIS KEWAJARAN FINANSIAL
+- **Claim Ratio**: 1.2045 (lebih dari 1, menunjukkan klaim tidak wajar).
+- **Tagihan vs INA-CBG**: Tagihan rumah sakit Rp 13.592.684 jauh melebihi tarif INA-CBG Rp 7.246.900, menunjukkan adanya markup yang tidak wajar.
+- **Persentase Selisih Klaim**: 
+  \[
+  \text{Persentase Selisih Klaim} = \frac{\text{Selisih Klaim}}{\text{Tarif INA-CBG}} \times 100 = \frac{938148}{7246900} \times 100 \approx 12.95\%
+  \]
+  Persentase ini melebihi batas maksimum 10% yang diatur dalam Permenkes INA-CBG.
+
+## 3. ANALISIS DIAGNOSIS & PROSEDUR (KLINIS)
+- **Diagnosis Name dan ICD-10**: Tidak ada data diagnosis yang tersedia, sehingga tidak dapat dilakukan pencocokan dengan kode ICD-10.
+- **Prosedur dan Severity INA-CBG**: Tidak ada data prosedur, sehingga tidak dapat dilakukan pencocokan dengan severity level INA-CBG. Risiko yang muncul adalah ketidakpastian dalam justifikasi medis dan prosedur yang dilakukan.
+
+## 4. CROSS-CHECK INA-CBG
+- **Severity Level**: Tidak tersedia dalam data klaim.
+- **Kesesuaian INA-CBG**: INA-CBG M-1-50-I tidak dapat diverifikasi dengan diagnosis dan prosedur yang tidak ada, sehingga menimbulkan keraguan atas keabsahan klaim.
+
+## 5. ANALISIS FRAUD BERDASARKAN REGULASI
+- **Fraud Type**: upcoding_diagnosis
+- **Dasar Regulasi yang Dilanggar**: 
+  - Permenkes INA-CBG: Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.
+  - PerBPJS No. 6/2020 Pasal 15: Sanksi administratif berupa penundaan pembayaran klaim dan kewajiban mengembalikan selisih klaim yang tidak wajar.
+- **Bukti Numerik dari Data Klaim**: 
+  - Tagihan Rp 13.592.684 melebihi batas wajar dari tarif INA-CBG Rp 7.246.900.
+  - Persentase selisih klaim 12.95% melebihi batas maksimum yang ditetapkan.
+
+## 6. ANALISIS FITUR SHAP
+Tidak ada fitur SHAP yang tersedia untuk analisis lebih lanjut. Oleh karena itu, tidak dapat dilakukan identifikasi fitur dominan yang berkontribusi terhadap prediksi fraud.
+
+## 7. KESIMPULAN AUDIT PROFESIONAL
+Tingkat risiko untuk klaim ini dinyatakan **Tinggi**. Dasar matematisnya didasarkan pada claim ratio yang lebih dari 1, persentase selisih klaim yang melebihi batas wajar, serta ketidakcocokan data diagnosis dan prosedur. Dasar regulatifnya merujuk pada Permenkes INA-CBG dan PerBPJS No. 6/2020.
+
+## 8. REKOMENDASI TINDAK LANJUT
+1. **Penundaan Pembayaran Klaim**: Sesuai dengan PerBPJS No. 6/2020, klaim ini harus ditunda hingga investigasi lebih lanjut dilakukan.
+2. **Pengembalian Selisih Klaim**: Fasilitas kesehatan harus diminta untuk mengembalikan selisih klaim yang tidak wajar.
+3. **Investigasi Lanjutan**: Lakukan audit mendalam terhadap fasilitas kesehatan terkait untuk memastikan kepatuhan terhadap regulasi dan mencegah potensi fraud di masa mendatang.
+4. **Peningkatan Pelatihan**: Fasilitas kesehatan perlu diberikan pelatihan mengenai pengisian klaim yang benar dan sesuai dengan regulasi yang berlaku. 
+
+Laporan ini disusun untuk memberikan gambaran menyeluruh mengenai potensi fraud pada klaim C00000011 dan sebagai dasar untuk tindakan lebih lanjut.","[{'title': 'INA-CBG Tariff Reference', 'type': None, 'snippet': '[MOCK] Permenkes INA-CBG: Untuk kasus upcoding_diagnosis, tarif standar Kelas III adalah... Markup tidak boleh melebihi 10% dari tarif dasar INA-CBG.'}, {'title': 'PerBPJS 6/2020 - Anti-Fraud', 'type': None, 'snippet': '[MOCK] PerBPJS No. 6/2020 Pasal 15: Fraud tipe upcoding_diagnosis dikenakan sanksi administratif berupa penundaan pembayaran klaim. Faskes wajib mengembalikan selisih klaim yang tidak wajar.'}, {'title': 'Clinical Practice Guidelines', 'type': None, 'snippet': '[MOCK] Clinical Pathway: Untuk diagnosis pneumonia (J18.9), typical LOS adalah 5 hari. Perawatan lebih dari 7 hari memerlukan justifikasi medis.'}]",gpt-4o-mini,2025-11-20T20:08:15.190816
+C00000012,E00000012,P00038934,DA430EE20D1E51EC,58,M,F00067,STAR0_S3,FKTP,Bali,Denpasar,2024-02-25,I10,89.03,Rawat Jalan,,0,417528,409163,142394,141705,0,True,False,False,STAR0_HUB,,M-1-30-I,605400,Hipertensi Esensial,Hypertension,Physical Examination,M-1-30-I,605400,8365,"['amlodipine', 'losartan']",0.5,999.0,2,1,417528.0,1,1,0.164944,1.0204416810863126,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,1,0,0,0,0.3,0.3410397840629034,0.3393895992853191,0.3333333333333333,0,0,0.0101774578885189,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -1.585728606673656, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 0.8632331353693735, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.8029861053801142, 'direction': '↓'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 0.34486766592308415, 'direction': '↑'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.315542416657554, 'direction': '↑'}]","billed_amount↓, paid_amount↑, provider_claim_share↓, selisih_klaim↑, tarif_inacbg↑",No explanation generated — claim classified as benign.,,,
+C00000017,E00000017,P00040397,1DEEF5F642E78B69,31,F,F00133,STAR0_S2,FKTP,DKI Jakarta,Jakarta Pusat,2024-09-30,I10,89.03,Rawat Jalan,,0,703003,701408,129369,274525,7,True,False,False,STAR0_HUB,,M-1-30-I,605400,Hipertensi Esensial,Hypertension,Physical Examination,M-1-30-I,605400,1595,"['hydrochlorothiazide', 'captopril']",0.5,999.0,9,3,703003.0,1,1,0.406006,1.0022725685014022,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.1840231350034992,0.3905027567410711,0.25,0,0,0.0138149589770116,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.49812249443726614, 'direction': '↓'}, {'feature': 'billed_amount', 'value': None, 'shap_value': -0.42867524599889295, 'direction': '↓'}, {'feature': 'selisih_klaim', 'value': None, 'shap_value': 0.4120290943517466, 'direction': '↑'}, {'feature': 'provider_monthly_claims', 'value': None, 'shap_value': 0.35389280281728136, 'direction': '↑'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.35380087612429634, 'direction': '↑'}]","provider_claim_share↓, billed_amount↓, selisih_klaim↑, provider_monthly_claims↑, procedure_cost↑",No explanation generated — claim classified as benign.,,,
+C00000008,E00000008,P00043089,DCE183DA5542D274,38,M,F00480,STAR0_S6,FKRTL,Jawa Barat,Bogor,2024-04-21,J18.9,87.44,Rawat Inap,Kelas III,6,5909006,5293959,357605,1336344,1,False,False,False,STAR0_HUB,,M-1-50-I,5448800,Pneumonia,Pneumonia,Chest X-Ray,M-1-50-I,5448800,615047,['azithromycin'],0.2,999.0,4,2,5909006.0,1,1,0.1371823636363636,1.116178815102494,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0605186285952952,0.2261537344599524,0.25,0,0,0.0106161775340998,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': 2.135291814643133, 'direction': '↑'}, {'feature': 'paid_amount', 'value': None, 'shap_value': -1.0953399441658984, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': -0.9599403215898201, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': 0.6706467121292371, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.5633659360941965, 'direction': '↓'}]","billed_amount↑, paid_amount↓, tarif_inacbg↓, procedure_cost↑, provider_claim_share↓",No explanation generated — claim classified as benign.,,,
+C00000013,E00000013,P00043472,08154F0D1ED1E60F,47,M,F00339,D00339,FKRTL,Jawa Tengah,Semarang,2024-08-09,N39.0,88.72,Rawat Jalan,,0,292866,262188,27494,45510,3,False,False,False,,,M-1-70-I,590500,Infeksi Saluran Kemih,UTI,Urine Analysis,M-1-70-I,590500,30678,"['cotrimoxazole', 'ciprofloxacin']",0.5,999.0,8,3,292866.0,1,1,0.3491866666666666,1.1170033830557349,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0.0,0,0,0,0,0,0,0.0,0.0938787913967773,0.1553947696394609,1.0,0,0,0.0093046863098529,BENIGN,0.3199999999999999,benign,,,,,,,,,"[{'feature': 'billed_amount', 'value': None, 'shap_value': -2.3534229538205547, 'direction': '↓'}, {'feature': 'paid_amount', 'value': None, 'shap_value': 1.2123575231875292, 'direction': '↑'}, {'feature': 'provider_claim_share', 'value': None, 'shap_value': -0.90533096758998, 'direction': '↓'}, {'feature': 'procedure_cost', 'value': None, 'shap_value': -0.8603277693025302, 'direction': '↓'}, {'feature': 'tarif_inacbg', 'value': None, 'shap_value': 0.775455881691305, 'direction': '↑'}]","billed_amount↓, paid_amount↑, provider_claim_share↓, procedure_cost↓, tarif_inacbg↑",No explanation generated — claim classified as benign.,,,

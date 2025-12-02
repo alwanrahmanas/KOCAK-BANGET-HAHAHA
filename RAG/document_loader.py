@@ -7,7 +7,7 @@ Supports PDF, DOCX, and TXT files
 import os
 from pathlib import Path
 from typing import Tuple, Dict, List
-from rag_config import RAGConfig
+from RAG.rag_config import RAGConfig
 import PyPDF2
 from docx import Document as DocxDocument
 

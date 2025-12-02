@@ -2,7 +2,7 @@
 from typing import Dict, List, Optional, Tuple
 from langchain_core.documents import Document
 from langchain_community.vectorstores import SupabaseVectorStore
-from rag_config import RAGConfig
+from RAG.rag_config import RAGConfig
 from collections import Counter
 import re
 

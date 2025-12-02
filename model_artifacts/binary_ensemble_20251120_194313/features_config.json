@@ -1,0 +1,54 @@
+{
+  "numerical_features": [
+    "age",
+    "lama_dirawat",
+    "billed_amount",
+    "paid_amount",
+    "drug_cost",
+    "procedure_cost",
+    "visit_count_30d",
+    "tarif_inacbg",
+    "selisih_klaim",
+    "time_diff_prev_claim",
+    "rolling_avg_cost_30d",
+    "provider_monthly_claims",
+    "nik_hash_reuse_count",
+    "clinical_pathway_deviation_score",
+    "claim_ratio",
+    "drug_ratio",
+    "procedure_ratio",
+    "provider_claim_share",
+    "claim_month",
+    "claim_quarter",
+    "total_klaim_5x",
+    "rerata_billed_5x",
+    "std_claim_ratio_5x",
+    "rerata_lama_dirawat_5x",
+    "total_rs_unique_visited_5x",
+    "total_diagnosis_unique_5x",
+    "obat_match_score",
+    "phantom_suspect_score",
+    "phantom_node_flag"
+  ],
+  "categorical_features": [
+    "sex",
+    "faskes_level",
+    "jenis_pelayanan",
+    "room_class"
+  ],
+  "boolean_features": [
+    "kapitasi_flag",
+    "referral_flag",
+    "referral_to_same_facility",
+    "visit_suspicious_flag",
+    "obat_mismatch_flag",
+    "billing_spike_flag",
+    "high_deviation_flag"
+  ],
+  "leakage_features": [
+    "fraud_type",
+    "severity",
+    "evidence_type",
+    "graph_pattern_id"
+  ]
+}

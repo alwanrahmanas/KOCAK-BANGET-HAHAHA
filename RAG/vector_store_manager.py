@@ -1,6 +1,6 @@
 # ==================== VECTOR STORE MANAGER ====================
 from typing import List
-from rag_config import RAGConfig
+from RAG.rag_config import RAGConfig
 
 # --- LangChain New Modular Packages ----
 from langchain_openai import OpenAIEmbeddings
@@ -16,7 +16,7 @@ from langchain_core.documents import Document
 from langchain_community.vectorstores import SupabaseVectorStore
 from langchain_openai import OpenAIEmbeddings
 from supabase import create_client, Client
-from rag_config import RAGConfig
+from RAG.rag_config import RAGConfig
 
 class VectorStoreManager:
     """Manage Supabase vector store for document retrieval"""

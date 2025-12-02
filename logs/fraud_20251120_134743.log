@@ -1,0 +1,15 @@
+2025-11-20 13:47:43,517 | __main__ | INFO | Command: train
+2025-11-20 13:47:43,519 | __main__ | INFO | Using config: config/settings.yaml
+2025-11-20 13:47:43,519 | __main__ | INFO | Starting training workflow...
+2025-11-20 13:47:43,520 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 13:47:43,520 | workflows.training_workflow | INFO | TRAINING BPJS FRAUD DETECTION MODELS
+2025-11-20 13:47:43,521 | workflows.training_workflow | INFO | ================================================================================
+2025-11-20 13:47:43,522 | workflows.training_workflow | INFO | 📂 Loading training data from: bpjs_train_small.csv
+2025-11-20 13:47:43,753 | workflows.training_workflow | INFO |    ✅ Rows: 7,500
+2025-11-20 13:47:43,754 | workflows.training_workflow | INFO |    ✅ Fraud rate: 5.44%
+2025-11-20 13:47:43,755 | workflows.training_workflow | INFO | 🎯 Training Stage 1 (binary)...
+2025-11-20 13:48:35,833 | workflows.training_workflow | INFO | 🎯 Training Stage 2 (multiclass)...
+2025-11-20 13:48:50,701 | workflows.training_workflow | INFO | 💾 Saving models to: ./model_artifacts
+2025-11-20 13:48:52,458 | workflows.training_workflow | INFO | ✅ TRAINING COMPLETED
+2025-11-20 13:48:52,461 | __main__ | INFO | Binary model saved to: ./model_artifacts\binary_ensemble_20251120_134850
+2025-11-20 13:48:52,462 | __main__ | INFO | Multiclass model saved to: ./model_artifacts\multiclass_ensemble_20251120_134851

@@ -3,6 +3,10 @@ import os
 # Load environment variables from .env
 from dotenv import load_dotenv
 load_dotenv(override=True)
+from utils.env_loader import get_env
+
+API_KEY = get_env("API_KEY")
+DB_URL = get_env("DB_URL")
 
 class RAGConfig:
     """Central configuration for RAG system"""

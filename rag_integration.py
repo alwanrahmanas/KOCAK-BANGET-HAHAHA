@@ -14,6 +14,10 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 logger = logging.getLogger(__name__)
+from utils.env_loader import get_env
+
+API_KEY = get_env("API_KEY")
+DB_URL = get_env("DB_URL")
 
 
 class RAGIntegration:

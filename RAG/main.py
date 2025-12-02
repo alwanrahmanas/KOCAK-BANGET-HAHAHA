@@ -16,6 +16,10 @@ warnings.filterwarnings('ignore')
 
 # Load environment variables from .env
 load_dotenv(override=True)
+from utils.env_loader import get_env
+
+API_KEY = get_env("API_KEY")
+DB_URL = get_env("DB_URL")
 
 # Import all RAG system components
 from rag_config import RAGConfig

@@ -3,7 +3,11 @@ from supabase import create_client
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
+from utils.env_loader import get_env
+
+API_KEY = get_env("API_KEY")
+DB_URL = get_env("DB_URL")
 
 url = os.getenv("SUPABASE_URL")
 key = os.getenv("SUPABASE_KEY")

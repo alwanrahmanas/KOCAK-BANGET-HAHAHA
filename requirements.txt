@@ -1,21 +1,28 @@
 # Core ML
-pandas>=1.5.0
-numpy>=1.23.0
-scikit-learn>=1.2.0
-xgboost>=1.7.0
-lightgbm>=3.3.5
+pandas==1.5.0
+numpy==1.23.0
+scikit-learn==1.2.0
+xgboost==1.7.0
+lightgbm==3.3.5
 
 # Explainability
-shap>=0.5.0
-cloudpickle>=2.2.0
+shap==0.5.0
+cloudpickle==2.2.0
 
 # Visualization
-matplotlib>=3.6.0
-seaborn>=0.12.0
+matplotlib==3.6.0
+seaborn==0.12.0
 
 # Utils
-pyyaml>=6.0
-joblib>=1.2.0
+pyyaml==6.0
+joblib==1.2.0
 
-# uvicorn
-uvicorn
+# Web & API
+uvicorn==0.29.0
+fastapi==0.110.0
+python-multipart==0.0.9
+
+# Optional but recommended
+python-dotenv
+requests
+supabase
